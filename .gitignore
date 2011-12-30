@@ -2,6 +2,7 @@
 tmp
 build/iphone/*
 build/android/*
+build/mobileweb/*
 build.log
 .project
 .settings/*

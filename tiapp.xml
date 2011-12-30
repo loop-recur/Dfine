@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <sdk-version>1.9.0</sdk-version>
+    <sdk-version>1.7.3</sdk-version>
     <deployment-targets>
-        <target device="mobileweb">true</target>
+        <target device="mobileweb">false</target>
         <target device="iphone">false</target>
         <target device="ipad">true</target>
         <target device="android">false</target>
@@ -10,11 +10,11 @@
     </deployment-targets>
     <id>com.looprecur.dfine</id>
     <name>dfine</name>
-    <version>1.0</version>
-    <publisher>brian</publisher>
+    <version>0.5</version>
+    <publisher>loop/recur</publisher>
     <url>http://looprecur.com</url>
-    <description>not specified</description>
-    <copyright>2011 by brian</copyright>
+    <description>DFINE Sales App</description>
+    <copyright>2011 by loop/recur</copyright>
     <icon>appicon.png</icon>
     <persistent-wifi>false</persistent-wifi>
     <prerendered-icon>false</prerendered-icon>

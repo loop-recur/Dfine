@@ -18,6 +18,7 @@ Layouts.application = function(delegate) {
 	var makeTab = function(attrs) {
 		var tab = Ti.UI.createButton({
 			backgroundImage:attrs.background,
+			backgroundSelectedImage:attrs.background,
 			right:0,
 			width:attrs.width,
 			height:attrs.height,

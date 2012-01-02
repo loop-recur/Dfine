@@ -62,9 +62,10 @@ Views.content.technology = function(win) {
 	nav_view.add(nav_bone);
 	
 	var button = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
 		title: "Watch a video",
-		width: 140,
-		height: 40,
+		width: 225,
+		height: 50,
 		bottom:0
 	});
 	

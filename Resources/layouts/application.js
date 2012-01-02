@@ -1,7 +1,7 @@
 Layouts.application = function(delegate) {	
 	var win = Ti.UI.createWindow({
 		backgroundImage:'images/main_bg.png',
-		orientationModes: [Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
+		orientationModes: [Ti.UI.LANDSCAPE_RIGHT, Ti.UI.LANDSCAPE_LEFT]
 	});
 	
 	var main_content = Ti.UI.createView({
@@ -11,6 +11,7 @@ Layouts.application = function(delegate) {
 	var nav = Ti.UI.createView({
 		layout: "horizontal",
 		right: 0,
+		top: 37,
 		height:"100%",
 		width:60
 	});
@@ -19,10 +20,11 @@ Layouts.application = function(delegate) {
 		var tab = Ti.UI.createButton({
 			backgroundImage:attrs.background,
 			backgroundSelectedImage:attrs.background,
-			right:0,
-			width:attrs.width,
+			width:60,
 			height:attrs.height,
-			top:-40
+			top:(attrs.top || 0) - 40,
+			right:0,
+			id: attrs.name
 		});
 		
 		tab.addEventListener('click', App.swapView(main_content, Controllers.content.index.p(Formatter.underscore(attrs.name))));
@@ -31,12 +33,12 @@ Layouts.application = function(delegate) {
 	}
 	
 	var tabs = [
-		{name: "Technology", background: "images/tabs/tabs_technology.png", width:60, height:160}
-		, {name: "Results", background: "images/tabs/tabs_results.png", width:60, height:150}
-		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", width:60, height:190}
-		, {name: "Cost", background: "images/tabs/tabs_cost.png", width:60, height:150}
-		, {name: "Reimbursment", background: "images/tabs/tabs_reimbursement.png", width:60, height:190}
-		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", width:60, height:150}
+		{name: "Technology", background: "images/tabs/tabs_technology.png", height:160}
+		, {name: "Results", background: "images/tabs/tabs_results.png", height:150, top:-20}
+		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", height:190}
+		, {name: "Cost", background: "images/tabs/tabs_cost.png", height:150, top: 20}
+		, {name: "Reimbursment", background: "images/tabs/tabs_reimbursement.png", height:190}
+		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -20}
 	]
 	
 	var tabButtons = map(makeTab, tabs);

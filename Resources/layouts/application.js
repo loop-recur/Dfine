@@ -30,7 +30,7 @@ Layouts.application = function(delegate) {
 		return tab;
 	}
 	
-	var tabs = [ 
+	var tabs = [
 		{name: "Technology", background: "images/tabs/tabs_technology.png", width:60, height:160}
 		, {name: "Results", background: "images/tabs/tabs_results.png", width:60, height:150}
 		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", width:60, height:190}

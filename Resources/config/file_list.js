@@ -8,6 +8,7 @@ FileList = [
 	, "views/content/access_and_navigation.js"
 	, "views/content/bone_cement.js"
 	, "views/content/technology.js"
+	, "views/content/tech_nav.js"
 	, "views/content/results.js"
 	, "views/content/case_studies.js"
 	, "views/content/cost.js"

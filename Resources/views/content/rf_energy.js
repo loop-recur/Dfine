@@ -1,6 +1,6 @@
 Views.content.rf_energy = function(win) {	
 	var view = Ti.UI.createView({
-		backgroundColor: "red"
+		backgroundImage:"images/page_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({

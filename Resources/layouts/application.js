@@ -1,7 +1,7 @@
 Layouts.application = function(delegate) {	
 	var win = Ti.UI.createWindow({
 		backgroundImage:'images/main_bg.png',
-		orientationModes: [Ti.UI.LANDSCAPE_RIGHT, Ti.UI.LANDSCAPE_LEFT]
+		orientationModes:[Ti.UI.LANDSCAPE_LEFT]
 	});
 	
 	var main_content = Ti.UI.createView({

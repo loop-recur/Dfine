@@ -72,5 +72,7 @@ Views.content.bone_cement = function(win) {
 	
 	view.add(video);
 	
+	view.add(Views.content.tech_nav(view));
+	
 	win.add(view);
 }

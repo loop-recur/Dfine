@@ -9,5 +9,6 @@ Views.content.access_and_navigation = function(win) {
 	
 	view.add(label);
 
+	view.add(Views.content.tech_nav(view));
 	win.add(view);
 }

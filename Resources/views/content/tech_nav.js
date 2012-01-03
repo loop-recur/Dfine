@@ -1,4 +1,4 @@
-Views.content.tech_nav = function(win, view) {	
+Views.content.tech_nav = function(view) {	
 	var getContent = function(name) {
 		Views.content[name](view);
 	}
@@ -57,5 +57,5 @@ Views.content.tech_nav = function(win, view) {
 	nav.add(rf_energy_button);
 	nav.add(access_and_navigation_button);
 	nav.add(bone_cement_button);
-	win.add(nav);
+	return nav;
 }

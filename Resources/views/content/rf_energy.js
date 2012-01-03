@@ -54,5 +54,7 @@ Views.content.rf_energy = function(win) {
 	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
 	
+	view.add(Views.content.tech_nav(view));
+	
 	win.add(view);
 }

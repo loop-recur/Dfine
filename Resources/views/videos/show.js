@@ -2,7 +2,7 @@ Views.videos.show = function(filename) {
 
 	var win = Ti.UI.createWindow({
 		title: "Video",
-		left: -500,
+		left: -1024,
 		backgroundColor: "black",
 		orientationModes: [Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
 	});
@@ -29,5 +29,5 @@ Views.videos.show = function(filename) {
 	win.add(player);
 	win.add(back_button);
 	win.open();
-	win.animate({left:0, duration:300});
+	win.animate({left:0, duration:500});
 }

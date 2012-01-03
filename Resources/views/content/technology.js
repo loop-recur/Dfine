@@ -71,6 +71,7 @@ Views.content.technology = function(win) {
 	
 	var button = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
+		color:"black",
 		title: "Watch a video",
 		width: 225,
 		height: 50,
@@ -78,7 +79,7 @@ Views.content.technology = function(win) {
 	});
 	
 	button.addEventListener('click', function(){
-		Controllers.content.video('iphone.mov');
+		Controllers.content.video('iphone.m4v');
 	});
 	
 	view.add(button);

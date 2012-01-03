@@ -51,7 +51,7 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	read_more.addEventListener('click', function(){
-		Controllers.content.video('iphone.mov');
+		Controllers.content.video('iphone.m4v');
 	});
 	
 	view.add(read_more);
@@ -67,7 +67,7 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('iphone.mov');
+		Controllers.content.video('iphone.m4v');
 	});
 	
 	view.add(video);

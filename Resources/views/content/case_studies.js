@@ -1,6 +1,6 @@
 Views.content.case_studies = function(win) {	
 	var view = Ti.UI.createView({
-		backgroundColor: "green"
+		backgroundImage:"images/page_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({

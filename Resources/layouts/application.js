@@ -33,12 +33,12 @@ Layouts.application = function(delegate) {
 	}
 	
 	var tabs = [
-		{name: "Technology", background: "images/tabs/tabs_technology.png", height:160, top:0}
-		, {name: "Results", background: "images/tabs/tabs_results.png", height:150, top:-20}
-		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", height:190}
-		, {name: "Cost", background: "images/tabs/tabs_cost.png", height:150, top: 20}
-		, {name: "Reimbursment", background: "images/tabs/tabs_reimbursement.png", height:190}
-		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -20}
+		{name: "Technology", background: "images/tabs/tabs_technology.png", height:160, top:-2}
+		, {name: "Results", background: "images/tabs/tabs_results.png", height:150, top:0}
+		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", height:190, top:0}
+		, {name: "Cost", background: "images/tabs/tabs_cost.png", height:150, top: -10}
+		, {name: "Reimbursment", background: "images/tabs/tabs_reimbursement.png", height:190,top:-20}
+		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -9}
 	]
 	
 	var tabButtons = map(makeTab, tabs);

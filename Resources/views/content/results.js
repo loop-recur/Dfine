@@ -1,6 +1,6 @@
 Views.content.results = function(win) {	
 	var view = Ti.UI.createView({
-		backgroundColor: "blue"
+		backgroundImage:"images/page_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({

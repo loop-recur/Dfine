@@ -23,33 +23,36 @@ Views.content.rf_energy = function(win) {
 
 	view.add(main_image);
 	
-	var hard_switch_cable = Ti.UI.createLabel({
-		text: "Hard Switch Cable",
-		font:{fontFamily:'Helvetica-Light',fontSize:17,fontWeight:'regular'},
-		color:"#023f66",
-		width:'auto',
-		top:400,
-		left:130,
-		height:'auto'
-	});
+	// example of view factories
+	var label_toggle_view = function(attrs) {
+		return Ti.UI.createLabel(merge({
+			font:{fontFamily:'Helvetica-Light',fontSize:17,fontWeight:'regular'},
+			color:"#023f66",
+			width:'auto',
+			top:400,
+			left:130,
+			height:'auto'
+		}, attrs));
+	}
+
+	var toggle_content_view = function(attrs) {
+		return Ti.UI.createView(merge({
+			backgroundColor:"orange",
+			height:220,
+			width:180,
+			top: 450,
+			left:110,
+			visible:false
+		}, attrs));
+	}
 	
-	view.add(hard_switch_cable);	
+	var hard_switch_cable_info = toggle_content_view({});	
+	var hard_switch_cable = label_toggle_view({text: "Hard Switch Cable"});
 	
-	var hard_switch_cable_info = Ti.UI.createView({
-		backgroundColor:"orange",
-		height:220,
-		width:180,
-		top: 450,
-		left:110,
-		visible:false
-	});
+	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	
+	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
-	
-	hard_switch_cable.addEventListener('click', function(){
-		hard_switch_cable_info.visible = true;
-	});
-	
 	
 	win.add(view);
 }

@@ -61,6 +61,14 @@ Views.content.technology = function(win) {
 	nav_view.add(nav_access);
 	nav_view.add(nav_bone);
 	
+	var getContent = function(name) {
+		Views.content[name](view);
+	}
+	
+	nav_rf.addEventListener('click', App.swapView(view, getContent.p("rf_energy")));
+	nav_access.addEventListener('click', App.swapView(view, getContent.p("access_and_navigation")));
+	nav_bone.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
+	
 	var button = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "Watch a video",
@@ -77,6 +85,4 @@ Views.content.technology = function(win) {
 	view.add(nav_view);
 		
 	win.add(view);
-	
-	Views.content.tech_nav(win, view);
 }

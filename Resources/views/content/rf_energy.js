@@ -109,6 +109,40 @@ Views.content.rf_energy = function(win) {
 	
 	activation_element_info.add(activation_bullets);
 	
+	var video = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
+		title: "Activation Element 2",
+		font:{fontSize:15, fontWeight:"regular"},
+		color:"black",
+		width: 225,
+		height: 50,
+		bottom:70,
+		right:200
+	});
+	
+	video.addEventListener('click', function(){
+		Controllers.content.video('1482.m4v');
+	});
+	
+	view.add(video);
+	
+	var video2 = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
+		title: "Activation Element 1",
+		font:{fontSize:15, fontWeight:"regular"},
+		color:"black",
+		width: 225,
+		height: 50,
+		bottom:70,
+		right:200
+	});
+	
+	video2.addEventListener('click', function(){
+		Controllers.content.video('2772.m4v');
+	});
+	
+	view.add(video2);
+	
 	view.add(Views.content.tech_nav(view));
 	win.add(view);
 }

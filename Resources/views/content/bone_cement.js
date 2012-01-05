@@ -68,7 +68,7 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('iphone.m4v');
+		Controllers.content.video('1115.mp4');
 	});
 	
 	view.add(video);

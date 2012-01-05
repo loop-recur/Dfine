@@ -7,7 +7,7 @@ Views.content.cost = function(win) {
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",
 		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
+		width:800,
 		top:40,
 		left:30,
 		height:'auto'
@@ -17,8 +17,8 @@ Views.content.cost = function(win) {
 		text: "StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
 		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
-		top:70,
+		width:800,
+		top:110,
 		left:30,
 		height:'auto'
 	});

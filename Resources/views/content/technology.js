@@ -91,19 +91,6 @@ Views.content.technology = function(win) {
 	nav_access.addEventListener('click', App.swapView(view, getContent.p("access_and_navigation")));
 	nav_bone.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
 	
-	var button = Ti.UI.createButton({
-		backgroundImage:"images/video_button.png",
-		color:"black",
-		title: "Watch a video",
-		width: 225,
-		height: 50,
-		bottom:0
-	});
-	
-	button.addEventListener('click', function(){
-		Controllers.content.video('iphone.m4v');
-	});
-	
 	var rf_sub = Ti.UI.createLabel({
 		text: "RF to modulate bone cement viscosity",
 		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
@@ -147,7 +134,6 @@ Views.content.technology = function(win) {
 	view.add(rf_sub);
 	view.add(bone_sub);
 	view.add(patents);
-	view.add(button);
 	view.add(nav_view);
 		
 	win.add(view);

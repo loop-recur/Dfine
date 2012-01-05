@@ -104,6 +104,49 @@ Views.content.technology = function(win) {
 		Controllers.content.video('iphone.m4v');
 	});
 	
+	var rf_sub = Ti.UI.createLabel({
+		text: "RF to modulate bone cement viscosity",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		top:300,
+		left:700,
+		height:'auto'
+	});
+	
+	var access_sub = Ti.UI.createLabel({
+		text: "Articulating osteotome enables site/size specificity",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		top:575,
+		left:300,
+		height:'auto'
+	});
+	
+	var bone_sub = Ti.UI.createLabel({
+		text: "Ultra-high viscosity cement, ideal for osteoporotic VCF applications",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		left:600,
+		top:575,
+		height:'auto'
+	});
+	
+	var patents = Ti.UI.createLabel({
+		text: "IP covering all three areas: 4 patents issued, 50 pending",
+		font:{fontFamily:'Helvetica',fontSize:18,fontWeight:'regular'},
+		color:"#023f66",
+		width:"auto",
+		bottom:50,
+		height:'auto'
+	});
+	
+	view.add(access_sub);
+	view.add(rf_sub);
+	view.add(bone_sub);
+	view.add(patents);
 	view.add(button);
 	view.add(nav_view);
 		

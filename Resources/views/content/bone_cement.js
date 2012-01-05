@@ -9,10 +9,22 @@ Views.content.bone_cement = function(win) {
 		color:"#023f66",
 		width:'auto',
 		top:40,
+		left:280,
+		height:'auto'
+	});
+	
+	var label2 = Ti.UI.createLabel({
+		text: "- consistent interdigitation throughout the vertebra",
+		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		top:80,
+		left:280,
 		height:'auto'
 	});
 	
 	view.add(label);
+	view.add(label2);
 	
 	var logo = Ti.UI.createView({
 		backgroundImage:"images/dfine_logo.png",
@@ -40,13 +52,37 @@ Views.content.bone_cement = function(win) {
 	view.add(left_image);
 	view.add(right_image);
 	
+	var left_note = Ti.UI.createLabel({
+		text: "Ultra-high viscosity StabiliT ER2 Bone Cement provides consistent interdigitation throughout the vertebre",
+		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:250,
+		top:520,
+		left:150,
+		height:'auto'
+	});
+	
+	var right_note = Ti.UI.createLabel({
+		text: "Cement is removed from the same vertebra – brown area is evidence of cement interdigitation",
+		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:250,
+		top:520,
+		right:200,
+		height:'auto'
+	});
+	
+	view.add(left_note);
+	view.add(right_note);
+	
 	var read_more = Ti.UI.createButton({
 		backgroundImage:"images/page_back_button.png",
-		title: "Interdigitation",
+		title: "Viscosity and Working Time",
+		font:{fontFamily:'Helvetica',fontSize:12,fontWeight:'bold'},
 		color:"black",
 		width: 200,
 		height: 50,
-		bottom:110,
+		bottom:70,
 		left:240
 	});
 	
@@ -62,7 +98,7 @@ Views.content.bone_cement = function(win) {
 		color:"black",
 		width: 225,
 		height: 50,
-		bottom:110,
+		bottom:70,
 		right:240
 	});
 	

@@ -9,7 +9,7 @@ Views.content.reimbursment = function(win) {
 		color:"#023f66",
 		width:400,
 		top:40,
-		left:500,
+		left:30,
 		height:'auto'
 	});
 	
@@ -19,7 +19,7 @@ Views.content.reimbursment = function(win) {
 		color:"#023f66",
 		width:400,
 		top:40,
-		left:30,
+		left:500,
 		height:'auto'
 	});
 	

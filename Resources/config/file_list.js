@@ -4,6 +4,7 @@ FileList = [
 	, "ui/toggle_switch.js"
 	, "helpers/ui.js"
 	, "lib/formatter.js"
+	, "lib/grid.js"
 	, "layouts/application.js"
 	, "views/content/rf_energy.js"
 	, "views/content/access_and_navigation.js"

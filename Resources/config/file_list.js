@@ -2,6 +2,7 @@ FileList = [
 	"helpers/application.js"
 	, "ui/button_group.js"
 	, "ui/toggle_switch.js"
+	, "ui/slideshow.js"
 	, "helpers/ui.js"
 	, "lib/formatter.js"
 	, "lib/grid.js"

@@ -42,7 +42,7 @@ Views.content.results = function(win) {
 		});
 		
 		var text = Ti.UI.createLabel({
-			text: attrs.text, 
+			text: attrs.text,
 			font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
 			color: "#6c7881",
 			top: 5,

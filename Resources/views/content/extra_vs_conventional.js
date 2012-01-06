@@ -1,10 +1,10 @@
-Views.content.pain_reduction = function(win) {	
+Views.content.extra_vs_conventional = function(win) {	
 	var view = Ti.UI.createView({
 		backgroundImage:"images/page_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({
-		text: "Pain reduction",
+		text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications",
 		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -21,16 +21,16 @@ Views.content.pain_reduction = function(win) {
 	})
 	
 	var content = Ti.UI.createLabel({
-		text: "StabiliT® ER2 Bone Cement fills the pathways created by the VertecoR MidLine Osteotome to ensure targeted delivery and interdigitation throughout the vertebra, potentially resulting in a safer and more effective vertebral augmentation.",
+		text: "A comparison of leakage rates between spine fractures treatments <6 weeks old and those >6 weeks old.(5)",
 		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
 		width:650,
-		bottom:200,
+		bottom:230,
 		height:'auto',
 		textAlign:"center"
 	});
 	
 	var bullets = Ti.UI.createLabel({
-		text: "• 66 RF-TVA procedures were performed between December 2008 and May 2009 \n• A standard 10-point visual analog scale (VAS) was utilized to assess back pain pre- and post-operatively \n• Pain medication use and activities were defined and monitored for changes \n• Significant improvement in pain, activity, and narcotic use was observed at 6 months",
+		text: "• 138 patients underwent conventional balloon kyphoplasty to treat 203 vertebral compression fractures \n• 42 patients were treated with RF-TVA for 60 vertebral compression fractures \n• Cement leakage for patients treated with balloon kyphoplasty averaged 18.7%, but was significantly higher at 27.7% for fractures greater than 6 weeks old(5) \n• Cement leakage with RF-TVA averaged 10.6%, but only 11.6% when delivered into fractures greater than six weeks old(5)",
 		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
 		width:700,
 		bottom:100,
@@ -42,7 +42,6 @@ Views.content.pain_reduction = function(win) {
 	view.add(image);
 	view.add(content);
 	view.add(bullets);
-	
 
 	win.add(view);
 }

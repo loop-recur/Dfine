@@ -2,12 +2,13 @@ Views.content.results = function(win) {
 	var arrow_top = 100;
 	
 	var data = [
-		{id: "pain_reduction", image: "images/technology/small_tech_nav_access_active.png", text: "MyText"}
-		, {id: "visual_analog", image: "images/technology/small_tech_nav_bone_active.png", text: "Some other text"}
-		, {id: "pain_relief_percent", image: "images/technology/small_tech_nav_rf_active.png", text: "A whole lotta text man, cause it's gotta wrap"}
-		, {id: "visual_analog", image: "images/technology/small_tech_nav_bone_active.png", text: "Some other text"}
-		, {id: "pain_relief_percent", image: "images/technology/small_tech_nav_rf_active.png", text: "A whole lotta text man, cause it's gotta wrap"}
-		, {id: "pain_reduction", image: "images/technology/small_tech_nav_access_active.png", text: "MyText"}
+		{id: "pain_reduction", image: "images/results/results_nav_icon1.png", text: "Significant pain reduction"}
+		, {id: "visual_analog", image: "images/results/results_nav_icon2.png", text: "Visual analog scale pain scores vs. Oswestry disability scores"}
+		, {id: "pain_relief_percent", image: "images/results/results_nav_icon3.png", text: "Percent of patients with pain relief"}
+		, {id: "reduced_extravasion", image: "images/results/results_nav_icon4.png", text: "Significantly reduced extravasation"}
+		, {id: "extra_vs_vertebro", image: "images/results/results_nav_icon5.png", text: "RF-TVA extravasation versus vertebroplasty extravasation"}
+		, {id: "extra_vs_conventional", image: "images/results/results_nav_icon6.png", text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications"}
+		, {id: "references", image: "images/results/results_nav_icon7.png", text: "References"}
 	]
 	
 	var getContent = function(name) {
@@ -16,12 +17,12 @@ Views.content.results = function(win) {
 	
 	var view = Ti.UI.createView({
 		backgroundImage:"images/page_bg.png",
-		width: "80%",
+		width: "75%",
 		right:14
 	});
 	
 	var nav = Ti.UI.createView({
-		width: "20%",
+		width: "25%",
 		left:0
 	});
 	
@@ -34,10 +35,9 @@ Views.content.results = function(win) {
 		
 		var image = Ti.UI.createImageView({
 			image: attrs.image,
-			left: 5,
-			top: 5,
-			width: 80,
-			height: 80,
+			left: 16,
+			width: 52,
+			height: 52,
 			id: attrs.id
 		});
 		
@@ -46,7 +46,7 @@ Views.content.results = function(win) {
 			font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
 			color: "#6c7881",
 			top: 5,
-			left: 100,
+			left: 80,
 			id: attrs.id
 		});
 	
@@ -67,10 +67,10 @@ Views.content.results = function(win) {
 	
 	var arrow = Ti.UI.createImageView({
 		image: "images/results/arrow.png",
-		right: 1,
+		right: 0,
 		top: 25,
 		width: 13,
-		height: 29
+		height: 52
 	});
 	
 	nav.add(table);

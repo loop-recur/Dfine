@@ -91,20 +91,49 @@ Views.content.technology = function(win) {
 	nav_access.addEventListener('click', App.swapView(view, getContent.p("access_and_navigation")));
 	nav_bone.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
 	
-	var button = Ti.UI.createButton({
-		backgroundImage:"images/video_button.png",
-		color:"black",
-		title: "Watch a video",
-		width: 225,
-		height: 50,
-		bottom:0
+	var rf_sub = Ti.UI.createLabel({
+		text: "RF to modulate bone cement viscosity",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		top:300,
+		left:700,
+		height:'auto'
 	});
 	
-	button.addEventListener('click', function(){
-		Controllers.content.video('iphone.m4v');
+	var access_sub = Ti.UI.createLabel({
+		text: "Articulating osteotome enables site/size specificity",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		top:575,
+		left:300,
+		height:'auto'
 	});
 	
-	view.add(button);
+	var bone_sub = Ti.UI.createLabel({
+		text: "Ultra-high viscosity cement, ideal for osteoporotic VCF applications",
+		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
+		color:"#023f66",
+		width:200,
+		left:600,
+		top:575,
+		height:'auto'
+	});
+	
+	var patents = Ti.UI.createLabel({
+		text: "IP covering all three areas: 4 patents issued, 50 pending",
+		font:{fontFamily:'Helvetica',fontSize:18,fontWeight:'regular'},
+		color:"#023f66",
+		width:"auto",
+		bottom:50,
+		height:'auto'
+	});
+	
+	view.add(access_sub);
+	view.add(rf_sub);
+	view.add(bone_sub);
+	view.add(patents);
 	view.add(nav_view);
 		
 	win.add(view);

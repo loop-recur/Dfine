@@ -1,5 +1,17 @@
 UI.slideshow = function(images) {
-	var win = Ti.UI.createWindow({});
+	var win = Ti.UI.createWindow({backgroundColor: "#000000"});
+	
+	var back = Ti.UI.createButton({
+		title: "(X)",
+		top: 5,
+		right: 5,
+		width: 40,
+		height: 40
+	});
+	
+	back.addEventListener('click', function(){
+		win.close();
+	});
 	
 	var _getUrl = function(image) {
 		return Helpers.Application.assetPath(image.url);
@@ -7,7 +19,10 @@ UI.slideshow = function(images) {
 	
 	var cover_view = Ti.UI.createCoverFlowView({
 		images:map(_getUrl, images),
-		backgroundColor:'#000'
+		backgroundColor:'#000',
+		top:0,
+		width: "100%",
+		height: "80%"
 	});
 	
 	var caption_view = Ti.UI.createView({
@@ -16,20 +31,58 @@ UI.slideshow = function(images) {
 		borderColor: "blue",
 		borderWidth: 1,
 		width: 300,
-		height: 100
+		height: 'auto',
+		bottom: 160
 	});
 	
 	var caption_text = Ti.UI.createLabel({
-		text: first(images).caption, 
+		text: first(images).caption+"\n", 
 		font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
+		left: 20,
+		top: 20,
+		bottom: 20,
 		color: "blue",
-		bottom: 100,
 		height: 'auto'
 	});
 	
+	var bottom_scroller = Ti.UI.createScrollView({
+		height: "20%",
+		bottom: 0,
+		layout: "horizontal",
+		contentWidth:"auto",
+		contentHeight:'auto',
+		showHorizontalScrollIndicator:true,
+		showVerticalScrollIndicator:false
+	});
+	
+	var _selectImage = function(image) {
+		cover_view.selected = images.indexOf(image);
+		caption_text.text = image.caption;
+	}
+	
+	var _addToShow = function(image) {
+		var image_view = Ti.UI.createImageView({
+			image: _getUrl(image),
+			width: 80,
+			height: 80,
+			left: 100
+		});
+		
+		image_view.addEventListener('click', function() {
+			_selectImage(image);
+		});
+		
+		bottom_scroller.add(image_view);
+	}
+	
+	map(_addToShow, images);
+	
 	win.add(cover_view);
+	win.add(bottom_scroller);
 	caption_view.add(caption_text);
 	win.add(caption_view);
+	win.add(back);
+	
 	
 	win.open();
 }

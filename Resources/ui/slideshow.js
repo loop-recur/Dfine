@@ -12,13 +12,9 @@ UI.slideshow = function(images) {
 	back.addEventListener('click', function(){
 		win.close();
 	});
-	
-	var _getUrl = function(image) {
-		return Helpers.Application.assetPath(image.url);
-	}
-	
+
 	var cover_view = Ti.UI.createCoverFlowView({
-		images:map(_getUrl, images),
+		images:map('.url', images),
 		backgroundColor:'#000',
 		top:0,
 		width: "100%",
@@ -62,7 +58,7 @@ UI.slideshow = function(images) {
 	
 	var _addToShow = function(image) {
 		var image_view = Ti.UI.createImageView({
-			image: _getUrl(image),
+			image: image.url,
 			width: 80,
 			height: 80,
 			left: 100

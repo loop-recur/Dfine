@@ -17,5 +17,6 @@ FileList = [
 	, "views/content/dfine.js"
 	, "views/videos/show.js"
 	, "controllers/content.js"
+	, "controllers/case_studies.js"
 	, "controllers/application.js"
 ]

@@ -1,4 +1,5 @@
-Views.content.case_studies = function(win) {	
+Views.content.case_studies = function(win) {
+	
 	var view = Ti.UI.createView({
 		backgroundImage:"images/page_bg.png"
 	});
@@ -8,6 +9,12 @@ Views.content.case_studies = function(win) {
 	});
 	
 	view.add(label);
+	
+	var finish = function(studies) {
+		log(studies);
+	}
+	
+	var studies = Controller.case_studies.getAll(finish);
 
 	win.add(view);
 }

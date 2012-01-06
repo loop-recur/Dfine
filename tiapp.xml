@@ -8,7 +8,7 @@
         <target device="android">false</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <id>com.looprecur.dfineapp</id>
+    <id>com.looprecur.dfine</id>
     <name>dfine</name>
     <version>0.5</version>
     <publisher>loop/recur</publisher>

@@ -5,7 +5,7 @@ Views.content.technology = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "Interventional Technology Platform",
-		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:40,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:40,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -13,28 +13,6 @@ Views.content.technology = function(win) {
 	});
 	
 	view.add(label);
-	
-	var label2 = Ti.UI.createLabel({
-		text: "Interventional Technology Platform",
-		font:{fontSize:40,fontWeight:'regular'},
-		color:"#023f66",
-		width:'auto',
-		top:80,
-		height:'auto'
-	});
-	
-	view.add(label2);
-	
-	var label3 = Ti.UI.createLabel({
-		text: "Interventional Technology Platform",
-		font:{fontFamily:'AmericanTypewriter-Bold',fontSize:40,fontWeight:'regular'},
-		color:"#023f66",
-		width:'auto',
-		top:120,
-		height:'auto'
-	});
-	
-	view.add(label3);
 	
 	var nav_view = Ti.UI.createView({
 		height:430,

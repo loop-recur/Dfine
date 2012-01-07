@@ -12,13 +12,9 @@ UI.slideshow = function(images) {
 	back.addEventListener('click', function(){
 		win.close();
 	});
-	
-	var _getUrl = function(image) {
-		return Helpers.Application.assetPath(image.url);
-	}
-	
+
 	var cover_view = Ti.UI.createCoverFlowView({
-		images:map(_getUrl, images),
+		images:map('.url', images),
 		backgroundColor:'#000',
 		top:0,
 		width: "100%",
@@ -36,7 +32,6 @@ UI.slideshow = function(images) {
 	});
 	
 	var caption_text = Ti.UI.createLabel({
-		text: first(images).caption+"\n", 
 		font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
 		left: 20,
 		top: 20,
@@ -55,14 +50,18 @@ UI.slideshow = function(images) {
 		showVerticalScrollIndicator:false
 	});
 	
+	var _updateCaption = function(caption) {
+		caption_view.visible = !!caption;
+		caption_text.text = caption+"\n";
+	}
+	
 	var _selectImage = function(image) {
 		cover_view.selected = images.indexOf(image);
-		caption_text.text = image.caption;
 	}
 	
 	var _addToShow = function(image) {
 		var image_view = Ti.UI.createImageView({
-			image: _getUrl(image),
+			image: image.url,
 			width: 80,
 			height: 80,
 			left: 100
@@ -70,6 +69,7 @@ UI.slideshow = function(images) {
 		
 		image_view.addEventListener('click', function() {
 			_selectImage(image);
+			_updateCaption(image.caption);
 		});
 		
 		bottom_scroller.add(image_view);
@@ -82,7 +82,7 @@ UI.slideshow = function(images) {
 	caption_view.add(caption_text);
 	win.add(caption_view);
 	win.add(back);
-	
+	_updateCaption(first(images).caption);
 	
 	win.open();
 }

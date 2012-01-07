@@ -44,7 +44,7 @@ Views.content.case_studies = function(win) {
 			height: icon_height
 		});
 		
-		var path = (attrs.images.length > 0) ? Helpers.Application.assetPath(first(attrs.images).url) : "images/reveal_plus_sign.png";
+		var path = (attrs.images.length > 0) ? first(attrs.images).url : "images/reveal_plus_sign.png";
 
 		var image = Ti.UI.createImageView({
 			image: path,

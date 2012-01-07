@@ -46,6 +46,7 @@ Views.content.reimbursment = function(win) {
 		left:500,
 		height:'auto'
 	});
+
 	
 	view.add(left_footnote);
 	view.add(right_footnote);

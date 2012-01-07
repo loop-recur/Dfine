@@ -32,7 +32,6 @@ UI.slideshow = function(images) {
 	});
 	
 	var caption_text = Ti.UI.createLabel({
-		text: first(images).caption+"\n", 
 		font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
 		left: 20,
 		top: 20,
@@ -51,9 +50,13 @@ UI.slideshow = function(images) {
 		showVerticalScrollIndicator:false
 	});
 	
+	var _updateCaption = function(caption) {
+		caption_view.visible = !!caption;
+		caption_text.text = caption+"\n";
+	}
+	
 	var _selectImage = function(image) {
 		cover_view.selected = images.indexOf(image);
-		caption_text.text = image.caption;
 	}
 	
 	var _addToShow = function(image) {
@@ -66,6 +69,7 @@ UI.slideshow = function(images) {
 		
 		image_view.addEventListener('click', function() {
 			_selectImage(image);
+			_updateCaption(image.caption);
 		});
 		
 		bottom_scroller.add(image_view);
@@ -78,7 +82,7 @@ UI.slideshow = function(images) {
 	caption_view.add(caption_text);
 	win.add(caption_view);
 	win.add(back);
-	
+	_updateCaption(first(images).caption);
 	
 	win.open();
 }

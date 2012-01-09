@@ -59,7 +59,7 @@ Views.content.rf_energy = function(win) {
 	}
 	
 	var hard_switch_cable_info = toggle_content_view({top:430, left:145});	
-	var hard_switch_cable = label_toggle_view({text: "Hard Switch Cable", top:400, left:160});
+	var hard_switch_cable = label_toggle_view({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:160});
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
@@ -128,7 +128,7 @@ Views.content.rf_energy = function(win) {
 	
 	var video2 = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Activation Element 1",
+		title: "Watch Video",
 		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 225,

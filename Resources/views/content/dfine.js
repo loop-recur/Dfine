@@ -15,7 +15,7 @@ Views.content.dfine = function(win) {
 	
 	var label2 = Ti.UI.createLabel({
 		text: "Founded in 2004 \nDirect in US and Germany. Distributionin 9 additional countries \n~150 Employees \nVenture backed company, located in San Jose, CA \nPioneered Radiofrequency Targeted Vertebral Augmentation (RF–TVA), a generational advance in the treatment of vertebral compression fractures (VCFs) \nCommitted to ongoing, clinically relevant scientific research & technology development \n",
-		top:150,
+		top:300,
 		height:"auto",
 		width: 700,
 		textAlign:"center"

@@ -1,4 +1,17 @@
-Views.content.reimbursment = function(win) {	
+Views.content.reimbursment = function(win) {
+	var table1Data = [
+		["ICD-9 Code", "Fiscal Year", "ICD-9 Code Title", "ICD-9 Code Description"]
+		, ["81.66", "2010", "Percutaneous veterbral augmentation", "Insertion of inflatable balloon, bone tamp, or other device displacing (removing) (compacting) bone to create a space (cavity) (void) prior to the injection of bone void filler (cement) (polymethylmethacrylate) (PMMA) or other substance. Arcuplasty, Kyphoplasty, SKyphoplasty, Spineoplasty.*\n\n"]
+	]
+	
+	var table2Data = [
+		["CPT Code", "CPT Code Description", "Ambulatory Payment Classification (APC)"]
+		, ["22523", "Percutaneous vertebral augmentation, including cavity creation (fracture reduction and bone biopsy included when performed) using mechanical device, one vertebral body, unilateral or bilateral cannulation (eg, kyphoplasty); thoracic\n\n", "APC 0052"]
+		, ["22524", "Percutaneous vertebral augmentation, including cavity creation (fracture reduction and bone biopsy included when performed) using mechanical device, one vertebral body, unilateral or bilateral cannulation (eg, kyphoplasty); lumbar\n\n", "APC 0052"]
+		, ["22525", "Each additional thoracic or lumbar vertebral body", "APC 0052"]
+	]
+	
+	
 	var view = Ti.UI.createView({
 		backgroundImage:"images/page_bg.png"
 	});
@@ -46,10 +59,69 @@ Views.content.reimbursment = function(win) {
 		left:500,
 		height:'auto'
 	});
+	
+	var make_cell_view = function(data, cell, e) {
+		var label = Ti.UI.createLabel({
+			text: data[e.row_index][e.column_index],
+			font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'regular'},
+			color:"#023f66",
+			height:'auto',
+			width:'auto'
+		});
+
+		cell.add(label);
+	}
+	
+	var make_header_view = function(data, cell, e) {
+		var label = Ti.UI.createLabel({
+			text: data[e.row_index][e.column_index],
+			font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'bold'},
+			color:"black",
+			height:'auto',
+			width:'auto'
+		});
+		
+		cell.add(label);
+	}
+	
+	var table1_rows = Grid(make_header_view.p(table1Data), make_cell_view.p(table1Data), {
+		columns: 4,
+		rows: 2,
+		cell_widths: [70, 70, 80, 210],
+		cell_height: 'auto'
+	});
+	
+	var table1 = Ti.UI.createTableView({
+		left: 10,
+		data:table1_rows,
+		backgroundColor:"#E6EAED",
+		borderColor: "#C7C8CC",
+		width:450,
+		height:228
+	});
+
+
+	var table2_rows = Grid(make_header_view.p(table2Data), make_cell_view.p(table2Data), {
+		columns: 3,
+		rows: 3,
+		cell_widths: [90, 270, 90],
+		cell_height: 'auto'
+	});
+	
+	var table2 = Ti.UI.createTableView({
+		right: 100,
+		data:table2_rows,
+		backgroundColor:"#E6EAED",
+		borderColor: "#C7C8CC",
+		width:450,
+		height:228
+	});
 
 	
 	view.add(left_footnote);
 	view.add(right_footnote);
+	view.add(table1);
+	view.add(table2);
 	
 	win.add(view);
 }

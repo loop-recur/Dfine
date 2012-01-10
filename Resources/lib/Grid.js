@@ -1,62 +1,47 @@
-// Grid = function(attrs) {
-// 	var cellWidth = (attrs.cell_width || 0);
-// 	var cellHeight = (attrs.cell_height || 0);
-// 	var xSpacer = (attrs.cell_height || 0);
-// 	var ySpacer = 10;
-// 	var xGrid = 3;
-// 	var yGrid = 12;
-// 	
-// 	
-// }
-//  
-// var tableData = [];
-//  
-// var colorSet = [
-//                 "#D44646",
-//                 "#46D463",
-//                 "#46D4BE",
-//                 "#C2D446",
-//                 "#D446D5",
-//                 "#4575D5",
-//                 "#E39127",
-//                 "#879181",
-//                 "#E291D4"
-//               ];
-//  
-// var colorSetIndex = 0;
-// var cellIndex = 0;
-//  
-// for (var y=0; y<yGrid; y++){
-//     var thisRow = Ti.UI.createTableViewRow({
-//         className: "grid",
-//         layout: "horizontal",
-//         height: cellHeight+(2*ySpacer),
-//         selectedBackgroundColor:"red"
-//     });
-//     for (var x=0; x<xGrid; x++){
-//         var thisView = Ti.UI.createView({
-//             objName:"grid-view",
-//             objIndex:cellIndex.toString(),
-//             backgroundColor: colorSet[colorSetIndex],
-//             left: ySpacer,
-//             height: cellHeight,
-//             width: cellWidth
-//         });
-//  
-//         var thisLabel = Ti.UI.createLabel({
-//             color:"white",
-//             font:{fontSize:48,fontWeight:'bold'},
-//             text:cellIndex.toString(),
-//             touchEnabled:false
-//         });
-//         thisView.add(thisLabel);
-//         thisRow.add(thisView);
-//         cellIndex++;
-//         colorSetIndex++;
-//  
-//         if( colorSetIndex === colorSet.length ){
-//             colorSetIndex = 0;
-//         }
-//     }
-//     tableData.push(thisRow);
-// }
+Grid = function(headerCb, cellCb, attrs) {
+	attrs = (attrs || {});
+	
+	var cellWidths = (attrs.cell_widths || [10])
+	, cellHeight = (attrs.cell_height || 10)
+	, headerHeight = (attrs.header_height || 'auto')
+	, xSpacer = (attrs.x_spacer || 0)
+	, ySpacer = (attrs.y_spacer || 0)
+	, xGrid = (attrs.columns || 1)
+	, yGrid = (attrs.rows || 1)
+	, tableData = []
+	, cellIndex = 0;
+ 
+for (var y=0; y<yGrid; y++){
+	var isHeader = (y < 1);
+	var height = isHeader ? headerHeight : cellHeight;
+	
+	var thisRow = Ti.UI.createTableViewRow({
+		className: "grid",
+		layout: "horizontal",
+		width: first(cellWidths),
+		height: (height == "auto") ? height : height+(2*ySpacer)
+	});
+
+   for (var x=0; x<xGrid; x++){
+		var width = cellWidths[x] || first(cellWidths);
+		
+		var thisView = Ti.UI.createView({
+			height: height,
+			width: width
+		});
+		
+		if(!x) thisView.left = ySpacer;
+		
+		thisRow.add(thisView);
+
+		var theCallback = isHeader ? headerCb : cellCb;
+		theCallback(thisView, {column_index: x, row_index: y});
+		
+		cellIndex++;
+   }
+
+   tableData.push(thisRow);
+}
+	
+	return tableData;
+}

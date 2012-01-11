@@ -59,7 +59,7 @@ Views.content.bone_cement = function(win) {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "High Viscosity",
+		title: "Ultra High Viscosity",
 		color:"black",
 		width: 225,
 		height: 50,

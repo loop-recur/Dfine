@@ -1,10 +1,7 @@
 Controllers.case_studies = (function() {
 	var Api = RestApi("case_studies");
 	
-	var getAll = function(cb){
-		log("in index!!!!!!");
-		Api.all(cb);
-	}
+	var getAll = Api.all;
 	
 	return {getAll : getAll}
 })();

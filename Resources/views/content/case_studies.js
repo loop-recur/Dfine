@@ -35,7 +35,6 @@ Views.content.case_studies = function(win) {
 	}
 	
 	var makeStudy = function(attrs) {
-
 		var study_view = Ti.UI.createView({
 			borderRadius:4,
 			borderColor: "#888888",
@@ -44,7 +43,8 @@ Views.content.case_studies = function(win) {
 			height: icon_height
 		});
 		
-		var path = (attrs.images.length > 0) ? first(attrs.images).url : "images/reveal_plus_sign.png";
+		var featured_pic = compose(first, filter('.featured'))(attrs.images);
+		var path = featured_pic ? featured_pic.url : first(attrs.images).url;
 
 		var image = Ti.UI.createImageView({
 			image: path,

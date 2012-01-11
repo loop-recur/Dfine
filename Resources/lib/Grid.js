@@ -19,7 +19,8 @@ for (var y=0; y<yGrid; y++){
 		className: "grid",
 		layout: "horizontal",
 		width: first(cellWidths),
-		height: (height == "auto") ? height : height+(2*ySpacer)
+		height: (height == "auto") ? height : height+(2*ySpacer),
+		selectionStyle:Ti.UI.iPhone.TableViewCellSelectionStyle.NONE
 	});
 
    for (var x=0; x<xGrid; x++){

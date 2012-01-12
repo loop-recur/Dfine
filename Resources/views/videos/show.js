@@ -1,4 +1,5 @@
-Views.videos.show = function(filename) {
+Views.videos.show = function(filename, attrs) {
+	attrs = attrs || {};
 
 	var win = Ti.UI.createWindow({
 		title: "Video",
@@ -20,6 +21,30 @@ Views.videos.show = function(filename) {
 		url: "/files/videos/"+filename,
 		height: "80%"
 	});
+	
+	var PlayerStopper = function(player, attrs) {
+		var intervalId;
+		
+		var checkToStop = function() {
+			if(player.currentPlaybackTime >= attrs.end) player.stop();
+		}
+		
+		var stop = function() {
+			clearInterval(intervalId);
+			back_button.fireEvent('click');
+		}
+		
+		var start = function() {
+			player.initialPlaybackTime = attrs.start;
+			intervalId = setInterval(checkToStop, 1000);
+		}
+		
+		player.addEventListener('playing', start);
+		
+		return {start : start}
+	}
+	
+	if(attrs.start) PlayerStopper(player, attrs).start();	
 	
 	back_button.addEventListener('click', function() {
 		player.stop();

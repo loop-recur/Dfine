@@ -32,6 +32,8 @@ Views.content.rf_energy = function(win) {
 		width:882,
 		top:90
 	});
+	
+	var main_image = ClickToExpand(main_image);
 
 	view.add(main_image);
 	
@@ -57,9 +59,9 @@ Views.content.rf_energy = function(win) {
 			visible:false
 		}, attrs));
 	}
-	
-	var hard_switch_cable_info = toggle_content_view({top:430, left:745});	
-	var hard_switch_cable = label_toggle_view({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:760});
+
+	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});	
+	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:760});
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
@@ -75,8 +77,8 @@ Views.content.rf_energy = function(win) {
 	
 	hard_switch_cable_info.add(hard_switch_bullets);
 	
-	var multiplex_controller_info = toggle_content_view({top:330, left:135});	
-	var multiplex_controller = label_toggle_view({text: "Multiplex Controller", top:300, left:150});
+	var multiplex_controller_info = UI.toggleableView({top:330, left:135});	
+	var multiplex_controller = UI.toggleableLabel({text: "Multiplex Controller", top:300, left:150});
 	ToggleSwitch(multiplex_controller, multiplex_controller_info);
 	view.add(multiplex_controller);
 	view.add(multiplex_controller_info);
@@ -93,8 +95,8 @@ Views.content.rf_energy = function(win) {
 	
 	multiplex_controller_info.add(multiplex_bullets);
 	
-	var activation_element_info = toggle_content_view({top:550, left:435});	
-	var activation_element = label_toggle_view({text: "Activation Element", top:530, left:450});
+	var activation_element_info = UI.toggleableView({top:550, left:435});	
+	var activation_element = UI.toggleableLabel({text: "Activation Element", top:530, left:450});
 	ToggleSwitch(activation_element, activation_element_info);
 	view.add(activation_element);
 	view.add(activation_element_info);	

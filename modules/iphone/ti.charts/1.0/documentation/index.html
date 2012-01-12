@@ -1,0 +1,258 @@
+<h1>charts Module</h1>
+
+<h2>Description</h2>
+
+<p>This module lets you create interactive charts and graphs with dynamic data updating capabilities. The following chart and graph types are supported:</p>
+
+<ul>
+<li>Line   </li>
+<li>Bar  </li>
+<li>Pie  </li>
+</ul>
+
+<h2>Getting Started</h2>
+
+<p>View the <a href="https://wiki.appcelerator.org/display/tis/Using+Titanium+Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+
+<h2>Accessing the charts Module</h2>
+
+<p>To access this module from JavaScript, you would do the following:</p>
+
+<pre>
+    var charts = require("ti.charts");
+</pre>
+
+<p>The charts variable is a reference to the Module object.    </p>
+
+<h2>Understanding Chart Components</h2>
+
+<p>A chart is composed of several components that are used to format the display of your data. Each of the following components can be customized to your specific charting needs:</p>
+
+<ul>
+<li>Chart View</li>
+<li>Plotting Area</li>
+<li>Axes</li>
+<li>Plotting Space</li>
+<li>Plots</li>
+</ul>
+
+<h3>Chart View</h3>
+
+<p>The Chart View is the central container for your charts and graphs. It is responsible for laying out and displaying the title, axes, and plots.</p>
+
+<h3>Plottting Area</h3>
+
+<p>The Plotting Area is the part of the chart where the data is plotted. It is typically bordered by the chart axes (for line and bar charts) and can contain major and minor gridlines.</p>
+
+<h3>Axes</h3>
+
+<p>The Axes describe the scale of the plot data that is in your plots. Each axis can display major and minor tick marks, labels, and a title.</p>
+
+<h3>Plotting Space</h3>
+
+<p>The Plotting Space defines the mapping between the coordinate space of the data and the drawing space of the plotting area. </p>
+
+<h3>Plots</h3>
+
+<p>The Plots are the visual representations of the data. Some plot types can be mixed to create a chart with multiple plots. For example, a line and a bar plot can be set in the same chart. A pie chart cannot be combined with any other plot type.</p>
+
+<h2>Module functions</h2>
+
+<h3>charts.createChart</h3>
+
+<p>This function creates the chart view object.</p>
+
+<h4>Arguments</h4>
+
+<p>Takes one argument, a dictionary with keys:</p>
+
+<p>(Parameters that are not specified will have default values assigned) </p>
+
+<ul>
+<li>All of the standard keys from Titanium.UI.View, such as: 
+<ul>
+<li>top </li>
+<li>bottom </li>
+<li>width </li>
+<li>height </li>
+<li>orientationModes </li>
+<li>backgroundColor </li>
+<li>etc. </li>
+</ul></li>
+<li>title[object]: title properties 
+<ul>
+<li>text[string]: title text </li>
+<li>color[string]: the color of the title </li>
+<li>font[object]: the title font object properties 
+<ul>
+<li>fontFamily[string]: the font family </li>
+<li>fontSize[string]: the font size </li>
+<li>fontWeight[string]: the font weight, either normal or bold </li>
+<li>fontStyle[string]: the font style, either normal or italics </li>
+</ul></li>
+<li>location[int]: the location of the title text 
+<ul>
+<li>charts.LOCATION_TOP </li>
+<li>charts.LOCATION_BOTTOM </li>
+<li>charts.LOCATION_LEFT </li>
+<li>charts.LOCATION_RIGHT </li>
+<li>charts.LOCATION_TOP<em>LEFT </li>
+<li>charts.LOCATION_TOP</em>RIGHT </li>
+<li>charts.LOCATION_BOTTOM<em>LEFT </li>
+<li>charts.LOCATION_BOTTOM</em>RIGHT </li>
+<li>charts.LOCATION_CENTER </li>
+</ul></li>
+<li>offset[object]: the offset object for the title 
+<ul>
+<li>x[float]: the offset in the x direction from the edge </li>
+<li>y[float]: the offset in the y direction from the edge </li>
+</ul></li>
+</ul></li>
+<li>padding[object]: the external padding between the view edge and the plot area 
+<ul>
+<li>top[float]: the padding at the top edge of the chart </li>
+<li>left[float]: the padding at the left edge of the chart </li>
+<li>right[float]: the padding at the right edge of the chart </li>
+<li>bottom[float]: the padding at the bottom edge of the chart </li>
+</ul></li>
+<li>plotArea[object]: the plot area object 
+<ul>
+<li>borderRadius[float]: the border radius for the plot area </li>
+<li>borderColor[string]: the border color for the plot area </li>
+<li>borderWidth[float]: the border width for the plot area </li>
+<li>borderOpacity[float]: the opacity from 0.0 - 1.0 </li>
+<li>padding[object]: the internal padding between the plot area and the graph 
+<ul>
+<li>top[float]: the padding at the top edge of the chart </li>
+<li>left[float]: the padding at the left edge of the chart </li>
+<li>right[float]: the padding at the right edge of the chart </li>
+<li>bottom[float]: the padding at the bottom edge of the chart </li>
+</ul></li>
+<li>backgroundColor[string]: the background color for the plot area </li>
+<li>backgroundGradient[object]: the background gradient for the plot area 
+startColor[string]: the starting color for the gradient 
+endColor[string]: the ending color for the gradient 
+angle[float]: the angle of the gradient in degrees </li>
+</ul></li>
+<li>theme[string]: the theme name containing default settings for the chart 
+<ul>
+<li>charts.THEME_DARK_GRADIENT </li>
+<li>charts.THEME_WHITE </li>
+<li>charts.THEME_BLACK </li>
+<li>charts.THEME_SLATE </li>
+<li>charts.THEME_STOCKS </li>
+</ul></li>
+<li>userInteraction[boolean]: true to enable user interaction with the chart, including:
+<ul>
+<li>allow pinch-zooming of the chart </li>
+<li>allow moving the chart within the plot area</li>
+</ul></li>
+<li>plotSpace[object]: the plot space object 
+<ul>
+<li>scaleToFit[boolean]: if true, the plotting space is automatically rescaled to fit the entire set of data </li>
+<li>expandRangeByFactor[float]: if 'scaleToFit' is true, the plotting space is expanded by this value to provide a customizable size for the data </li>
+</ul></li>
+<li>xAxis[object]: the X-axis definition object 
+<ul>
+<li>origin[float]: the point where this axis intersects the orthogonal axis </li>
+<li>lineColor[string]: the color of the axis line </li>
+<li>lineWidth[float]: the width of the axis line </li>
+<li>title[object]: the title for the axis
+<ul>
+<li>text[string]: title text </li>
+<li>color[string]: the color of the title </li>
+<li>font[object]: the title font object properties 
+<ul>
+<li>fontFamily[string]: the font family </li>
+<li>fontSize[string]: the font size </li>
+<li>fontWeight[string]: the font weight, either normal or bold </li>
+<li>fontStyle[string]: the font style, either normal or italics </li>
+</ul></li>
+<li>offset[object]: the offset object for the title 
+<ul>
+<li>x[float]: the offset in the x direction from the edge </li>
+<li>y[float]: the offset in the y direction from the edge </li>
+</ul></li>
+</ul></li>
+<li>majorTickInterval[float]: the interval of major ticks on the axis </li>
+<li>minorTickCount[float]: the number of minor ticks between each major tick </li>
+<li>majorTicks[object]: the formatting object for the major tick marks 
+<ul>
+<li>color[string]: the color of the tick mark </li>
+<li>width[float]: the width of the tick mark </li>
+<li>length[float]: the length of the tick mark </li>
+<li>opacity[float]: the opacity from 0.0 - 1.0 </li>
+</ul></li>
+<li>minorTicks[object]: the formatting object for the minor tick marks 
+<ul>
+<li>color[string]: the color of the tick mark </li>
+<li>width[float]: the width of the tick mark </li>
+<li>length[float]: the length of the tick mark </li>
+<li>opacity[float]: the opacity from 0.0 - 1.0 </li>
+</ul></li>
+<li>majorGridLines[object]: the formatting object for the major grid lines 
+<ul>
+<li>color[string]: the color of the grid line </li>
+<li>width[float]: the width of the grid line </li>
+<li>opacity[float]: the opacity from 0.0 - 1.0 </li>
+</ul></li>
+<li>minorGridLines[object]: the formatting object for the minor grid lines 
+<ul>
+<li>color[string]: the color of the grid line</li>
+<li>width[float]: the width of the grid line </li>
+<li>opacity[float]: the opacity from 0.0 - 1.0 </li>
+</ul></li>
+<li>labels[object]: the formatting object for the axis labels 
+<ul>
+<li>offset[float]: the offset from the axis </li>
+<li>angle[float]: the rotation angle for the label (in degrees) </li>
+<li>color[string]: the color of the label </li>
+<li>font[object]: the label font object properties 
+<ul>
+<li>fontFamily[string]: the font family </li>
+<li>fontSize[string]: the font size </li>
+<li>fontWeight[string]: the font weight, either normal or bold </li>
+<li>fontStyle[string]: the font style, either normal or italics       </li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li>yAxis[object]: the Y-axis definition object 
+<ul>
+<li>(same properties as the xAxis)</li>
+</ul></li>
+</ul>
+
+<h4>Plots</h4>
+
+<p>Once the chart view object is created, plots can be added and removed from the chart. See <a href="chart.html">Chart</a> for details.</p>
+
+<h2>Using this module</h2>
+
+<ul>
+<li>Put the module zip file into the root folder of your Titanium application. </li>
+<li>Set the <code>&lt;module&gt;</code> element in tiapp.xml, such as this: 
+<modules> 
+    <module version="1.0">ti.charts</module> 
+</modules> </li>
+</ul>
+
+<h2>Usage</h2>
+
+<p>See the app.js file in the example folder of the module folder.</p>
+
+<h2>Author</h2>
+
+<p>Jeff English</p>
+
+<h2>Module History</h2>
+
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+
+<h2>Feedback and Support</h2>
+
+<p>Please direct all questions, feedback, and concerns to <a href="mailto:info@appcelerator.com?subject=iOS%20Charts%20Module">info@appcelerator.com</a>.</p>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2011 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

@@ -1,6 +1,10 @@
 FileList = [
 	"helpers/application.js"
+	, "ui/factories.js"
+	, "ui/back_button.js"
 	, "ui/button_group.js"
+	, "ui/chart.js"
+	, "ui/click_to_expand.js"
 	, "ui/toggle_switch.js"
 	, "ui/slideshow.js"
 	, "helpers/ui.js"

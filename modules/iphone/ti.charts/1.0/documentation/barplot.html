@@ -1,0 +1,77 @@
+<h1>Chart Object</h1>
+
+<p>The createChart function creates a chart view object. The object has functions and properties that allow you to control the plots that are rendered in the chart.</p>
+
+<pre>
+    var chart = charts.createChart({ ... });
+</pre>
+
+<h2>Functions</h2>
+
+<h3>createBarPlot</h3>
+
+<p>This function creates a new bar plot object and adds it to the chart.</p>
+
+<h4>Arguments</h4>
+
+<p>Take one argument, a dictionary with keys:</p>
+
+<p>(Parameters that are not specified will have default values assigned)</p>
+
+<ul>
+<li>name[string]: name that identifies the plot </li>
+<li>lineColor[string]: the color of the line bordering the bar  </li>
+<li>lineWidth[float]: the width of the line bordering the bar </li>
+<li>lineOpacity[float]: the opacity of the line from 0.0 - 1.0 </li>
+<li>fillColor[string]: the color to fill the bar </li>
+<li>fillGradient[object]: the gradient to fill the bar <br />
+startColor[string]: the starting color for the gradient 
+endColor[string]: the ending color for the gradient 
+angle[float]: the angle of the gradient in degrees </li>
+<li>fillOpacity[float]: the opacity from 0.0 - 1.0 </li>
+<li>barDirection[int]: the direction of the bars 
+<ul>
+<li>charts.DIRECTION_VERTICAL </li>
+<li>charts.DIRECTION_HORIZONTAL</li>
+</ul></li>
+<li>barWidth[float]: the width of each bar </li>
+<li>barOffset[float]: the offset of each bar </li>
+<li>barCornerRadius[float]: the radius of the edge of the bar </li>
+<li>labels[object]: the formatting object for the labels 
+<ul>
+<li>offset[float]: the offset from the bar</li>
+<li>angle[float]: the rotation angle for the label (in degrees) </li>
+<li>color[string]: the color of the label </li>
+<li>font[object]: the label font object properties 
+<ul>
+<li>fontFamily[string]: the font family </li>
+<li>fontSize[string]: the font size </li>
+<li>fontWeight[string]: the font weight, either normal or bold </li>
+<li>fontStyle[string]: the font style, either normal or italics       </li>
+</ul></li>
+</ul></li>
+<li>data[array]: the data for the plot. Can be either an array of float values, an array of dictionary values, or a combination of both. If dictionary values are included in the data array you must specify the 'dataKey' parameter. </li>
+<li>dataKey[string]: the name of the key in each data item </li>
+</ul>
+
+<h3>dataClickedEvent</h3>
+
+<p>If 'userInteraction' is enabled on the chart, then a 'dataClicked' event is fired when the user clicks on a bar on the plot.</p>
+
+<h4>Properties</h4>
+
+<ul>
+<li>name[string]: the name of the bar plot </li>
+<li>index[int]: the index of the point in the data array </li>
+<li>value[float]: the data value for the point</li>
+</ul>
+
+<pre>
+    barPlot.addEventListener('dataClicked',function(e) { 
+        Ti.API.info('line ' + e.name + ' clicked: index= ' + e.index + ' value= ' + e.value);  
+    });
+</pre>
+
+<h2>License</h2>
+
+<p>Copyright(c) 2010-2011 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

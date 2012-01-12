@@ -37,6 +37,21 @@ Views.content.reduced_extravasion = function(win) {
 		height:'auto',
 		textAlign:"center"
 	});
+	
+	var toggle_label = UI.toggleableLabel({
+		bottom: 10,
+		right:50,
+		text: "My Label 1"
+	});
+	
+	var toggle_view = UI.toggleableView({
+		bottom: 60,
+		right:90
+	});
+	
+	ToggleSwitch(toggle_label, toggle_view);
+	view.add(toggle_label);
+	view.add(toggle_view);
 
 	view.add(label);
 	view.add(image);

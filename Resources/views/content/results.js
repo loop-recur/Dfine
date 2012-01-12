@@ -82,12 +82,16 @@ Views.content.results = function(win) {
 	}
 	
 	table.addEventListener('click', function(e){
-		App.swapView(view, getContent(e.source.id));
+		view.opacity = 0;
 		animateArrow(e.index);
+		setTimeout(function(){
+			App.swapView(view, getContent(e.source.id));
+			view.animate({opacity: 1, duration: 150});
+		}, 500);
 	});
 	
 	first(rows).fireEvent('click');
-		
+
 	win.add(view);
 	win.add(nav);
 }

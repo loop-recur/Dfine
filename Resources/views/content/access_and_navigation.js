@@ -55,7 +55,9 @@ Views.content.access_and_navigation = function(win) {
 		width:188,
 		top:230,
 		left:200
-	})
+	});
+	
+	var xray = ClickToExpand(xray);
 	
 	var tool1 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool1.png",
@@ -63,7 +65,9 @@ Views.content.access_and_navigation = function(win) {
 		width:234,
 		top:200,
 		left:450
-	})
+	});
+	
+	var tool1 = ClickToExpand(tool1);
 	
 	var tool2 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool2.png",
@@ -71,14 +75,14 @@ Views.content.access_and_navigation = function(win) {
 		width:265,
 		top:290,
 		left:600
-	})
+	});
+	
+	var tool2 = ClickToExpand(tool2);
 	
 	view.add(xray);
 	view.add(tool1);
 	view.add(tool2);
 	
-	
-
 	view.add(Views.content.tech_nav(view));
 	win.add(view);
 }

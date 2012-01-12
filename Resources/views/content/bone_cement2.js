@@ -43,12 +43,16 @@ Views.content.bone_cement2 = function(win) {
 		left: 90
 	});
 	
+	var left_image = ClickToExpand(left_image);
+	
 	var right_image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/midlifeCement2_transparent.png",
 		height:275,
 		width:375,
 		right:140
 	});
+	
+	var right_image = ClickToExpand(right_image);
 	
 	view.add(left_image);
 	view.add(right_image);

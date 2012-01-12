@@ -69,7 +69,7 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('1115.mp4', {start: 14, end: 21});
+		Controllers.content.video('1115.mp4');
 	});
 	
 	view.add(video);

@@ -5,9 +5,9 @@ Views.content.cost = function(win) {
 
 	var label = Ti.UI.createLabel({
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:30,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:34,fontWeight:'regular'},
 		color:"#023f66",
-		width:800,
+		width:'auto',
 		top:40,
 		left:30,
 		height:'auto'
@@ -15,11 +15,11 @@ Views.content.cost = function(win) {
 	
 	var label2 = Ti.UI.createLabel({
 		text: "- StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular', fontStyle:"italic"},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:18,fontWeight:'italic'},
 		color:"#023f66",
-		width:800,
-		top:110,
-		left:30,
+		width:'auto',
+		top:80,
+		left:40,
 		height:'auto'
 	});
 	

@@ -6,21 +6,21 @@ Views.content.bone_cement = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:40,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
-		left:280,
+		left:240,
 		height:'auto'
 	});
 	
 	var label2 = Ti.UI.createLabel({
 		text: "- Unmatched viscosity and working time",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
 		color:"#023f66",
 		width:'auto',
 		top:80,
-		left:280,
+		left:250,
 		height:'auto'
 	});
 	

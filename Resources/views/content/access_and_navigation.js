@@ -5,21 +5,21 @@ Views.content.access_and_navigation = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "VertecoR ® Navigational MidLine Osteotome",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
-		left:280,
+		left:240,
 		height:'auto'
 	});
 	
 	var label2 = Ti.UI.createLabel({
 		text: "Enables targeted cavity creation",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
 		color:"#023f66",
 		width:'auto',
-		top:70,
-		left:280,
+		top:80,
+		left:250,
 		height:'auto'
 	});
 	

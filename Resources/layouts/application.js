@@ -47,6 +47,6 @@ Layouts.application = function(delegate) {
 
 	win.add(main_content);
 	win.add(nav);
-	win.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
+	win.open();
 	delegate.root(main_content);
 }

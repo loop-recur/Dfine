@@ -5,7 +5,7 @@ Views.content.cost = function(win) {
 
 	var label = Ti.UI.createLabel({
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",
-		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:30,fontWeight:'regular'},
 		color:"#023f66",
 		width:800,
 		top:40,
@@ -14,8 +14,8 @@ Views.content.cost = function(win) {
 	});
 	
 	var label2 = Ti.UI.createLabel({
-		text: "StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		text: "- StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular', fontStyle:"italic"},
 		color:"#023f66",
 		width:800,
 		top:110,
@@ -25,18 +25,20 @@ Views.content.cost = function(win) {
 	
 	var cost = Ti.UI.createView({
 		backgroundImage:"images/cost/cost.png",
-		height:244,
-		width:453,
-		top:300
+		height:430,
+		width:798,
+		left:80,
+		top:190
 	})
 
 
 	var bottom_note = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
-		font:{fontFamily:'Helvetica-Light',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
-		width:600,
-		bottom:50,
+		width:790,
+		bottom:88,
+		left:85,
 		height:'auto'
 	});
 

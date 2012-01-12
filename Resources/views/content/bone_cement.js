@@ -6,7 +6,7 @@ Views.content.bone_cement = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement",
-		font:{fontFamily:'Helvetica-Light',fontSize:40,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:40,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -16,7 +16,7 @@ Views.content.bone_cement = function(win) {
 	
 	var label2 = Ti.UI.createLabel({
 		text: "- Unmatched viscosity and working time",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:80,
@@ -60,6 +60,7 @@ Views.content.bone_cement = function(win) {
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "Ultra High Viscosity",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
 		width: 225,
 		height: 50,
@@ -76,7 +77,7 @@ Views.content.bone_cement = function(win) {
 	
 	var foot_note = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",
-		font:{fontFamily:'Helvetica-Light',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:500,
 		bottom:180,

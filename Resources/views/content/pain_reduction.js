@@ -5,7 +5,7 @@ Views.content.pain_reduction = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "Pain reduction",
-		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -15,25 +15,25 @@ Views.content.pain_reduction = function(win) {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results_page1_significant_pain.png",
-		top:200,
+		top:100,
 		width:722,
 		height:285,
 	})
 	
 	var content = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement fills the pathways created by the VertecoR MidLine Osteotome to ensure targeted delivery and interdigitation throughout the vertebra, potentially resulting in a safer and more effective vertebral augmentation.",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'bold'},
 		width:650,
-		bottom:200,
+		bottom:300,
 		height:'auto',
 		textAlign:"center"
 	});
 	
 	var bullets = Ti.UI.createLabel({
 		text: "• 66 RF-TVA procedures were performed between December 2008 and May 2009 \n• A standard 10-point visual analog scale (VAS) was utilized to assess back pain pre- and post-operatively \n• Pain medication use and activities were defined and monitored for changes \n• Significant improvement in pain, activity, and narcotic use was observed at 6 months",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
-		width:700,
-		bottom:100,
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
+		width:650,
+		bottom:160,
 		height:'auto',
 		textAlign:"center"
 	});

@@ -5,21 +5,21 @@ Views.content.rf_energy = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "MultiPlex Controller and Activation Element",
-		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
-		left:280,
+		left:240,
 		height:'auto'
 	});
 	
 	var label2 = Ti.UI.createLabel({
-		text: "Best-in-class RF Technology",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		text: "- Best-in-class RF Technology",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
 		color:"#023f66",
 		width:'auto',
-		top:70,
-		left:280,
+		top:80,
+		left:250,
 		height:'auto'
 	});
 	
@@ -27,10 +27,10 @@ Views.content.rf_energy = function(win) {
 	view.add(label2);
 	
 	var main_image = Ti.UI.createView({
-		backgroundImage:"images/technology/rf/closed_tabs_system_image.png",
-		height:375,
-		width:475,
-		top: 250
+		backgroundImage:"images/technology/rf/363.png",
+		height:550,
+		width:882,
+		top:90
 	});
 
 	view.add(main_image);
@@ -38,7 +38,7 @@ Views.content.rf_energy = function(win) {
 	// example of view factories
 	var label_toggle_view = function(attrs) {
 		return Ti.UI.createLabel(merge({
-			font:{fontFamily:'Helvetica-Light',fontSize:17,fontWeight:'regular'},
+			font:{fontFamily:'Helvetica LT CondensedLight',fontSize:22,fontWeight:'regular'},
 			color:"#023f66",
 			width:'auto',
 			top:400,
@@ -50,7 +50,7 @@ Views.content.rf_energy = function(win) {
 	var toggle_content_view = function(attrs) {
 		return Ti.UI.createView(merge({
 			backgroundColor:"#EDEDED",
-			height:220,
+			height:'auto',
 			width:180,
 			top: 450,
 			left:130,
@@ -58,15 +58,15 @@ Views.content.rf_energy = function(win) {
 		}, attrs));
 	}
 	
-	var hard_switch_cable_info = toggle_content_view({top:430, left:145});	
-	var hard_switch_cable = label_toggle_view({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:160});
+	var hard_switch_cable_info = toggle_content_view({top:430, left:745});	
+	var hard_switch_cable = label_toggle_view({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:760});
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
 	
 	var hard_switch_bullets = Ti.UI.createLabel({
 		text: "Enables physician to control application of RF energy from up to 10 feet away from the radiation source.",
-		font:{fontFamily:'Helvetica-Light',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:170,
 		top:2,
@@ -75,32 +75,33 @@ Views.content.rf_energy = function(win) {
 	
 	hard_switch_cable_info.add(hard_switch_bullets);
 	
-	var multiplex_controller_info = toggle_content_view({top:260, left:555});	
-	var multiplex_controller = label_toggle_view({text: "Multiplex Controller", top:230, left:570});
+	var multiplex_controller_info = toggle_content_view({top:330, left:135});	
+	var multiplex_controller = label_toggle_view({text: "Multiplex Controller", top:300, left:150});
 	ToggleSwitch(multiplex_controller, multiplex_controller_info);
 	view.add(multiplex_controller);
 	view.add(multiplex_controller_info);
 	
 	var multiplex_bullets = Ti.UI.createLabel({
 		text: "Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n Maintains viscosity of cement at consistent level throughout the procedure. \nHydraulic system allows for consistent injection of bone cement.",
-		font:{fontFamily:'Helvetica-Light',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:170,
 		top:2,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	multiplex_controller_info.add(multiplex_bullets);
 	
-	var activation_element_info = toggle_content_view({top:510, left:685});	
-	var activation_element = label_toggle_view({text: "Activation Element", top:480, left:700});
+	var activation_element_info = toggle_content_view({top:550, left:435});	
+	var activation_element = label_toggle_view({text: "Activation Element", top:530, left:450});
 	ToggleSwitch(activation_element, activation_element_info);
 	view.add(activation_element);
 	view.add(activation_element_info);	
 	
 	var activation_bullets = Ti.UI.createLabel({
 		text: "Applies RF energy to bone cement thus increasing its viscosity.",
-		font:{fontFamily:'Helvetica-Light',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:170,
 		top:2,
@@ -111,13 +112,13 @@ Views.content.rf_energy = function(win) {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Activation Element 2",
+		title: "Activation Element",
 		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 225,
 		height: 50,
-		bottom:70,
-		right:200
+		bottom:40,
+		right:370
 	});
 	
 	video.addEventListener('click', function(){
@@ -133,8 +134,8 @@ Views.content.rf_energy = function(win) {
 		color:"black",
 		width: 225,
 		height: 50,
-		bottom:70,
-		right:200
+		bottom:40,
+		right:100
 	});
 	
 	video2.addEventListener('click', function(){

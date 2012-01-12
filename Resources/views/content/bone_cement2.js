@@ -6,7 +6,7 @@ Views.content.bone_cement2 = function(win) {
 	
 	var label = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement",
-		font:{fontFamily:'Helvetica-Light',fontSize:40,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:40,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -16,7 +16,7 @@ Views.content.bone_cement2 = function(win) {
 	
 	var label2 = Ti.UI.createLabel({
 		text: "- consistent interdigitation throughout the vertebra",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:80,

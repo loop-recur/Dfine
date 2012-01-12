@@ -18,22 +18,24 @@ Views.content.reimbursment = function(win) {
 	
 	var left_label = Ti.UI.createLabel({
 		text: "Vertebral Augmentation Coding: Effective October 1, 2008 (ICD-9 CM 2010 Volumes 1 & 2)",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:25,fontWeight:'regular'},
 		color:"#023f66",
 		width:400,
-		top:40,
+		top:100,
 		left:30,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	var right_label2 = Ti.UI.createLabel({
 		text: "CPT codes and corresponding APC codes for vertebral augmentation",
-		font:{fontFamily:'Helvetica-Light',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:25,fontWeight:'regular'},
 		color:"#023f66",
 		width:400,
-		top:40,
+		top:100,
 		left:500,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	view.add(left_label);
@@ -42,31 +44,34 @@ Views.content.reimbursment = function(win) {
 
 	var left_footnote = Ti.UI.createLabel({
 		text: "Product specific terms given as examples that were commercially available at the time of publication.",
-		font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
-		width:400,
-		top:620,
+		width:420,
+		top:470,
 		left:30,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	var right_footnote = Ti.UI.createLabel({
 		text: "The reimbursement language herein replaces previously used terms, including, but not limited to, kyphoplasty reimbursement, kyphoplasty ICD 9 code, and kyphoplasty CPT code.",
-		font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
-		width:400,
-		top:620,
+		width:420,
+		top:470,
 		left:500,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	var make_cell_view = function(data, cell, e) {
 		var label = Ti.UI.createLabel({
 			text: data[e.row_index][e.column_index],
-			font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'regular'},
+			font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
 			color:"#023f66",
 			height:'auto',
-			width:'auto'
+			width:'auto',
+			textAlign:"center"
 		});
 
 		cell.add(label);
@@ -75,10 +80,11 @@ Views.content.reimbursment = function(win) {
 	var make_header_view = function(data, cell, e) {
 		var label = Ti.UI.createLabel({
 			text: data[e.row_index][e.column_index],
-			font:{fontFamily:'Helvetica-Light',fontSize:12,fontWeight:'bold'},
+			font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'bold'},
 			color:"black",
 			height:'auto',
-			width:'auto'
+			width:'auto',
+			textAlign:"center"
 		});
 		
 		cell.add(label);
@@ -93,6 +99,7 @@ Views.content.reimbursment = function(win) {
 	
 	var table1 = Ti.UI.createTableView({
 		left: 10,
+		top:214,
 		data:table1_rows,
 		backgroundColor:"#E6EAED",
 		borderColor: "#C7C8CC",
@@ -110,6 +117,7 @@ Views.content.reimbursment = function(win) {
 	
 	var table2 = Ti.UI.createTableView({
 		right: 100,
+		top:214,
 		data:table2_rows,
 		backgroundColor:"#E6EAED",
 		borderColor: "#C7C8CC",

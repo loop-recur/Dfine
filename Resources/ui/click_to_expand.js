@@ -1,6 +1,7 @@
 ClickToExpand = function(image_view) {
 	var image = (image_view.image || image_view.backgroundImage);
-	
+
+	// There's a height: 70% that dictates the initial size
 	var getPage = function() {
 		return '<html> \
 		<head> \
@@ -11,7 +12,7 @@ ClickToExpand = function(image_view) {
 		</body> \
 		</html>'
 	}
-		
+
 	var expand = Ti.UI.createButton({
 		backgroundImage: "images/fullscreen_icon.png",
 		width: 20,
@@ -25,12 +26,12 @@ ClickToExpand = function(image_view) {
 	
 	var expandView = function() {
 		var win = Ti.UI.createWindow({backgroundColor: "#ffffff"});
-		
+
 		var webview = Ti.UI.createWebView({
-       scalesPageToFit: true,
-			 top: 0,
-			 html: getPage()
-    });
+			scalesPageToFit: true,
+			top: 0,
+			html: getPage()
+		});
 		
 		win.add(webview);
 		win.add(UI.BackButton(win));

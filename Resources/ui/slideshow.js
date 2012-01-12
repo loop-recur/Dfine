@@ -2,21 +2,6 @@ UI.slideshow = function(images) {
 	var bottom_views = [];
 	var currentImageIndex = 0;
 	var win = Ti.UI.createWindow({backgroundColor: "#000000"});
-	
-	var makeBackButton = function(w) {
-		var back = Ti.UI.createButton({
-			title: "(X)",
-			top: 10,
-			right: 10,
-			width: 40,
-			height: 40
-		});
-		
-		back.addEventListener('click', function(){
-			w.close();
-		});
-		return back;
-	}
 
 	var cover_view = Ti.UI.createView({
 		height: "80%",
@@ -167,7 +152,7 @@ UI.slideshow = function(images) {
 	
 	var openMainImage = function() {
 		var image_win = Ti.UI.createWindow({backgroundColor: "#000000"});
-		var back = makeBackButton(image_win);
+		var back = UI.BackButton(image_win);
 		var image = images[currentImageIndex];
 
 		var image_view = Ti.UI.createImageView({
@@ -201,7 +186,7 @@ UI.slideshow = function(images) {
 	
 	last(bottom_views).addEventListener("load", addClickHandlers);
 	
-	var back = makeBackButton(win);
+	var back = UI.BackButton(win);
 	
 	cover_view.add(main_image_view);
 	cover_view.add(previous_image_view);

@@ -75,11 +75,6 @@ Views.content.results = function(win) {
 	
 	nav.add(table);
 	nav.add(arrow);
-
-	var label = Ti.UI.createLabel({
-		text: "Hello Results",
-		left: 20
-	});
 	
 	var animateArrow = function(index) {
 		var position = index ? (index * arrow_top) : 0;
@@ -92,8 +87,7 @@ Views.content.results = function(win) {
 	});
 	
 	first(rows).fireEvent('click');
-		
-	view.add(label);
+
 	win.add(view);
 	win.add(nav);
 }

@@ -156,9 +156,21 @@ keys = function(obj) {
 	return omap(function(key, value){return key}, obj);
 }
 
+isArray = function(obj) {
+	return obj.constructor == Array;
+}
+
+isObj = function(obj) {
+	return (typeof obj == "object" && !isArray(obj));
+}
+
 merge = function(x,y) {
 	for(property in y) {
-		if(y[property]) x[property] = y[property];
+		if(isObj(y[property])) {
+			merge(x[property], y[property]);
+		}  else {
+			if(y[property]) x[property] = y[property];
+		}
 	}
 	return x;
 }

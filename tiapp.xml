@@ -34,5 +34,7 @@
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
-    <modules/>
+    <modules>
+			<module platform="iphone" version="1.0">ti.charts</module>
+		</modules>
 </ti:app>

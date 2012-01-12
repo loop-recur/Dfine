@@ -32,34 +32,13 @@ Views.content.rf_energy = function(win) {
 		width:475,
 		top: 250
 	});
+	
+	var main_image = ClickToExpand(main_image);
 
 	view.add(main_image);
 	
-	// example of view factories
-	var label_toggle_view = function(attrs) {
-		return Ti.UI.createLabel(merge({
-			font:{fontFamily:'Helvetica-Light',fontSize:17,fontWeight:'regular'},
-			color:"#023f66",
-			width:'auto',
-			top:400,
-			left:130,
-			height:'auto'
-		}, attrs));
-	}
-
-	var toggle_content_view = function(attrs) {
-		return Ti.UI.createView(merge({
-			backgroundColor:"#EDEDED",
-			height:220,
-			width:180,
-			top: 450,
-			left:130,
-			visible:false
-		}, attrs));
-	}
-	
-	var hard_switch_cable_info = toggle_content_view({top:430, left:145});	
-	var hard_switch_cable = label_toggle_view({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:160});
+	var hard_switch_cable_info = UI.toggleableView({top:430, left:145});	
+	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:160});
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
 	view.add(hard_switch_cable_info);
@@ -75,8 +54,8 @@ Views.content.rf_energy = function(win) {
 	
 	hard_switch_cable_info.add(hard_switch_bullets);
 	
-	var multiplex_controller_info = toggle_content_view({top:260, left:555});	
-	var multiplex_controller = label_toggle_view({text: "Multiplex Controller", top:230, left:570});
+	var multiplex_controller_info = UI.toggleableView({top:260, left:555});	
+	var multiplex_controller = UI.toggleableLabel({text: "Multiplex Controller", top:230, left:570});
 	ToggleSwitch(multiplex_controller, multiplex_controller_info);
 	view.add(multiplex_controller);
 	view.add(multiplex_controller_info);
@@ -92,8 +71,8 @@ Views.content.rf_energy = function(win) {
 	
 	multiplex_controller_info.add(multiplex_bullets);
 	
-	var activation_element_info = toggle_content_view({top:510, left:685});	
-	var activation_element = label_toggle_view({text: "Activation Element", top:480, left:700});
+	var activation_element_info = UI.toggleableView({top:510, left:685});	
+	var activation_element = UI.toggleableLabel({text: "Activation Element", top:480, left:700});
 	ToggleSwitch(activation_element, activation_element_info);
 	view.add(activation_element);
 	view.add(activation_element_info);	

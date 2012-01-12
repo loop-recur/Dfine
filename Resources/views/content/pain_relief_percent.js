@@ -5,7 +5,7 @@ Views.content.pain_relief_percent = function(win) {
 
 	var label = Ti.UI.createLabel({
 		text: "Pain Relief Percent",
-		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -15,25 +15,25 @@ Views.content.pain_relief_percent = function(win) {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results_page3_percent_patients.png",
-		top:200,
+		top:80,
 		width:722,
 		height:285,
 	})
 	
 	var content = Ti.UI.createLabel({
 		text: "93% of patients had complete or moderate pain relief.(2)",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'bold'},
 		width:650,
-		bottom:200,
+		bottom:380,
 		height:'auto',
 		textAlign:"center"
 	});
 	
 	var bullets = Ti.UI.createLabel({
 		text: "•68 levels treated with RF-TVA \n• 93% of patients had complete or moderate pain relief (>50% reduction of pre-op score) (2) \n• 94% of procedures were unipedicular \n• 90% of patients had no extravasation(2) \n• Extravasation was clinically insignificant(2)",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
-		width:700,
-		bottom:100,
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
+		width:650,
+		bottom:250,
 		height:'auto',
 		textAlign:"center"
 	});

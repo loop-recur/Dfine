@@ -5,7 +5,7 @@ Views.content.visual_analog = function(win) {
 
 	var label = Ti.UI.createLabel({
 		text: "Visual Analog",
-		font:{fontFamily:'Helvetica-Light',fontSize:28,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
 		top:40,
@@ -15,25 +15,25 @@ Views.content.visual_analog = function(win) {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results_page2_visual_analog.png",
-		top:200,
+		top:100,
 		width:722,
 		height:285,
 	})
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.(1)",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'bold'},
 		width:650,
-		bottom:200,
+		bottom:330,
 		height:'auto',
 		textAlign:"center"
 	});
 	
 	var bullets = Ti.UI.createLabel({
 		text: "•63 patients underwent RF-TVA to treat 116 osteolytic vertebral compression fractures \n•Median pain (VAS) and Oswestry (disability) scores improved significantly post treatment and continued to maintain improved levels at 3 and 6 months(1)",
-		font:{fontFamily:'Helvetica-Light',fontSize:15,fontWeight:'regular'},
-		width:700,
-		bottom:100,
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
+		width:650,
+		bottom:230,
 		height:'auto',
 		textAlign:"center"
 	});

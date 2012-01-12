@@ -3,16 +3,21 @@ Views.content.technology = function(win) {
 		backgroundImage: "images/page_bg.png"
 	});
 	
+	var center_content = Ti.UI.createView({
+		width:964,
+		left:0
+	}); 
+	
 	var label = Ti.UI.createLabel({
 		text: "Interventional Technology Platform",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:40,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:46,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
-		top:40,
+		top:50,
 		height:'auto'
 	});
 	
-	view.add(label);
+	center_content.add(label);
 	
 	var nav_view = Ti.UI.createView({
 		height:430,
@@ -74,8 +79,8 @@ Views.content.technology = function(win) {
 		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:200,
-		top:300,
-		left:700,
+		top:160,
+		left:570,
 		height:'auto'
 	});
 	
@@ -85,7 +90,7 @@ Views.content.technology = function(win) {
 		color:"#023f66",
 		width:200,
 		top:575,
-		left:300,
+		left:220,
 		height:'auto'
 	});
 	
@@ -94,7 +99,7 @@ Views.content.technology = function(win) {
 		font:{fontFamily:'Helvetica',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
 		width:200,
-		left:600,
+		left:620,
 		top:575,
 		height:'auto'
 	});
@@ -108,11 +113,13 @@ Views.content.technology = function(win) {
 		height:'auto'
 	});
 	
-	view.add(access_sub);
-	view.add(rf_sub);
-	view.add(bone_sub);
-	view.add(patents);
-	view.add(nav_view);
-		
+	center_content.add(access_sub);
+	center_content.add(rf_sub);
+	center_content.add(bone_sub);
+	center_content.add(patents);
+	center_content.add(nav_view);
+	
+	view.add(center_content);
+	
 	win.add(view);
 }

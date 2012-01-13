@@ -4,8 +4,28 @@ Views.content.bone_cement = function(win) {
 		backgroundImage:"images/page_bg.png"
 	});
 	
+	var copyright = Ti.UI.createLabel({
+		text: "®",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		height:'auto',
+		top:40,
+		left:335
+	});
+	
+	var two = Ti.UI.createLabel({
+		text: "2",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		height:'auto',
+		top:40,
+		left:385
+	});
+	
 	var label = Ti.UI.createLabel({
-		text: "StabiliT® ER2 Bone Cement",
+		text: "StabiliT  ER  Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -26,6 +46,8 @@ Views.content.bone_cement = function(win) {
 	
 	view.add(label);
 	view.add(label2);
+	view.add(copyright);
+	view.add(two);
 	
 	var logo = Ti.UI.createView({
 		backgroundImage:"images/dfine_logo.png",

@@ -22,7 +22,8 @@ Layouts.application = function(delegate) {
 		backgroundImage: "images/closed_tab_page_bg.png",
 		width: 1024,
 		height: 768,
-		left:0
+		left:0,
+		zIndex: 20
 	});
 	
 	var cover_image_image = Ti.UI.createView({
@@ -64,18 +65,23 @@ Layouts.application = function(delegate) {
 	cover_image.add(video);
 	
 	var main_content = Ti.UI.createView({
-		backgroundImage:'images/main_bg.png',
+		backgroundImage:'images/main_bg.png'
 	});
 	
-	main_window_view.addEventListener("swipe", function(e) {
-		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
-			main_window_view.remove(cover_view);
+	var addOpenListener = function() {
+		cover_view.addEventListener("swipe", function(e) {
+			main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
+				main_window_view.remove(cover_view);
+			});
+			first(tabButtons).fireEvent('click');
 		});
-		first(tabButtons).fireEvent('click');
-	});
+	}
 	
+	addOpenListener();
+		
 	main_content.addEventListener('backToCover', function() {
 		main_window_view.add(cover_view);
+		addOpenListener();
 		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
 	});
 	

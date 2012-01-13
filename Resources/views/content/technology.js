@@ -22,8 +22,18 @@ Views.content.technology = function(win) {
 		left:0
 	});
 	
+	var copyright = Ti.UI.createLabel({
+		text: "®",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:19,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		height:'auto',
+		top:50,
+		left:335
+	});
+	
 	var label = Ti.UI.createLabel({
-		text: "StabiliT(R) System Technology Platform",
+		text: "StabiliT  System Technology Platform",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:46,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -32,6 +42,7 @@ Views.content.technology = function(win) {
 	});
 	
 	center_content.add(label);
+	center_content.add(copyright);
 	
 	var nav_view = Ti.UI.createView({
 		height:430,

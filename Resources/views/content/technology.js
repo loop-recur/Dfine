@@ -3,12 +3,19 @@ Views.content.technology = function(win) {
 		backgroundImage: "images/page_bg.png"
 	});
 	
-	// var superSub = UI.superSub("This isn't going to work", "123", {
-	// 	top: 120,
-	// 	left: 240
-	// });
-	// 
-	// view.add(superSub);
+	var back_to_cover = Ti.UI.createButton({
+		backgroundImage:"images/page_back_button.png",
+		title: "Back to cover",
+		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'bold'},
+		color:"black",
+		width: 200,
+		height: 50,
+		left:20
+	});
+	
+	back_to_cover.addEventListener("click", function(e) {
+		win.fireEvent('backToCover');
+	});
 	
 	var center_content = Ti.UI.createView({
 		width:964,
@@ -135,6 +142,7 @@ Views.content.technology = function(win) {
 	center_content.add(nav_view);
 	
 	view.add(center_content);
+	view.add(back_to_cover);
 	
 	win.add(view);
 }

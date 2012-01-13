@@ -11,6 +11,15 @@ Views.content.case_studies = function(win) {
 	
 	var view = makeView();
 	
+	var spinner = Ti.UI.createActivityIndicator({
+		style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
+		height:30,
+		width:30
+	});
+
+	view.add(spinner);
+	spinner.show();
+	
 	var makeBullet = function(view, state, point) {
 		var dot = Ti.UI.createView({
 			left: 210,

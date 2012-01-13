@@ -1,20 +1,27 @@
-Layouts.application = function(delegate) {	
+Layouts.application = function(delegate) {
+	var tabButtons;
+	
 	var win = Ti.UI.createWindow({
 		backgroundImage:'images/main_bg.png',
 		orientationModes:[Ti.UI.LANDSCAPE_LEFT]
 	});
+		
+	var main_window_view = Ti.UI.createView({
+		left:0,
+		width:964,
+		height: "100%"
+	});
 	
 	var cover_view = Ti.UI.createView({
-		zIndex: 99,
 		width: "100%",
-		height: "100%",
-		name: "cover_view"
+		height: "100%"
 	});
 	
 	var cover_image = Ti.UI.createView({
 		backgroundImage: "images/closed_tab_page_bg.png",
 		width: 1024,
-		height: 768
+		height: 768,
+		right:0
 	});
 	
 	var cover_image_image = Ti.UI.createView({
@@ -50,43 +57,23 @@ Layouts.application = function(delegate) {
 		Controllers.content.video('PML2775.mp4');
 	});
 	
-	
-	
 	cover_view.add(cover_image);
 	cover_image.add(cover_image_image);
 	cover_image.add(label);
 	cover_image.add(video);
 	
-	win.add(cover_view);
-	
-	cover_view.addEventListener("swipe", function(e) {
-		if(e.direction == "left") {
-			cover_image.animate({left:-1000, duration:400}, function() {
-				win.remove(cover_view);
-			});
-		}
-	});
-	
 	var main_content = Ti.UI.createView({
 		backgroundImage:'images/main_bg.png',
 	});
 	
-	// var back_to_cover = Ti.UI.createButton({
-	// 	backgroundImage:"images/page_back_button.png",
-	// 	title: "Back to cover",
-	// 	font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'bold'},
-	// 	color:"black",
-	// 	width: 200,
-	// 	height: 50,
-	// 	left:20
-	// });
-	// 
-	// back_to_cover.addEventListener("click", function(e) {
-	// 	win.add(cover_view);
-	// 	cover_image.animate({left:0, duration:400}, function(){})
-	// });
-	// 
-	// win.add(back_to_cover);
+	main_window_view.addEventListener("swipe", function(e) {
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content});
+		first(tabButtons).fireEvent('click');
+	});
+	
+	main_content.addEventListener('backToCover', function() {
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
+	});
 	
 	var nav = Ti.UI.createView({
 		layout: "horizontal",
@@ -121,12 +108,13 @@ Layouts.application = function(delegate) {
 		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -9}
 	]
 	
-	var tabButtons = map(makeTab, tabs);
+	tabButtons = map(makeTab, tabs);
 
 	var button_group = UI.ButtonGroup.apply(this, tabButtons);
-
-	win.add(main_content);
+	
+	main_window_view.add(main_content);
+	main_window_view.add(cover_view);
 	win.add(nav);
+	win.add(main_window_view);
 	win.open();
-	delegate.root(main_content);
 }

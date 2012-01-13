@@ -25,12 +25,8 @@
     <analytics>false</analytics>
     <guid>fac535b7-f44b-4927-ac23-1f16a60bbe6e</guid>
     <iphone>
-        <orientations device="iphone">
-            <orientation>Ti.UI.PORTRAIT</orientation>
-        </orientations>
         <orientations device="ipad">
             <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
-            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>

@@ -4,8 +4,8 @@ Views.content.tech_nav = function(view) {
 	}
 
 	var nav = Ti.UI.createView({
-		height:220,
-		width:220,
+		height:240,
+		width:240,
 		top:30,
 		left:30
 	});
@@ -20,7 +20,7 @@ Views.content.tech_nav = function(view) {
 		backgroundImage:"images/technology/small_tech_nav_rf_inactive.png",
 		backgroundSelectedImage:"images/technology/small_tech_nav_rf_active.png",
 		width:90,
-		height:90,
+		height:100,
 		top:0,
 		id: 'rf_energy'
 	});
@@ -32,7 +32,7 @@ Views.content.tech_nav = function(view) {
 		backgroundSelectedImage:"images/technology/small_tech_nav_access_active.png",
 		left:0,
 		width:90,
-		height:90,
+		height:100,
 		bottom:10,
 		id: 'access_and_navigation'
 	});
@@ -44,7 +44,7 @@ Views.content.tech_nav = function(view) {
 		backgroundSelectedImage:"images/technology/small_tech_nav_bone_active.png",
 		right:0,
 		width:90,
-		height:90,
+		height:100,
 		bottom:10,
 		id: "bone_cement"
 	});

@@ -1,4 +1,4 @@
-Views.content.tech_nav = function(view) {	
+Views.content.tech_nav = function(view, current) {	
 	var getContent = function(name) {
 		Views.content[name](view);
 	}
@@ -52,6 +52,8 @@ Views.content.tech_nav = function(view) {
 	bone_cement_button.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
 
 	var button_group = UI.ButtonGroup(rf_energy_button, access_and_navigation_button, bone_cement_button);
+	var currentButton = {'bone_cement': bone_cement_button, 'access_and_navigation': access_and_navigation_button, 'rf_energy': rf_energy_button }[current];
+	button_group.setActive(currentButton);
 
 	nav.add(nav_circle);
 	nav.add(rf_energy_button);

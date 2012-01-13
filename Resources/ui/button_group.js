@@ -40,5 +40,5 @@ UI.ButtonGroup = function() {
 
 	init(buttons);
 	
-	return {isActive : isActive, activeButton: activeButton};
+	return {isActive : isActive, activeButton: activeButton, setActive: setActive};
 }

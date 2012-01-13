@@ -74,7 +74,7 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	view.add(video);
-	view.add(Views.content.tech_nav(view));
+	view.add(Views.content.tech_nav(view, 'bone_cement'));
 	
 	var foot_note = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",

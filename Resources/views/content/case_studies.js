@@ -25,7 +25,7 @@ Views.content.case_studies = function(win) {
 			left: 210,
 			width: 10,
 			height: 10,
-			top: state.top+2,
+			top: state.top+4,
 			backgroundColor: '#023f66',
 			borderColor: "#023f66",
 			borderRadius: 10,
@@ -37,6 +37,7 @@ Views.content.case_studies = function(win) {
 			font: {fontFamily:'Helvetica',fontSize: 13,fontWeight:'regular'},
 			color: "#023f66",
 			height: 'auto',
+			width: 180,
 			top: state.top,
 			left: 225
 		});
@@ -50,13 +51,15 @@ Views.content.case_studies = function(win) {
 	
 	var makeStudy = function(attrs) {
 		var study_view = Ti.UI.createScrollView({
-			backgroundImage:"images/case_studies_box.png",
 			width: icon_width,
 			height: icon_height,
 			contentWidth: 'auto',
 			contentHeight: 'auto',
 			showHorizontalScrollIndicator:false,
-			showVerticalScrollIndicator:true
+			showVerticalScrollIndicator:true,
+			borderColor: "#cccccc",
+			borderRadius: 10,
+			borderWidth: 1
 		});
 		
 		var featured_pic = compose(first, filter('.featured'))(attrs.images);
@@ -67,7 +70,8 @@ Views.content.case_studies = function(win) {
 			width: 200,
 			height: 200,
 			top: 60,
-			left: 5
+			left: 5,
+			backgroundColor: "#000000"
 		});
 		
 		var title = Ti.UI.createLabel({
@@ -85,7 +89,7 @@ Views.content.case_studies = function(win) {
 		
 		study_view.addEventListener('click', UI.slideshow.p(attrs.images));
 		
-		reduce(makeBullet.p(study_view), {top: 70}, attrs.bullet_points);
+		reduce(makeBullet.p(study_view), {top: 55}, attrs.bullet_points);
 
 		return study_view;
 	}

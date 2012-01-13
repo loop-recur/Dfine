@@ -8,20 +8,21 @@ Layouts.application = function(delegate) {
 		
 	var main_window_view = Ti.UI.createView({
 		left:0,
-		width:964,
+		width: "100%",
 		height: "100%"
 	});
 	
 	var cover_view = Ti.UI.createView({
-		width: "100%",
-		height: "100%"
+		width: 964,
+		height: "100%",
+		left: 0
 	});
 	
 	var cover_image = Ti.UI.createView({
 		backgroundImage: "images/closed_tab_page_bg.png",
 		width: 1024,
 		height: 768,
-		right:0
+		left:0
 	});
 	
 	var cover_image_image = Ti.UI.createView({
@@ -67,11 +68,14 @@ Layouts.application = function(delegate) {
 	});
 	
 	main_window_view.addEventListener("swipe", function(e) {
-		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content});
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
+			main_window_view.remove(cover_view);
+		});
 		first(tabButtons).fireEvent('click');
 	});
 	
 	main_content.addEventListener('backToCover', function() {
+		main_window_view.add(cover_view);
 		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
 	});
 	
@@ -114,7 +118,7 @@ Layouts.application = function(delegate) {
 	
 	main_window_view.add(main_content);
 	main_window_view.add(cover_view);
-	win.add(nav);
 	win.add(main_window_view);
+	win.add(nav);
 	win.open();
 }

@@ -1,5 +1,6 @@
 Views.content.technology = function(win) {
 	var view = Ti.UI.createView({
+		width:"100%",
 		backgroundImage: "images/page_bg.png"
 	});
 	
@@ -18,7 +19,6 @@ Views.content.technology = function(win) {
 	});
 	
 	var center_content = Ti.UI.createView({
-		width:964,
 		left:0
 	});
 	

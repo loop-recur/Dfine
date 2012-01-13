@@ -41,7 +41,7 @@ Views.content.rf_energy = function(win) {
 			width: 25,
 			height: 25,
 			top: element.top,
-			left: element.left + n
+			left: element.left+n
 		});
 
 		plus_button.addEventListener('click', function() {
@@ -51,7 +51,7 @@ Views.content.rf_energy = function(win) {
 		return plus_button;
 	}
 
-	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});	
+	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});
 	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hand Switch Cable", top:400, left:740});
 	var hard_plus_button = makePlus(hard_switch_cable, 150);
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
@@ -144,6 +144,6 @@ Views.content.rf_energy = function(win) {
 	
 	view.add(video2);
 	
-	view.add(Views.content.tech_nav(view));
+	view.add(Views.content.tech_nav(view, 'rf_energy'));
 	win.add(view);
 }

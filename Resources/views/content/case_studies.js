@@ -122,8 +122,7 @@ Views.content.case_studies = function(win) {
 	}
 	
 	var finish = function(studies) {
-		win.remove(view);
-		view = makeView();
+		map(function(c){ view.remove(c); }, view.children);
 		var groups = groups_of(4, studies);
 		var views = map(makePage, groups);
 		var dashboard = Ti.UI.createScrollableView({height: "90%", width: "90%", views: views, showPagingControl:true, pagingControlColor:"green"});

@@ -105,7 +105,7 @@ Views.content.bone_cement2 = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('PML2775.mp4');
+		Controllers.content.video('PML2775-a-bone2-157-208.mov');
 	});
 	
 	view.add(video);

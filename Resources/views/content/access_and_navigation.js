@@ -72,8 +72,8 @@ Views.content.access_and_navigation = function(win) {
 
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "MidLine Osteotome (X-ray)",
-		font:{fontSize:12, fontWeight:"regular"},
+		title: "Cavity Creation",
+		font:{fontSize:13, fontWeight:"regular"},
 		color:"black",
 		width: 245,
 		height: 50,
@@ -99,7 +99,7 @@ Views.content.access_and_navigation = function(win) {
 	});
 	
 	video2.addEventListener('click', function(){
-		Controllers.content.video('1482.m4v');
+		Controllers.content.video('PML2775-a-access-midline-45-120.mov');
 	});
 	
 	view.add(video2);

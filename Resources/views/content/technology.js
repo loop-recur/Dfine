@@ -16,7 +16,7 @@ Views.content.technology = function(win) {
 	});
 	
 	var label = Ti.UI.createLabel({
-		text: "Interventional Technology Platform",
+		text: "StabiliT(R) System Technology Platform",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:46,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',

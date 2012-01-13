@@ -21,7 +21,7 @@ Views.content.visual_analog = function(win) {
 	}));
 	
 	var content = Ti.UI.createLabel({
-		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.(1)",
+		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:330,
@@ -30,7 +30,7 @@ Views.content.visual_analog = function(win) {
 	});
 	
 	var bullets = Ti.UI.createLabel({
-		text: "•63 patients underwent RF-TVA to treat 116 osteolytic vertebral compression fractures \n•Median pain (VAS) and Oswestry (disability) scores improved significantly post treatment and continued to maintain improved levels at 3 and 6 months(1)",
+		text: "•63 patients underwent RF-TVA to treat 116 osteolytic vertebral compression fractures \n•Median pain (VAS) and Oswestry (disability) scores improved significantly post treatment and continued to maintain improved levels at 3 and 6 months",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		width:650,
 		bottom:230,

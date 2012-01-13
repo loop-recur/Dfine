@@ -60,10 +60,10 @@ Views.content.bone_cement = function(win) {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Ultra High Viscosity",
+		title: "StabiliT ER2 Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
-		width: 225,
+		width: 250,
 		height: 50,
 		bottom:70,
 		left:240

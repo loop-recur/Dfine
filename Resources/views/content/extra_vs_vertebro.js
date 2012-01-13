@@ -15,9 +15,10 @@ Views.content.extra_vs_vertebro = function(win) {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results_page5_RF-TVA_vs_vertebro.png",
-		top:100,
-		width:722,
-		height:200,
+		top:130,
+		left:30,
+		width:670,
+		height:120,
 	})
 	
 	var bullets = Ti.UI.createLabel({
@@ -30,19 +31,26 @@ Views.content.extra_vs_vertebro = function(win) {
 	});
 	
 	var toggle_label = UI.toggleableLabel({
-		bottom: 10,
-		right:50,
-		text: "My Label 1"
+		bottom: 20,
+		right:70,
+		text: "Reference",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 	});
 	
-	var toggle_view = UI.toggleableView({
-		bottom: 60,
-		right:90
+	var toggle_reference = UI.toggleableLabel({
+		text:"Reference: Pflugmacher R, Randau T, Kabir K, and Wirtz DC. Radiofrequency (RF) Kyphoplasty in comparison to in Vertebroplasty (VP) A prospective evaluation. IOF WCO-ECCEO10 2010.",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
+		bottom: 40,
+		right:70,
+		width:300,
+		height:"auto"
 	});
 	
-	ToggleSwitch(toggle_label, toggle_view);
+	toggle_reference.visible = false;
+	
+	ToggleSwitch(toggle_label, toggle_reference);
 	view.add(toggle_label);
-	view.add(toggle_view);
+	view.add(toggle_reference);
 
 	view.add(label);
 	view.add(image);

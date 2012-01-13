@@ -139,7 +139,7 @@ Views.content.rf_energy = function(win) {
 	});
 	
 	video2.addEventListener('click', function(){
-		Controllers.content.video('2772.m4v');
+		Controllers.content.video('2772-a-rf-handswitch-159-212.mov');
 	});
 	
 	view.add(video2);

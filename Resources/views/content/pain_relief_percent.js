@@ -22,7 +22,7 @@ Views.content.pain_relief_percent = function(win) {
 	}));
 	
 	var content = Ti.UI.createLabel({
-		text: "93% of patients had complete or moderate pain relief.(2)",
+		text: "93% of patients had complete or moderate pain relief.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:380,
@@ -31,7 +31,7 @@ Views.content.pain_relief_percent = function(win) {
 	});
 	
 	var bullets = Ti.UI.createLabel({
-		text: "•68 levels treated with RF-TVA \n• 93% of patients had complete or moderate pain relief (>50% reduction of pre-op score) (2) \n• 94% of procedures were unipedicular \n• 90% of patients had no extravasation(2) \n• Extravasation was clinically insignificant(2)",
+		text: "•68 levels treated with RF-TVA \n• 93% of patients had complete or moderate pain relief (>50% reduction of pre-op score) \n• 94% of procedures were unipedicular \n• 90% of patients had no extravasation \n• Extravasation was clinically insignificant",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		width:650,
 		bottom:250,

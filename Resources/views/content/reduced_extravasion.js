@@ -21,7 +21,7 @@ Views.content.reduced_extravasion = function(win) {
 	}));
 	
 	var content = Ti.UI.createLabel({
-		text: "Use of StabiliT® ER2 Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.(3)",
+		text: "Use of StabiliT® ER2 Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:280,
@@ -30,7 +30,7 @@ Views.content.reduced_extravasion = function(win) {
 	});
 	
 	var bullets = Ti.UI.createLabel({
-		text: "• 39 levels were treated with RF-TVA \n• 66 levels were treated with high-viscosity vertebroplasty \n• 49 levels were treated with conventional balloon kyphoplasty \n• No leakage was reported in 69% of the RF-TVA group, compared to 53% in the vertebroplasty procedure group and 41% in the conventional balloon kyphoplasty procedure group(3) \n• This represents a significant decrease in incidence of cement leakage when using RF-TVA: \n-34% lower leakage rate than vertebroplasty3 \n- 47% lower leakage rate than conventional balloon kyphoplasty(3)",
+		text: "• 39 levels were treated with RF-TVA \n• 66 levels were treated with high-viscosity vertebroplasty \n• 49 levels were treated with conventional balloon kyphoplasty \n• No leakage was reported in 69% of the RF-TVA group, compared to 53% in the vertebroplasty procedure group and 41% in the conventional balloon kyphoplasty procedure group \n• This represents a significant decrease in incidence of cement leakage when using RF-TVA: \n-34% lower leakage rate than vertebroplasty3 \n- 47% lower leakage rate than conventional balloon kyphoplasty",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		width:650,
 		bottom:110,

@@ -92,19 +92,20 @@ Views.content.bone_cement2 = function(win) {
 	});
 	
 	view.add(read_more);
-	
+
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Interdigitation",
+		title: "StabiliT ER2 Bone Cement",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
-		width: 225,
+		width: 250,
 		height: 50,
 		bottom:70,
 		right:240
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('PML2775.mp4');
+		Controllers.content.video('PML2775-a-bone2-157-208.mov');
 	});
 	
 	view.add(video);

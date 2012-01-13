@@ -28,7 +28,7 @@ Views.content.cost = function(win) {
 		height:430,
 		width:798,
 		left:80,
-		top:190
+		top:160
 	}));
 
 

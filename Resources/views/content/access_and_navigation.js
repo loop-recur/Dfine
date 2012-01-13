@@ -53,8 +53,8 @@ Views.content.access_and_navigation = function(win) {
 		backgroundImage:"images/technology/access/xray.png",
 		height:183,
 		width:188,
-		top:230,
-		left:200
+		top:250,
+		left:240
 	});
 	
 	var xray = ClickToExpand(xray);

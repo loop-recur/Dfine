@@ -39,19 +39,26 @@ Views.content.extra_vs_conventional = function(win) {
 	});
 	
 	var toggle_label = UI.toggleableLabel({
-		bottom: 10,
-		right:50,
-		text: "My Label 1"
+		bottom: 20,
+		right:70,
+		text: "Reference",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 	});
 	
-	var toggle_view = UI.toggleableView({
-		bottom: 60,
-		right:90
+	var toggle_reference = UI.toggleableLabel({
+		text:"Reference: Licht, AW and Kramer W. One-year observation study upon a new augmentation procedure (Radiofrequency-Kyphoplasty) in the treatment of vertebral body compression fractures. Eurospine 2011.",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
+		bottom: 40,
+		right:70,
+		width:300,
+		height:"auto"
 	});
 	
-	ToggleSwitch(toggle_label, toggle_view);
+	toggle_reference.visible = false;
+	
+	ToggleSwitch(toggle_label, toggle_reference);
 	view.add(toggle_label);
-	view.add(toggle_view);
+	view.add(toggle_reference);
 
 	view.add(label);
 	view.add(image);

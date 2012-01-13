@@ -7,27 +7,29 @@ Views.content.dfine = function(win) {
 		text: "DFINE at a glance",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:45,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
+		width:450,
 		top:40,
-		left:30,
-		height:'auto'
+		left:10,
+		height:'auto',
+		textAlign:"right"
 	});
 	
 	var label2 = Ti.UI.createLabel({
-		text: "Founded in 2004 \nDirect in US and Germany. Distributionin 9 additional countries \n~150 Employees \nVenture backed company, located in San Jose, CA \nPioneered Radiofrequency Targeted Vertebral Augmentation (RF–TVA), a generational advance in the treatment of vertebral compression fractures (VCFs) \nCommitted to ongoing, clinically relevant scientific research & technology development \n",
-		bottom:70,
+		text: "Founded in 2004 \n\nDirect in US and Germany. Distributionin 9 additional countries \n\n~150 Employees \n\nVenture backed company, located in San Jose, CA \n\nPioneered Radiofrequency Targeted Vertebral Augmentation (RF–TVA), a generational advance in the treatment of vertebral compression fractures (VCFs) \n\nCommitted to ongoing, clinically relevant scientific research & technology development",
+		top:140,
+		left:10,
 		color:"#023f66",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
 		height:"auto",
-		width: 850,
-		textAlign:"center"
+		width: 450,
+		textAlign:"right"
 	});
 	
 	var image = Ti.UI.createView({
-		backgroundImage:"images/Picture1.jpg",
-		height:425,
-		width:500,
-		top:80
+		backgroundImage:"images/building.jpg",
+		height:678,
+		width:454,
+		right:80
 	});
 	
 	view.add(image);

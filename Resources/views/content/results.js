@@ -8,7 +8,6 @@ Views.content.results = function(win) {
 		, {id: "reduced_extravasion", image: "images/results/results_nav_icon4.png", text: "Significantly reduced extravasation"}
 		, {id: "extra_vs_vertebro", image: "images/results/results_nav_icon5.png", text: "RF-TVA extravasation versus vertebroplasty extravasation"}
 		, {id: "extra_vs_conventional", image: "images/results/results_nav_icon6.png", text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications"}
-		, {id: "references", image: "images/results/results_nav_icon7.png", text: "References"}
 	]
 	
 	var getContent = function(name) {

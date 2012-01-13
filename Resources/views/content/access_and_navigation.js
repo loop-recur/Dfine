@@ -14,7 +14,7 @@ Views.content.access_and_navigation = function(win) {
 	});
 	
 	var label2 = Ti.UI.createLabel({
-		text: "Enables targeted cavity creation",
+		text: "- Enables targeted cavity creation",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
 		color:"#023f66",
 		width:'auto',
@@ -60,21 +60,21 @@ Views.content.access_and_navigation = function(win) {
 	var xray = ClickToExpand(xray);
 	
 	var tool1 = Ti.UI.createView({
-		backgroundImage:"images/technology/access/tool1.png",
+		backgroundImage:"images/technology/access/tool1b.png",
 		height:121,
 		width:234,
-		top:200,
-		left:450
+		top:150,
+		left:550
 	});
 	
 	var tool1 = ClickToExpand(tool1);
 	
 	var tool2 = Ti.UI.createView({
-		backgroundImage:"images/technology/access/tool2.png",
+		backgroundImage:"images/technology/access/tool2b.png",
 		height:148,
 		width:265,
-		top:290,
-		left:600
+		top:310,
+		left:550
 	});
 	
 	var tool2 = ClickToExpand(tool2);

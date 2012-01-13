@@ -28,7 +28,6 @@ FileList = [
 	, "views/content/reduced_extravasion.js"
 	, "views/content/extra_vs_vertebro.js"
 	, "views/content/extra_vs_conventional.js"
-	, "views/content/references.js"
 	, "views/videos/show.js"
 	, "controllers/content.js"
 	, "controllers/case_studies.js"

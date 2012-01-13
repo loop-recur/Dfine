@@ -110,7 +110,7 @@ Views.content.bone_cement2 = function(win) {
 	
 	view.add(video);
 	
-	view.add(Views.content.tech_nav(view));
+	view.add(Views.content.tech_nav(view, "bone_cement"));
 	
 	var getContent = function(name) {
 		Views.content[name](view);

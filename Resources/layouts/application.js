@@ -68,19 +68,32 @@ Layouts.application = function(delegate) {
 		backgroundImage:'images/main_bg.png'
 	});
 	
-	var addOpenListener = function() {
-		cover_view.addEventListener("swipe", function(e) {
-			main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
-				main_window_view.remove(cover_view);
-			});
-			first(tabButtons).fireEvent('click');
+	var nav_cover = Ti.UI.createView({
+		right:0,
+		width: 60,
+		zIndex: 99
+	});
+	
+	win.add(nav_cover);
+	
+	var openApp = function() {
+		win.remove(nav_cover);
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
+			main_window_view.remove(cover_view);
 		});
+		first(tabButtons).fireEvent('click');
+	}
+	
+	var addOpenListener = function() {
+		cover_view.addEventListener("swipe", openApp);
+		nav_cover.addEventListener("touchend", openApp);
 	}
 	
 	addOpenListener();
 		
 	main_content.addEventListener('backToCover', function() {
 		main_window_view.add(cover_view);
+		win.add(nav_cover);
 		addOpenListener();
 		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
 	});

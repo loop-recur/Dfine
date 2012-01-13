@@ -34,19 +34,37 @@ Views.content.rf_energy = function(win) {
 	});
 
 	view.add(main_image);
+	
+	var makePlus = function(element, n) {
+		var plus_button = Ti.UI.createImageView({
+			image: "images/reveal_plus_sign.png",
+			width: 25,
+			height: 25,
+			top: element.top,
+			left: element.left + n
+		});
+
+		plus_button.addEventListener('click', function() {
+			element.fireEvent('click');
+		});
+		
+		return plus_button;
+	}
 
 	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});	
-	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:760});
+	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:740});
+	var hard_plus_button = makePlus(hard_switch_cable, 150);
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
+	view.add(hard_plus_button);
 	view.add(hard_switch_cable_info);
 	
 	var hard_switch_bullets = Ti.UI.createLabel({
-		text: "Enables physician to control application of RF energy from up to 10 feet away from the radiation source.",
+		text: "• Enables physician to control application of RF energy from up to 10 feet away from the radiation source.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
-		color:"#023f66",
+		color:"black",
 		width:170,
-		top:2,
+		top:10,
 		height:'auto'
 	});
 	
@@ -54,16 +72,18 @@ Views.content.rf_energy = function(win) {
 	
 	var multiplex_controller_info = UI.toggleableView({top:330, left:135});	
 	var multiplex_controller = UI.toggleableLabel({text: "Multiplex Controller", top:300, left:150});
+	var multiplex_plus_button = makePlus(multiplex_controller, 150);
 	ToggleSwitch(multiplex_controller, multiplex_controller_info);
 	view.add(multiplex_controller);
+	view.add(multiplex_plus_button);
 	view.add(multiplex_controller_info);
 	
 	var multiplex_bullets = Ti.UI.createLabel({
-		text: "Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n Maintains viscosity of cement at consistent level throughout the procedure. \nHydraulic system allows for consistent injection of bone cement.",
+		text: "• Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n\n • Maintains viscosity of cement at consistent level throughout the procedure. \n\n • Hydraulic system allows for consistent injection of bone cement.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
-		color:"#023f66",
+		color:"black",
 		width:170,
-		top:2,
+		top:10,
 		height:'auto',
 		textAlign:"center"
 	});
@@ -72,16 +92,19 @@ Views.content.rf_energy = function(win) {
 	
 	var activation_element_info = UI.toggleableView({top:550, left:435});	
 	var activation_element = UI.toggleableLabel({text: "Activation Element", top:530, left:450});
+	var activation_plus_button = makePlus(activation_element, 150);
+	
 	ToggleSwitch(activation_element, activation_element_info);
 	view.add(activation_element);
-	view.add(activation_element_info);	
+	view.add(activation_plus_button);
+	view.add(activation_element_info);
 	
 	var activation_bullets = Ti.UI.createLabel({
-		text: "Applies RF energy to bone cement thus increasing its viscosity.",
+		text: "• Applies RF energy to bone cement thus increasing its viscosity.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
-		color:"#023f66",
+		color:"black",
 		width:170,
-		top:2,
+		top:10,
 		height:'auto'
 	});
 	

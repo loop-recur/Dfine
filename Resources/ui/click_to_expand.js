@@ -1,5 +1,5 @@
 ClickToExpand = function(image_view) {
-	var image = (image_view.image || image_view.backgroundImage);
+	var image = (image_view.backgroundImage || image_view.image);
 
 	var getPage = function() {
 		return '<html> \

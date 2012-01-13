@@ -11,18 +11,40 @@ Layouts.application = function(delegate) {
 		name: "cover_view"
 	});
 	
-	var cover_image = Ti.UI.createImageView({
-		image: "images/closed_tab_page_bg.png",
+	var cover_image = Ti.UI.createView({
+		backgroundImage: "images/closed_tab_page_bg.png",
 		width: 1024,
 		height: 768
 	});
 	
+	var cover_image_image = Ti.UI.createView({
+		backgroundImage: "images/closed_tab_all_content_flat.png",
+		width: 925,
+		height: 500,
+		left:50,
+		top: 80
+	});
+	
+	var label = Ti.UI.createLabel({
+		text: "Swipe left to begin...",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular', fontStyle:"italic"},
+		color:"#023f66",
+		width:'auto',
+		top:130,
+		right:70,
+		height:'auto'
+	});
+	
 	cover_view.add(cover_image);
+	cover_image.add(cover_image_image);
+	cover_image.add(label);
+	
+	
 	win.add(cover_view);
 	
 	cover_view.addEventListener("swipe", function(e) {
 		if(e.direction == "left") {
-			cover_image.animate({center:{x:-800, y: 512}, duration:300}, function() {
+			cover_image.animate({left:-1000, duration:400}, function() {
 				win.remove(cover_view);
 			});
 		}

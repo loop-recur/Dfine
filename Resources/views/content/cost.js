@@ -23,13 +23,13 @@ Views.content.cost = function(win) {
 		height:'auto'
 	});
 	
-	var cost = Ti.UI.createView({
+	var cost = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/cost/cost.png",
 		height:430,
 		width:798,
 		left:80,
 		top:190
-	})
+	}));
 
 
 	var bottom_note = Ti.UI.createLabel({

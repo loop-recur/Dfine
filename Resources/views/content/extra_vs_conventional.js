@@ -13,12 +13,12 @@ Views.content.extra_vs_conventional = function(win) {
 		height:'auto'
 	});
 	
-	var image = Ti.UI.createView({
+	var image = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/results/results_page1_significant_pain.png",
 		top:130,
 		width:682,
-		height:285,
-	})
+		height:285
+	}));
 	
 	var content = Ti.UI.createLabel({
 		text: "A comparison of leakage rates between spine fractures treatments <6 weeks old and those >6 weeks old.(5)",

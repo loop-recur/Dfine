@@ -36,11 +36,11 @@ Views.content.bone_cement = function(win) {
 	});
 	view.add(logo);
 	
-	var image = Ti.UI.createView({
+	var image = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
 		height:268,
 		width:640
-	});
+	}));
 	
 	view.add(image);
 	

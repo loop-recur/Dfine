@@ -16,3 +16,18 @@ UI.toggleableView = function(attrs) {
 		zIndex: 10
 	}, attrs));
 }
+
+
+UI.superSub = function(supertext, subtext, attrs) {
+	var style = "font: 17px Helvetica-Light";
+	var superhtml = '<p style="'+style+'"><sup>'+supertext+'</sup>'+subtext+'</p>';
+	
+	var webview = Ti.UI.createWebView(merge({
+		html: superhtml,
+		backgroundColor: "transparent",
+		width: 'auto',
+		height: 'auto'
+	}, attrs));
+	
+	return webview;
+}

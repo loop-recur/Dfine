@@ -64,7 +64,7 @@ UI.slideshow = function(images) {
 		right: 10,
 		top: 10,
 		bottom: 10,
-		color: "blue",
+		color: "#023f66",
 		height: 'auto'
 	});
 	

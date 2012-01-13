@@ -13,12 +13,12 @@ Views.content.visual_analog = function(win) {
 		height:'auto'
 	});
 	
-	var image = Ti.UI.createView({
+	var image = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/results/results_page2_visual_analog.png",
 		top:100,
 		width:722,
-		height:285,
-	})
+		height:285
+	}));
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.(1)",

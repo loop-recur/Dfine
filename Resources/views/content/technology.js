@@ -3,10 +3,17 @@ Views.content.technology = function(win) {
 		backgroundImage: "images/page_bg.png"
 	});
 	
+	// var superSub = UI.superSub("This isn't going to work", "123", {
+	// 	top: 120,
+	// 	left: 240
+	// });
+	// 
+	// view.add(superSub);
+	
 	var center_content = Ti.UI.createView({
 		width:964,
 		left:0
-	}); 
+	});
 	
 	var label = Ti.UI.createLabel({
 		text: "Interventional Technology Platform",

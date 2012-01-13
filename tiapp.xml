@@ -10,7 +10,7 @@
     </deployment-targets>
     <id>com.looprecur.dfine</id>
     <name>dfine</name>
-    <version>0.5</version>
+    <version>0.8</version>
     <publisher>loop/recur</publisher>
     <url>http://looprecur.com</url>
     <description>DFINE Sales App</description>
@@ -35,6 +35,6 @@
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
     <modules>
-			<module platform="iphone" version="1.0">ti.charts</module>
-		</modules>
+        <module platform="iphone" version="1.0">ti.charts</module>
+    </modules>
 </ti:app>

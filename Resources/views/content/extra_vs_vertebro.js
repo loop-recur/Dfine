@@ -4,7 +4,7 @@ Views.content.extra_vs_vertebro = function(win) {
 	});
 	
 	var label = Ti.UI.createLabel({
-		text: "RF-TVA extravasation versus vertebroplasty extravasation",
+		text: "RF-TVA Extravasation Versus Vertebroplasty Extravasation",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:700,

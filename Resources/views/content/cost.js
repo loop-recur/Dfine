@@ -25,9 +25,9 @@ Views.content.cost = function(win) {
 	
 	var cost = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/cost/cost.png",
-		height:430,
-		width:798,
-		left:80,
+		height:339,
+		width:629,
+		left:170,
 		top:160
 	}));
 
@@ -37,8 +37,8 @@ Views.content.cost = function(win) {
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
 		width:790,
-		bottom:88,
-		left:85,
+		bottom:200,
+		left:170,
 		height:'auto'
 	});
 

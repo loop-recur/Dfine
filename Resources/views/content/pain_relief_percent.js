@@ -4,7 +4,7 @@ Views.content.pain_relief_percent = function(win) {
 	});
 
 	var label = Ti.UI.createLabel({
-		text: "Pain Relief Percent",
+		text: "Percent of Patients With Pain Relief",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -23,7 +23,7 @@ Views.content.pain_relief_percent = function(win) {
 	
 	var content = Ti.UI.createLabel({
 		text: "93% of patients had complete or moderate pain relief.(2)",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'bold'},
+		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:380,
 		height:'auto',

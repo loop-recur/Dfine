@@ -4,7 +4,7 @@ Views.content.visual_analog = function(win) {
 	});
 
 	var label = Ti.UI.createLabel({
-		text: "Visual Analog",
+		text: "Visual Analog Scale Pain Scores vs. Oswestry Disability Scores",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -22,7 +22,7 @@ Views.content.visual_analog = function(win) {
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.(1)",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'bold'},
+		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:330,
 		height:'auto',

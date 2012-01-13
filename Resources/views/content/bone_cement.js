@@ -39,7 +39,8 @@ Views.content.bone_cement = function(win) {
 	var image = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
 		height:268,
-		width:640
+		width:640,
+		top:275
 	}));
 	
 	view.add(image);
@@ -47,12 +48,12 @@ Views.content.bone_cement = function(win) {
 	var read_more = Ti.UI.createButton({
 		backgroundImage:"images/page_fwd_button.png",
 		title: "Interdigitation",
-		font:{fontFamily:'Helvetica',fontSize:12,fontWeight:'bold'},
+		font:{fontFamily:'Helvetica',fontSize:17,fontWeight:'bold'},
 		color:"black",
 		width: 200,
 		height: 50,
 		bottom:70,
-		left:240
+		right:240
 	});
 	
 	view.add(read_more);
@@ -65,7 +66,7 @@ Views.content.bone_cement = function(win) {
 		width: 225,
 		height: 50,
 		bottom:70,
-		right:240
+		left:240
 	});
 	
 	video.addEventListener('click', function(){
@@ -79,8 +80,8 @@ Views.content.bone_cement = function(win) {
 		text: "StabiliT® ER2 Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"#023f66",
-		width:500,
-		bottom:180,
+		width:580,
+		bottom:165,
 		height:'auto',
 		textAlign:"center"
 	});

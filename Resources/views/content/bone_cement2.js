@@ -104,7 +104,7 @@ Views.content.bone_cement2 = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('iphone.m4v');
+		Controllers.content.video('PML2775.mp4');
 	});
 	
 	view.add(video);

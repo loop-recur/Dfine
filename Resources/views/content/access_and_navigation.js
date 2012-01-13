@@ -28,21 +28,21 @@ Views.content.access_and_navigation = function(win) {
 	
 	var midline = Ti.UI.createLabel({
 		text: "VertecoR® Navigational MidLine Osteotome",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:20,fontWeight:'regular'},
 		color:"#023f66",
 		width:"auto",
-		bottom:250,
+		bottom:240,
 		height:'auto'
 	});
 	
 	view.add(midline);
 	
 	var midline_bullets = Ti.UI.createLabel({
-		text: "Allows unipedicular access to vertebrae*. \nEnables targeted cavity creation across the vertebral midline. \nSpares cancellous bone. \nCreates preferential pathways for high viscosity StabiliT ER2 Bone Cement to follow. \nMaximizes exposed surface area to facilitate interdigitation. \n*85+% of procedures to date have used the unipendicular technique to enter the vertebra",
+		text: "Allows unipedicular access to vertebrae*. \nEnables targeted cavity creation across the vertebral midline. \nSpares cancellous bone. \nCreates preferential pathways for high viscosity StabiliT ER2 Bone Cement to follow. \nMaximizes exposed surface area to facilitate interdigitation. \n\n*85+% of procedures to date have used the unipendicular technique to enter the vertebra",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:"auto",
-		bottom:100,
+		bottom:70,
 		height:'auto',
 		textAlign:"center"
 	});
@@ -53,8 +53,8 @@ Views.content.access_and_navigation = function(win) {
 		backgroundImage:"images/technology/access/xray.png",
 		height:183,
 		width:188,
-		top:250,
-		left:240
+		top:260,
+		left:260
 	});
 	
 	var xray = ClickToExpand(xray);
@@ -64,7 +64,7 @@ Views.content.access_and_navigation = function(win) {
 		height:121,
 		width:234,
 		top:150,
-		left:550
+		left:450
 	});
 	
 	var tool1 = ClickToExpand(tool1);

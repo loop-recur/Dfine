@@ -9,7 +9,7 @@ FileList = [
 	, "ui/slideshow.js"
 	, "helpers/ui.js"
 	, "lib/formatter.js"
-	, "lib/grid.js"
+	, "lib/Grid.js"
 	, "layouts/application.js"
 	, "views/content/rf_energy.js"
 	, "views/content/access_and_navigation.js"

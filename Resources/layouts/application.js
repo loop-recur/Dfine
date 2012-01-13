@@ -35,10 +35,27 @@ Layouts.application = function(delegate) {
 		height:'auto'
 	});
 	
+	var video = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
+		title: "Overview Video",
+		font:{fontSize:15, fontWeight:"regular"},
+		color:"black",
+		width: 225,
+		height: 50,
+		bottom:40,
+		left:100
+	});
+	
+	video.addEventListener('click', function(){
+		Controllers.content.video('PML2775.mp4');
+	});
+	
+	
+	
 	cover_view.add(cover_image);
 	cover_image.add(cover_image_image);
 	cover_image.add(label);
-	
+	cover_image.add(video);
 	
 	win.add(cover_view);
 	

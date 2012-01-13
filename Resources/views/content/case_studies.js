@@ -1,6 +1,6 @@
 Views.content.case_studies = function(win) {
-	var icon_width = 400
-	, icon_height = 250
+	var icon_width = 420
+	, icon_height = 280
 	, columns = 2;
 	
 	var makeView = function() {
@@ -41,9 +41,7 @@ Views.content.case_studies = function(win) {
 	
 	var makeStudy = function(attrs) {
 		var study_view = Ti.UI.createScrollView({
-			borderRadius:4,
-			borderColor: "#888888",
-			borderWidth: 1,
+			backgroundImage:"images/case_studies_box.png",
 			width: icon_width,
 			height: icon_height,
 			contentWidth: 'auto',
@@ -59,17 +57,18 @@ Views.content.case_studies = function(win) {
 			image: path,
 			width: 200,
 			height: 200,
-			top: 20,
+			top: 60,
 			left: 5
 		});
 		
 		var title = Ti.UI.createLabel({
 			text: attrs.title, 
-			font: {fontFamily:'Helvetica LT CondensedLight',fontSize:13,fontWeight:'bold'},
+			font: {fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 			color: "#023f66",
-			top: 20,
-			height: 'auto',
-			left: 210
+			top: 10,
+			height: 30,
+			left: 10,
+			width: 380
 		});
 		
 		study_view.add(image);
@@ -86,7 +85,7 @@ Views.content.case_studies = function(win) {
 		var page_view = Ti.UI.createView({});
 		
 		var placeStudyView = function(position, v) {
-			var horizontal_padding = icon_width + 60
+			var horizontal_padding = icon_width + 50
 			, vertical_padding = icon_height + 30
 			, new_left = position.left + horizontal_padding
 			, new_top = position.top;

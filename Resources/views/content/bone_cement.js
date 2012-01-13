@@ -78,7 +78,7 @@ Views.content.bone_cement = function(win) {
 	
 	var foot_note = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:580,
 		bottom:165,

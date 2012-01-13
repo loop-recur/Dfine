@@ -46,7 +46,7 @@ Views.content.visual_analog = function(win) {
 	});
 	
 	var toggle_reference = UI.toggleableLabel({
-		text:"Reference: Pflugmacher R, Randau T, Kabir K, and Wirtz DC. Radiofrequency (RF) Kyphoplasty in treatment of osteolytic vertebral fractures. IOF WCO-ECCEO10 2010.",
+		text:"Pflugmacher R, Randau T, Kabir K, and Wirtz DC. Radiofrequency (RF) Kyphoplasty in treatment of osteolytic vertebral fractures. IOF WCO-ECCEO10 2010.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
 		bottom: 40,
 		right:70,

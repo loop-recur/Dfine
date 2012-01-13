@@ -38,7 +38,7 @@ Views.content.extra_vs_vertebro = function(win) {
 	});
 	
 	var toggle_reference = UI.toggleableLabel({
-		text:"Reference: Pflugmacher R, Randau T, Kabir K, and Wirtz DC. Radiofrequency (RF) Kyphoplasty in comparison to in Vertebroplasty (VP) A prospective evaluation. IOF WCO-ECCEO10 2010.",
+		text:"Pflugmacher R, Randau T, Kabir K, and Wirtz DC. Radiofrequency (RF) Kyphoplasty in comparison to in Vertebroplasty (VP) A prospective evaluation. IOF WCO-ECCEO10 2010.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
 		bottom: 40,
 		right:70,

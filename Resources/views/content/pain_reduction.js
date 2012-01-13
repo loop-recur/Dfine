@@ -48,7 +48,7 @@ Views.content.pain_reduction = function(win) {
 	});
 	
 	var toggle_reference = UI.toggleableLabel({
-		text:"Reference: Erdem, E. Radiofrequency Kyphoplasty (RFK) for the Treatment of Vertebral Compression Fractures As A Result of Multiple Myeloma. ASSR 2011.",
+		text:"Erdem, E. Radiofrequency Kyphoplasty (RFK) for the Treatment of Vertebral Compression Fractures As A Result of Multiple Myeloma. ASSR 2011.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
 		bottom: 40,
 		right:70,

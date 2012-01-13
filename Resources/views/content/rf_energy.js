@@ -52,7 +52,7 @@ Views.content.rf_energy = function(win) {
 	}
 
 	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});	
-	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:740});
+	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hand Switch Cable", top:400, left:740});
 	var hard_plus_button = makePlus(hard_switch_cable, 150);
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
@@ -79,7 +79,7 @@ Views.content.rf_energy = function(win) {
 	view.add(multiplex_controller_info);
 	
 	var multiplex_bullets = Ti.UI.createLabel({
-		text: "• Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n\n • Maintains viscosity of cement at consistent level throughout the procedure. \n\n • Hydraulic system allows for consistent injection of bone cement.",
+		text: "• Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n\n • Maintains viscosity of cement at consistent level throughout the procedure. \n\n\n • Hydraulic system allows for consistent injection of bone cement.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"black",
 		width:170,
@@ -129,7 +129,7 @@ Views.content.rf_energy = function(win) {
 	
 	var video2 = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Watch Video",
+		title: "Hand Switch Cable",
 		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 225,

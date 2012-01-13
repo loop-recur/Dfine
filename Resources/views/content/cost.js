@@ -25,9 +25,9 @@ Views.content.cost = function(win) {
 	
 	var cost = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/cost/cost.png",
-		height:339,
-		width:629,
-		left:170,
+		height:264,
+		width:503,
+		left:220,
 		top:160
 	}));
 
@@ -36,9 +36,9 @@ Views.content.cost = function(win) {
 		text: "StabiliT® ER2 Bone Cement’s extended working time allows physicians to treat multiple levels with a single fracture kit.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
-		width:790,
-		bottom:200,
-		left:170,
+		width:500,
+		bottom:270,
+		left:225,
 		height:'auto'
 	});
 

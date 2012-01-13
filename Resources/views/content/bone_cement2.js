@@ -58,7 +58,7 @@ Views.content.bone_cement2 = function(win) {
 	view.add(right_image);
 	
 	var left_note = Ti.UI.createLabel({
-		text: "Ultra-high viscosity StabiliT ER2 Bone Cement provides consistent interdigitation throughout the vertebre",
+		text: "Ultra-high viscosity StabiliT ER2 Bone Cement provides consistent interdigitation throughout the vertebra",
 		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:250,

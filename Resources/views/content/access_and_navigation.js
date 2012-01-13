@@ -49,20 +49,10 @@ Views.content.access_and_navigation = function(win) {
 	
 	view.add(midline_bullets);
 	
-	var xray = Ti.UI.createView({
-		backgroundImage:"images/technology/access/xray.png",
-		height:183,
-		width:188,
-		top:260,
-		left:260
-	});
-	
-	var xray = ClickToExpand(xray);
-	
 	var tool1 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool1b.png",
-		height:121,
-		width:234,
+		height:157,
+		width:304,
 		top:150,
 		left:450
 	});
@@ -73,13 +63,47 @@ Views.content.access_and_navigation = function(win) {
 		backgroundImage:"images/technology/access/tool2b.png",
 		height:148,
 		width:265,
-		top:310,
-		left:550
+		top:330,
+		left:487
 	});
 	
 	var tool2 = ClickToExpand(tool2);
 	
-	view.add(xray);
+
+	var video = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
+		title: "MidLine Osteotome (X-ray)",
+		font:{fontSize:12, fontWeight:"regular"},
+		color:"black",
+		width: 245,
+		height: 50,
+		left:150,
+		top:300
+	});
+	
+	video.addEventListener('click', function(){
+		Controllers.content.video('1482.m4v');
+	});
+	
+	view.add(video);
+	
+	var video2 = Ti.UI.createButton({
+		backgroundImage:"images/video_button.png",
+		title: "MidLine Osteotome",
+		font:{fontSize:12, fontWeight:"regular"},
+		color:"black",
+		width: 245,
+		height: 50,
+		left:150,
+		top:380
+	});
+	
+	video2.addEventListener('click', function(){
+		Controllers.content.video('1482.m4v');
+	});
+	
+	view.add(video2);
+	
 	view.add(tool1);
 	view.add(tool2);
 	

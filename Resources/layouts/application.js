@@ -37,7 +37,7 @@ Layouts.application = function(delegate) {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "Overview Video",
+		title: "RF-TVA",
 		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 225,
@@ -66,10 +66,27 @@ Layouts.application = function(delegate) {
 			});
 		}
 	});
-		
+	
 	var main_content = Ti.UI.createView({
 		backgroundImage:'images/main_bg.png',
 	});
+	
+	// var back_to_cover = Ti.UI.createButton({
+	// 	backgroundImage:"images/page_back_button.png",
+	// 	title: "Back to cover",
+	// 	font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'bold'},
+	// 	color:"black",
+	// 	width: 200,
+	// 	height: 50,
+	// 	left:20
+	// });
+	// 
+	// back_to_cover.addEventListener("click", function(e) {
+	// 	win.add(cover_view);
+	// 	cover_image.animate({left:0, duration:400}, function(){})
+	// });
+	// 
+	// win.add(back_to_cover);
 	
 	var nav = Ti.UI.createView({
 		layout: "horizontal",

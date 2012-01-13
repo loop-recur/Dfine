@@ -32,33 +32,8 @@ Views.content.rf_energy = function(win) {
 		width:882,
 		top:90
 	});
-	
-	var main_image = ClickToExpand(main_image);
 
 	view.add(main_image);
-	
-	// example of view factories
-	var label_toggle_view = function(attrs) {
-		return Ti.UI.createLabel(merge({
-			font:{fontFamily:'Helvetica LT CondensedLight',fontSize:22,fontWeight:'regular'},
-			color:"#023f66",
-			width:'auto',
-			top:400,
-			left:130,
-			height:'auto'
-		}, attrs));
-	}
-
-	var toggle_content_view = function(attrs) {
-		return Ti.UI.createView(merge({
-			backgroundColor:"#EDEDED",
-			height:'auto',
-			width:180,
-			top: 450,
-			left:130,
-			visible:false
-		}, attrs));
-	}
 
 	var hard_switch_cable_info = UI.toggleableView({top:430, left:745});	
 	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "Hard Switch Cable", top:400, left:760});

@@ -8,12 +8,8 @@ Views.videos.show = function(filename, attrs) {
 		orientationModes: [Ti.UI.LANDSCAPE_LEFT, Ti.UI.LANDSCAPE_RIGHT]
 	});
 	
-	var back_button = Ti.UI.createButton({
-		title: "Back",
-		width: 140,
-		height: 40,
-		right: 10,
-		top: 5
+	var back_button = UI.BackButton(win, function() {
+		player.stop();
 	});
 	
 	var player = Ti.Media.createVideoPlayer({
@@ -45,11 +41,6 @@ Views.videos.show = function(filename, attrs) {
 	}
 	
 	if(attrs.start) PlayerStopper(player, attrs).start();	
-	
-	back_button.addEventListener('click', function() {
-		player.stop();
-		win.close();
-	});
 
 	win.add(player);
 	win.add(back_button);

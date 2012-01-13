@@ -4,6 +4,30 @@ Layouts.application = function(delegate) {
 		orientationModes:[Ti.UI.LANDSCAPE_LEFT]
 	});
 	
+	var cover_view = Ti.UI.createView({
+		zIndex: 99,
+		width: "100%",
+		height: "100%",
+		name: "cover_view"
+	});
+	
+	var cover_image = Ti.UI.createImageView({
+		image: "images/closed_tab_page_bg.png",
+		width: 1024,
+		height: 768
+	});
+	
+	cover_view.add(cover_image);
+	win.add(cover_view);
+	
+	cover_view.addEventListener("swipe", function(e) {
+		if(e.direction == "left") {
+			cover_image.animate({center:{x:-800, y: 512}, duration:300}, function() {
+				win.remove(cover_view);
+			});
+		}
+	});
+		
 	var main_content = Ti.UI.createView({
 		backgroundImage:'images/main_bg.png',
 	});

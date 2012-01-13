@@ -81,12 +81,8 @@ Views.content.results = function(win) {
 	}
 	
 	table.addEventListener('click', function(e){
-		view.opacity = 0;
 		animateArrow(e.index);
-		setTimeout(function(){
-			App.swapView(view, getContent(e.source.id));
-			view.animate({opacity: 1, duration: 150});
-		}, 500);
+		App.swapView(view, getContent(e.source.id));
 	});
 	
 	first(rows).fireEvent('click');

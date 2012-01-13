@@ -1,14 +1,13 @@
 ClickToExpand = function(image_view) {
 	var image = (image_view.image || image_view.backgroundImage);
 
-	// There's a height: 70% that dictates the initial size
 	var getPage = function() {
 		return '<html> \
 		<head> \
 		  <title>Expanded Image</title> \
 		</head> \
-		<body style="padding:0; margin:0;"> \
-		  <img src="'+image+'" style="height:70%"/> \
+		<body style="padding:0; margin:200px auto; width:600px;" > \
+		  <img src="'+image+'" /> \
 		</body> \
 		</html>'
 	}
@@ -29,7 +28,6 @@ ClickToExpand = function(image_view) {
 
 		var webview = Ti.UI.createWebView({
 			scalesPageToFit: true,
-			top: 0,
 			html: getPage()
 		});
 		

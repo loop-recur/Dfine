@@ -13,12 +13,12 @@ Views.content.pain_reduction = function(win) {
 		height:'auto'
 	});
 	
-	var image = Ti.UI.createView({
+	var image = ClickToExpand(Ti.UI.createView({
 		backgroundImage:"images/results/results_page1_significant_pain.png",
 		top:100,
 		width:722,
 		height:285,
-	})
+	}));
 	
 	view.add(image);
 	

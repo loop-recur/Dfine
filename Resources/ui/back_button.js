@@ -1,7 +1,7 @@
 UI.BackButton = function(win, cb) {
 	
 	var back = Ti.UI.createButton({
-		title: "(X)",
+		backgroundImage: "images/back_button.png",
 		top: 10,
 		right: 10,
 		width: 40,

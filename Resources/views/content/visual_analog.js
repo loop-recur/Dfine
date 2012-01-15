@@ -17,7 +17,7 @@ Views.content.visual_analog = function(win) {
 		top:100,
 		width:722,
 		height:285
-	}));
+	}), true);
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.",

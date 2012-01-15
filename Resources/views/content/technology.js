@@ -25,7 +25,7 @@ Views.content.technology = function(win) {
 		width:'auto',
 		height:'auto',
 		top:50,
-		left:335
+		left:333
 	});
 	
 	var label = Ti.UI.createLabel({

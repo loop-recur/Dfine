@@ -17,7 +17,7 @@ Views.content.pain_reduction = function(win) {
 		top:100,
 		width:722,
 		height:285,
-	}));
+	}), true);
 	
 	view.add(image);
 

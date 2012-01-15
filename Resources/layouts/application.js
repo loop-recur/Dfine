@@ -125,5 +125,5 @@ Layouts.application = function(delegate) {
 	main_window_view.add(cover_view);
 	win.add(main_window_view);
 	win.add(nav);
-	win.open();
+	win.open({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN});
 }

@@ -26,15 +26,6 @@ Views.content.bone_cement2 = function(win) {
 	view.add(label);
 	view.add(label2);
 	
-	var logo = Ti.UI.createView({
-		backgroundImage:"images/dfine_logo.png",
-		height:50,
-		width:150,
-		bottom:10,
-		right:70
-	});
-	view.add(logo);
-	
 	var left_image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bolus2_transparent.png",
 		height:275,

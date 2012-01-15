@@ -48,21 +48,12 @@ Views.content.bone_cement = function(win) {
 	view.add(copyright);
 	view.add(two);
 	
-	var logo = Ti.UI.createView({
-		backgroundImage:"images/dfine_logo.png",
-		height:50,
-		width:150,
-		bottom:10,
-		right:70
-	});
-	view.add(logo);
-	
-	var image = ClickToExpand(Ti.UI.createView({
+	var image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
 		height:268,
 		width:640,
 		top:275
-	}));
+	});
 	
 	view.add(image);
 	

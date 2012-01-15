@@ -14,7 +14,7 @@ Views.content.dfine = function(win) {
 	});
 	
 	var label2 = Ti.UI.createLabel({
-		text: "Founded in 2004 \n\nDirect in US and Germany. Distributionin 9 additional countries \n\n~150 Employees \n\nVenture backed company, located in San Jose, CA \n\nPioneered Radiofrequency Targeted Vertebral Augmentation (RF–TVA), a generational advance in the treatment of vertebral compression fractures (VCFs) \n\nCommitted to ongoing, clinically relevant scientific research & technology development",
+		text: "Founded in 2004 \n\nDirect in US and Germany. Distribution in 9 additional countries \n\n~150 Employees \n\nVenture backed company, located in San Jose, CA \n\nPioneered Radiofrequency Targeted Vertebral Augmentation (RF–TVA), a generational advance in the treatment of vertebral compression fractures (VCFs) \n\nCommitted to ongoing, clinically relevant scientific research & technology development",
 		top:140,
 		left:10,
 		color:"#023f66",

@@ -1,4 +1,4 @@
-ClickToExpand = function(image_view) {
+ClickToExpand = function(image_view, hide_expand) {
 	var image = (image_view.backgroundImage || image_view.image);
 
 	var getPage = function() {
@@ -12,16 +12,18 @@ ClickToExpand = function(image_view) {
 		</html>'
 	}
 
-	var expand = Ti.UI.createButton({
-		backgroundImage: "images/fullscreen_icon.png",
-		width: 20,
-		height: 20,
-		bottom: 4,
-		right: 4,
-		zIndex: 10
-	});
-	
-	image_view.add(expand);
+	if(!hide_expand)  {
+		var expand = Ti.UI.createButton({
+			backgroundImage: "images/fullscreen_icon.png",
+			width: 20,
+			height: 20,
+			bottom: 4,
+			right: 4,
+			zIndex: 10
+		});
+
+		image_view.add(expand);
+	}
 	
 	var expandView = function() {
 		var win = Ti.UI.createWindow({backgroundColor: "#ffffff"});

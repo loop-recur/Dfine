@@ -3,8 +3,28 @@ Views.content.bone_cement2 = function(win) {
 	var view = Ti.UI.createView({
 	});
 	
+	var copyright = Ti.UI.createLabel({
+		text: "®",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		height:'auto',
+		top:40,
+		left:335
+	});
+	
+	var two = Ti.UI.createLabel({
+		text: "2",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
+		color:"#023f66",
+		width:'auto',
+		height:'auto',
+		top:40,
+		left:385
+	});
+	
 	var label = Ti.UI.createLabel({
-		text: "StabiliT® ER2 Bone Cement",
+		text: "StabiliT  ER  Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -12,7 +32,7 @@ Views.content.bone_cement2 = function(win) {
 		left:240,
 		height:'auto'
 	});
-	
+		
 	var label2 = Ti.UI.createLabel({
 		text: "- consistent interdigitation throughout the vertebra",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
@@ -25,6 +45,9 @@ Views.content.bone_cement2 = function(win) {
 	
 	view.add(label);
 	view.add(label2);
+	
+	view.add(copyright);
+	view.add(two);
 	
 	var left_image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bolus2_transparent.png",
@@ -48,7 +71,7 @@ Views.content.bone_cement2 = function(win) {
 	view.add(right_image);
 	
 	var left_note = Ti.UI.createLabel({
-		text: "Ultra-high viscosity StabiliT ER2 Bone Cement provides consistent interdigitation throughout the vertebra",
+		text: "Ultra-high viscosity StabiliT  ER  Bone Cement provides consistent interdigitation throughout the vertebra",
 		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:250,
@@ -56,6 +79,8 @@ Views.content.bone_cement2 = function(win) {
 		left:150,
 		height:'auto'
 	});
+	
+	UI.Er2(left_note, view, {left: 312}, {left: 30}, {left: 60});
 	
 	var right_note = Ti.UI.createLabel({
 		text: "Cement is removed from the same vertebra – brown area is evidence of cement interdigitation",
@@ -85,7 +110,7 @@ Views.content.bone_cement2 = function(win) {
 
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "StabiliT ER2 Bone Cement",
+		title: "StabiliT   ER  Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
 		width: 250,
@@ -99,6 +124,7 @@ Views.content.bone_cement2 = function(win) {
 	});
 	
 	view.add(video);
+	UI.Er2(video, view, {left: 462, bottom: 93}, {left: 30}, {left: 55});
 	
 	view.add(Views.content.tech_nav(view, "bone_cement"));
 	

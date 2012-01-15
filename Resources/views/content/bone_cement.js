@@ -72,7 +72,7 @@ Views.content.bone_cement = function(win) {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "StabiliT ER2 Bone Cement",
+		title: "StabiliT   ER  Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
 		width: 250,
@@ -80,23 +80,27 @@ Views.content.bone_cement = function(win) {
 		bottom:70,
 		left:240
 	});
-	
+		
 	video.addEventListener('click', function(){
 		Controllers.content.video('1115.mp4');
 	});
 	
 	view.add(video);
 	view.add(Views.content.tech_nav(view, 'bone_cement'));
+	UI.Er2(video, view, {left: 303, bottom: 93}, {left: 30}, {left: 55});
+	
 	
 	var foot_note = Ti.UI.createLabel({
-		text: "StabiliT® ER2 Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",
+		text: "StabiliT   ER   Bone Cement quickly reaches and stabilizes at an ultra-high viscosity for an extended period of time.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:580,
-		bottom:165,
+		bottom:150,
 		height:'auto',
 		textAlign:"center"
 	});
+	
+	UI.Er2(foot_note, view, {left: 246}, {left: 30}, {left: 55});
 	
 	view.add(foot_note);
 	

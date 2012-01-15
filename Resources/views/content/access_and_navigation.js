@@ -36,7 +36,7 @@ Views.content.access_and_navigation = function(win) {
 	view.add(midline);
 	
 	var midline_bullets = Ti.UI.createLabel({
-		text: "Allows unipedicular access to vertebrae*. \nEnables targeted cavity creation across the vertebral midline. \nSpares cancellous bone. \nCreates preferential pathways for high viscosity StabiliT ER2 Bone Cement to follow. \nMaximizes exposed surface area to facilitate interdigitation. \n\n*85+% of procedures to date have used the unipendicular technique to enter the vertebra",
+		text: "Allows unipedicular access to vertebrae*. \nEnables targeted cavity creation across the vertebral midline. \nSpares cancellous bone. \nCreates preferential pathways for high viscosity StabiliT   ER  Bone Cement to follow. \nMaximizes exposed surface area to facilitate interdigitation. \n\n*85+% of procedures to date have used the unipendicular technique to enter the vertebra",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:"auto",
@@ -46,6 +46,7 @@ Views.content.access_and_navigation = function(win) {
 	});
 	
 	view.add(midline_bullets);
+	UI.Er2(midline_bullets, view, {left: 550, bottom: 138}, {left: 30}, {left: 56});	
 	
 	var tool1 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool1b.png",

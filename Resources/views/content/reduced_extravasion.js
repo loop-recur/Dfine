@@ -17,10 +17,10 @@ Views.content.reduced_extravasion = function(win) {
 		top:90,
 		width:717,
 		height:349
-	}));
+	}), true);
 	
 	var content = Ti.UI.createLabel({
-		text: "Use of StabiliT® ER2 Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.",
+		text: "Use of StabiliT   ER  Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
 		bottom:280,
@@ -64,5 +64,7 @@ Views.content.reduced_extravasion = function(win) {
 	view.add(content);
 	view.add(bullets);
 
+	UI.Er2(content, view, {left: 148}, {left: 30}, {left: 57});
+	
 	win.add(view);
 }

@@ -62,3 +62,41 @@ UI.superSub = function(supertext, subtext, attrs) {
 	
 	return webview;
 }
+
+UI.Er2 = function(label, win, view_attrs, copy_attrs, two_attrs) {
+	view_attrs = view_attrs || {};
+	copy_attrs = copy_attrs || {};
+	two_attrs = two_attrs || {};
+	
+	var font = merge(label.font, {fontSize: label.font.fontSize / 1.7 });
+	
+	var view = Ti.UI.createView(merge({
+		height: 'auto',
+		width: 'auto',
+		left:label.left,
+		right: label.right
+	}, view_attrs));
+	
+	if(label.bottom && !view.bottom) view.bottom = label.bottom + 29;
+	if(label.top && !view.top) view.top = label.top - 4;
+	
+	var copyright = Ti.UI.createLabel(merge({
+		text: "®",
+		font: font,
+		color:label.color,
+		width:'auto',
+		height:'auto'
+	}, copy_attrs));
+	
+	var two = Ti.UI.createLabel(merge({
+		text: "2",
+		font: font,
+		color:label.color,
+		width:'auto',
+		height:'auto'
+	}, two_attrs));
+	
+	view.add(copyright);
+	view.add(two);
+	win.add(view);
+}

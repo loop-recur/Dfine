@@ -78,7 +78,7 @@ Views.content.rf_energy = function(win) {
 	view.add(multiplex_controller_info);
 	
 	var multiplex_bullets = Ti.UI.createLabel({
-		text: "• Controls RF-energy applied to StabiliT ER2 Bone Cement, resulting in high viscosity cement.\n\n • Maintains viscosity of cement at consistent level throughout the procedure. \n\n • Hydraulic system allows for consistent injection of bone cement.",
+		text: "• Controls RF-energy applied to StabiliT   ER  Bone Cement, resulting in high viscosity cement.\n\n • Maintains viscosity of cement at consistent level throughout the procedure. \n\n • Hydraulic system allows for consistent injection of bone cement.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"black",
 		width:170,
@@ -88,6 +88,7 @@ Views.content.rf_energy = function(win) {
 	});
 	
 	multiplex_controller_info.add(multiplex_bullets);
+	UI.Er2(multiplex_bullets, multiplex_controller_info, {left: 42, top: 27}, {left: 30}, {left: 51});
 	
 	var activation_element_info = UI.toggleableView({top:550, left:435});	
 	var activation_element = UI.toggleableLabel({text: "Activation Element", top:530, left:450});

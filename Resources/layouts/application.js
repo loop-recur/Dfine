@@ -16,7 +16,8 @@ Layouts.application = function(delegate) {
 		backgroundImage: "images/closed_tab_page_bg.png",
 		width: 1017,
 		height: "100%",
-		left: 0
+		left: 0,
+		zIndex: 2
 	});
 
 	var cover_image = Ti.UI.createView({
@@ -48,7 +49,8 @@ Layouts.application = function(delegate) {
 	var main_content = Ti.UI.createView({
 		left: 0,
 		width: 1017,
-		backgroundImage: "images/page_bg.png"
+		backgroundImage: "images/page_bg.png",
+		zIndex: 1
 	});
 	
 	var nav_cover = Ti.UI.createView({
@@ -61,8 +63,9 @@ Layouts.application = function(delegate) {
 	
 	var openApp = function() {
 		win.remove(nav_cover);
-		// main_window_view.remove(cover_view);
-		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content});
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content}, function() {
+			cover_view.zIndex = 0;
+		});
 	}
 	
 	var addOpenListener = function() {
@@ -75,8 +78,9 @@ Layouts.application = function(delegate) {
 	main_content.addEventListener('backToCover', function() {
 		win.add(nav_cover);
 		addOpenListener();
-		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
-		// main_window_view.add(cover_view);
+		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view}, function() {
+			cover_view.zIndex = 2;
+		});
 	});
 	
 	var nav = Ti.UI.createView({

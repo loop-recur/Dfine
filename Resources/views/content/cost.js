@@ -38,7 +38,8 @@ Views.content.cost = function(win) {
 		width:500,
 		bottom:270,
 		left:225,
-		height:'auto'
+		height:'auto',
+		textAlign:"center"
 	});
 
 	view.add(label);

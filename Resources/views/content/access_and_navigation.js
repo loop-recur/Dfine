@@ -1,7 +1,5 @@
 Views.content.access_and_navigation = function(win) {	
-	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png"
-	});
+	var view = Ti.UI.createView({});
 	
 	var label = Ti.UI.createLabel({
 		text: "VertecoR ® Navigational MidLine Osteotome",

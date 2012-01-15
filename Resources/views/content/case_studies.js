@@ -5,7 +5,6 @@ Views.content.case_studies = function(win) {
 	
 	var makeView = function() {
 		return Ti.UI.createView({
-			backgroundImage:"images/page_bg.png"
 		});
 	}
 	

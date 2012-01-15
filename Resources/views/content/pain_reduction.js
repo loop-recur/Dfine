@@ -1,6 +1,5 @@
 Views.content.pain_reduction = function(win) {
 	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({
@@ -21,7 +20,7 @@ Views.content.pain_reduction = function(win) {
 	}));
 	
 	view.add(image);
-	
+
 	var content = Ti.UI.createLabel({
 		text: "StabiliT® ER2 Bone Cement fills the pathways created by the VertecoR MidLine Osteotome to ensure targeted delivery and interdigitation throughout the vertebra, potentially resulting in a safer and more effective vertebral augmentation.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},

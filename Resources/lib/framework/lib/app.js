@@ -20,7 +20,7 @@ App.removeChildren = function(view, children) {
 
 App.swapView = function(view, cb) {
 	return function(e) {
-		var children = view.children;
+		var children = view.children || [];
 		cb(view);
 		App.removeChildren(view, children);
 	}

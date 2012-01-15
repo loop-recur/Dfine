@@ -13,7 +13,6 @@ Views.content.reimbursment = function(win) {
 	
 	
 	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png"
 	});
 	
 	var left_label = Ti.UI.createLabel({

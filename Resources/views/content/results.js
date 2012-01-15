@@ -15,7 +15,6 @@ Views.content.results = function(win) {
 	}
 	
 	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png",
 		width: "75%",
 		right:14
 	});
@@ -82,7 +81,7 @@ Views.content.results = function(win) {
 	
 	table.addEventListener('click', function(e){
 		animateArrow(e.index);
-		App.swapView(view, getContent(e.source.id));
+		App.swapView(view, getContent.p(e.source.id))();
 	});
 	
 	first(rows).fireEvent('click');

@@ -1,6 +1,5 @@
 Views.content.pain_relief_percent = function(win) {	
 	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png"
 	});
 
 	var label = Ti.UI.createLabel({

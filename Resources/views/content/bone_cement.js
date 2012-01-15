@@ -1,7 +1,6 @@
 Views.content.bone_cement = function(win) {	
 	
 	var view = Ti.UI.createView({
-		backgroundImage:"images/page_bg.png"
 	});
 	
 	var copyright = Ti.UI.createLabel({

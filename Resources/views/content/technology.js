@@ -1,7 +1,7 @@
 Views.content.technology = function(win) {
 	var view = Ti.UI.createView({
 		width:"100%",
-		backgroundImage: "images/page_bg.png"
+		left: 0
 	});
 	
 	var back_to_cover = Ti.UI.createButton({
@@ -16,10 +16,6 @@ Views.content.technology = function(win) {
 	
 	back_to_cover.addEventListener("click", function(e) {
 		win.fireEvent('backToCover');
-	});
-	
-	var center_content = Ti.UI.createView({
-		left:0
 	});
 	
 	var copyright = Ti.UI.createLabel({
@@ -41,8 +37,8 @@ Views.content.technology = function(win) {
 		height:'auto'
 	});
 	
-	center_content.add(label);
-	center_content.add(copyright);
+	view.add(label);
+	view.add(copyright);
 	
 	var nav_view = Ti.UI.createView({
 		height:430,
@@ -146,13 +142,12 @@ Views.content.technology = function(win) {
 		height:'auto'
 	});
 	
-	center_content.add(access_sub);
-	center_content.add(rf_sub);
-	center_content.add(bone_sub);
-	center_content.add(patents);
-	center_content.add(nav_view);
+	view.add(access_sub);
+	view.add(rf_sub);
+	view.add(bone_sub);
+	view.add(patents);
+	view.add(nav_view);
 	
-	view.add(center_content);
 	view.add(back_to_cover);
 	
 	win.add(view);

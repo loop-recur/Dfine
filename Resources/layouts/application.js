@@ -61,9 +61,8 @@ Layouts.application = function(delegate) {
 	
 	var openApp = function() {
 		win.remove(nav_cover);
+		// main_window_view.remove(cover_view);
 		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_DOWN, view: main_content});
-		main_window_view.remove(cover_view);
-		first(tabButtons).fireEvent('click');
 	}
 	
 	var addOpenListener = function() {
@@ -74,10 +73,10 @@ Layouts.application = function(delegate) {
 	addOpenListener();
 		
 	main_content.addEventListener('backToCover', function() {
-		main_window_view.add(cover_view);
 		win.add(nav_cover);
 		addOpenListener();
 		main_window_view.animate({transition:Ti.UI.iPhone.AnimationStyle.CURL_UP, view: cover_view});
+		// main_window_view.add(cover_view);
 	});
 	
 	var nav = Ti.UI.createView({
@@ -116,6 +115,7 @@ Layouts.application = function(delegate) {
 	tabButtons = map(makeTab, tabs);
 
 	var button_group = UI.ButtonGroup.apply(this, tabButtons);
+	first(tabButtons).fireEvent('click');
 	
 	main_window_view.add(main_content);
 	main_window_view.add(cover_view);

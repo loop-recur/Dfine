@@ -27,16 +27,6 @@ Layouts.application = function(delegate) {
 		top: 80
 	});
 	
-	var label = Ti.UI.createLabel({
-		text: "Swipe left to begin...",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular', fontStyle:"italic"},
-		color:"#023f66",
-		width:'auto',
-		top:130,
-		right:70,
-		height:'auto'
-	});
-	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "RF-TVA",
@@ -53,7 +43,6 @@ Layouts.application = function(delegate) {
 	});
 	
 	cover_view.add(cover_image);
-	cover_view.add(label);
 	cover_view.add(video);
 	
 	var main_content = Ti.UI.createView({

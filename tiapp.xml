@@ -9,7 +9,7 @@
         <target device="blackberry">false</target>
     </deployment-targets>
     <id>com.looprecur.DFINE</id>
-    <name>dfine</name>
+    <name>DFINE</name>
     <version>0.8</version>
     <publisher>loop/recur</publisher>
     <url>http://looprecur.com</url>

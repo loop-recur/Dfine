@@ -71,7 +71,7 @@ Views.content.access_and_navigation = function(win) {
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "Cavity Creation",
-		font:{fontSize:13, fontWeight:"regular"},
+		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 245,
 		height: 50,
@@ -88,7 +88,7 @@ Views.content.access_and_navigation = function(win) {
 	var video2 = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "MidLine Osteotome",
-		font:{fontSize:12, fontWeight:"regular"},
+		font:{fontSize:15, fontWeight:"regular"},
 		color:"black",
 		width: 245,
 		height: 50,

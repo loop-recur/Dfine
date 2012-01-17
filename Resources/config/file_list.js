@@ -10,6 +10,7 @@ FileList = [
 	, "helpers/ui.js"
 	, "lib/formatter.js"
 	, "lib/Grid.js"
+	, "lib/image_cache.js"
 	, "layouts/application.js"
 	, "views/content/rf_energy.js"
 	, "views/content/access_and_navigation.js"

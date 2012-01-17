@@ -133,19 +133,9 @@ Views.content.technology = function(win) {
 		height:'auto'
 	});
 	
-	var patents = Ti.UI.createLabel({
-		text: "IP covering all three areas: 4 patents issued, 50 pending",
-		font:{fontFamily:'Helvetica',fontSize:18,fontWeight:'regular'},
-		color:"#023f66",
-		width:"auto",
-		bottom:50,
-		height:'auto'
-	});
-	
 	view.add(access_sub);
 	view.add(rf_sub);
 	view.add(bone_sub);
-	view.add(patents);
 	view.add(nav_view);
 	
 	view.add(back_to_cover);

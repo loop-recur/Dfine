@@ -129,7 +129,7 @@ Views.content.case_studies = function(win) {
 		view.add(dashboard);
 	}
 	
-	Controllers.case_studies.getAll(finish);
+	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images")});
 
 	win.add(view);
 }

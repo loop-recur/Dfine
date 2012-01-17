@@ -181,7 +181,7 @@ UI.slideshow = function(images) {
 			_updateImagePositions();
 		});
 	}
-	
+
 	map(_addToBottom, images);
 	
 	last(bottom_views).addEventListener("load", addClickHandlers);

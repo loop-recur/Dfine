@@ -122,7 +122,7 @@ Views.content.rf_energy = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('1482.m4v');
+		Controllers.content.video('1482.mov');
 	});
 	
 	view.add(video);

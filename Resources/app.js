@@ -3,6 +3,6 @@ App.run();
 
 App.setHost("http://dfine.herokuapp.com/api", "admin@dfine.com:Secret123");
 
-if(Ti.Network.networkType != Ti.Network.NETWORK_WIFI) ImageCache();
+if(Ti.Network.networkType == Ti.Network.NETWORK_WIFI) ImageCache();
 
 Controllers.application.index();

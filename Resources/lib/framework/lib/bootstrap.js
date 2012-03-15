@@ -6,7 +6,7 @@ Bootstrap.run = function() {
 	
 	function includeAllFiles() {
 		Views[Ti.Platform.osname] = {};
-		Layouts[Ti.Platform.osname] = {};
+		Windows[Ti.Platform.osname] = {};
 		map(includeFile, FileList);
 	}
 
@@ -17,7 +17,7 @@ Bootstrap.run = function() {
 	}
 	
 	function isView(name) {
-		return name.match(/views|layouts/i);
+		return name.match(/views|windows/i);
 	};
 	
 	function shouldInclude(name) {
@@ -27,7 +27,7 @@ Bootstrap.run = function() {
 	}
 
 	function makeNamespace(name) {
-		var kinds = {"views": Views, "controllers": Controllers, "layouts": Layouts, "config": Config, "lib": Lib, "helpers": Helpers, "ui": UI};
+		var kinds = {"views": Views, "controllers": Controllers, "windows": Windows, "config": Config, "lib": Lib, "helpers": Helpers, "ui": UI};
 		var paths = name.split('/');
 		var kind = paths[0];
 		var namespace = paths[1];

@@ -35,5 +35,5 @@ Views.content.dfine = function(win) {
 	view.add(label);
 	view.add(label2);
 
-	win.add(view);
+	return view;
 }

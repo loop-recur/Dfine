@@ -110,5 +110,5 @@ Views.content.bone_cement = function(win) {
 	
 	read_more.addEventListener('click', App.swapView(view, getContent.p("bone_cement2")));
 	
-	win.add(view);
+	return view;
 }

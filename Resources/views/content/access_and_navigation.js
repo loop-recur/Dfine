@@ -107,5 +107,5 @@ Views.content.access_and_navigation = function(win) {
 	view.add(tool2);
 	
 	view.add(Views.content.tech_nav(view, 'access_and_navigation'));
-	win.add(view);
+	return view;
 }

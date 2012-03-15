@@ -11,7 +11,8 @@ FileList = [
 	, "lib/formatter.js"
 	, "lib/Grid.js"
 	, "lib/image_cache.js"
-	, "layouts/application.js"
+	, "windows/content.js"
+	, "views/content/main_screen.js"
 	, "views/content/rf_energy.js"
 	, "views/content/access_and_navigation.js"
 	, "views/content/bone_cement.js"
@@ -32,5 +33,4 @@ FileList = [
 	, "views/videos/show.js"
 	, "controllers/content.js"
 	, "controllers/case_studies.js"
-	, "controllers/application.js"
 ]

@@ -14,8 +14,14 @@ App.action = defn(function(win, controller_action, args) {
 	Controllers[controller][action](view.p(win), params);
 });
 
+
 App.removeChildren = function(view, children) {
 	if(children) map(function(c){ view.remove(c); c = null; children = null; }, children);
+}
+
+App.removeAllChildren = function(view){
+	var children = view.children || [];
+	removeChildren(view, children);
 }
 
 App.swapView = function(view, cb) {
@@ -30,3 +36,4 @@ App.setHost = function(url, credentials) {
 	App.base_url = url;
 	if(credentials) App.http_client.credentials = ('Basic ' + Titanium.Utils.base64encode(credentials));
 }
+

@@ -29,21 +29,21 @@ UI.toggleableView = function(attrs) {
 		width:'100%'
 	});
 		
-	var close_button = Ti.UI.createImageView({
-		image: "images/reveal_close_x.png",
-		width: 30,
-		height: 30,
-		top: -15,
-		right: -15,
-		zIndex: 10
-	});
-
-	close_button.addEventListener('click', function() {
-		view.visible = false;
-	});
+	// var close_button = Ti.UI.createImageView({
+	// 	image: "images/reveal_close_x.png",
+	// 	width: 30,
+	// 	height: 30,
+	// 	top: -15,
+	// 	right: -15,
+	// 	zIndex: 10
+	// });
+	// 
+	// close_button.addEventListener('click', function() {
+	// 	view.visible = false;
+	// });
 	
 	view.add(box);
-	view.add(close_button);
+	// view.add(close_button);
 
 	return view;
 }

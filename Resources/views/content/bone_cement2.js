@@ -24,27 +24,27 @@ Views.content.bone_cement2 = function(win) {
 	});
 	
 	var label = Ti.UI.createLabel({
-		text: "StabiliT  ER  Bone Cement",
+		text: "StabiliT  ER  Bone Cement - Interdigitation and optimized fill",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
+		width:700,
 		top:40,
 		left:240,
 		height:'auto'
 	});
 		
-	var label2 = Ti.UI.createLabel({
-		text: "- consistent interdigitation throughout the vertebra",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
-		color:"#023f66",
-		width:'auto',
-		top:80,
-		left:250,
-		height:'auto'
-	});
+	// var label2 = Ti.UI.createLabel({
+	// 	text: "- consistent interdigitation throughout the vertebra",
+	// 	font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
+	// 	color:"#023f66",
+	// 	width:'auto',
+	// 	top:80,
+	// 	left:250,
+	// 	height:'auto'
+	// });
 	
 	view.add(label);
-	view.add(label2);
+	// view.add(label2);
 	
 	view.add(copyright);
 	view.add(two);
@@ -53,7 +53,8 @@ Views.content.bone_cement2 = function(win) {
 		backgroundImage:"images/technology/bone_cement/bolus2_transparent.png",
 		height:275,
 		width:375,
-		left: 90
+		left: 90,
+		top:200
 	});
 	
 	var left_image = ClickToExpand(left_image);
@@ -62,7 +63,8 @@ Views.content.bone_cement2 = function(win) {
 		backgroundImage:"images/technology/bone_cement/midlifeCement2_transparent.png",
 		height:275,
 		width:375,
-		right:140
+		right:140,
+		top:200
 	});
 	
 	var right_image = ClickToExpand(right_image);
@@ -70,25 +72,45 @@ Views.content.bone_cement2 = function(win) {
 	view.add(left_image);
 	view.add(right_image);
 	
+	// var left_note = Ti.UI.createLabel({
+	// 	text: "Ultra-high viscosity StabiliT  ER  Bone Cement provides consistent interdigitation throughout the vertebra",
+	// 	font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
+	// 	color:"#023f66",
+	// 	width:250,
+	// 	top:520,
+	// 	left:150,
+	// 	height:'auto'
+	// });
+	
 	var left_note = Ti.UI.createLabel({
-		text: "Ultra-high viscosity StabiliT  ER  Bone Cement provides consistent interdigitation throughout the vertebra",
+		text: "Cross section of vertebral body demonstrates extensive interdigitation and optimized fill.",
 		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
-		width:250,
-		top:520,
-		left:150,
+		width:300,
+		top:500,
+		left:130,
 		height:'auto'
 	});
 	
-	UI.Er2(left_note, view, {left: 312}, {left: 30}, {left: 60});
+	// UI.Er2(left_note, view, {left: 312}, {left: 30}, {left: 60});
+	
+	// var right_note = Ti.UI.createLabel({
+	// 	text: "Cement is removed from the same vertebra – brown area is evidence of cement interdigitation",
+	// 	font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
+	// 	color:"#023f66",
+	// 	width:250,
+	// 	top:520,
+	// 	right:200,
+	// 	height:'auto'
+	// });
 	
 	var right_note = Ti.UI.createLabel({
-		text: "Cement is removed from the same vertebra – brown area is evidence of cement interdigitation",
-		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
+		text: "The orange area indicates where the StabiliT  ER   ultra high viscosity cement penetrated the vertebral body. Note the high degree of remaining intact cancellous bone and the relative size of the targeted cavity versus the high degree of cement interdigitation.",
+		font:{fontFamily:'Helvetica',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
-		width:250,
-		top:520,
-		right:200,
+		width:350,
+		top:500,
+		right:150,
 		height:'auto'
 	});
 	
@@ -118,7 +140,7 @@ Views.content.bone_cement2 = function(win) {
 		bottom:70,
 		right:240
 	});
-	
+
 	video.addEventListener('click', function(){
 		Controllers.content.video('PML2775-a-bone2-157-208.mov');
 	});

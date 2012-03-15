@@ -13,7 +13,7 @@ Views.content.extra_vs_conventional = function(win) {
 	});
 	
 	var image = ClickToExpand(Ti.UI.createView({
-		backgroundImage:"images/results/results_page1_significant_pain.png",
+		backgroundImage:"images/results/results_page6_RF-TVA_vs_Conventional.png",
 		top:130,
 		width:682,
 		height:285

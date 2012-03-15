@@ -90,7 +90,7 @@ Views.content.rf_energy = function(win) {
 	multiplex_controller_info.add(multiplex_bullets);
 	UI.Er2(multiplex_bullets, multiplex_controller_info, {left: 42, top: 27}, {left: 30}, {left: 51});
 	
-	var activation_element_info = UI.toggleableView({top:550, left:435});	
+	var activation_element_info = UI.toggleableView({top:560, left:435});	
 	var activation_element = UI.toggleableLabel({text: "Activation Element", top:530, left:450});
 	var activation_plus_button = makePlus(activation_element, 150);
 	
@@ -100,7 +100,7 @@ Views.content.rf_energy = function(win) {
 	view.add(activation_element_info);
 	
 	var activation_bullets = Ti.UI.createLabel({
-		text: "• Applies RF energy to bone cement thus increasing its viscosity.",
+		text: "• Applies energy to bone cement thus increasing its viscosity.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
 		color:"black",
 		width:170,

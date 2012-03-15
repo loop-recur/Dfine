@@ -25,7 +25,7 @@ Views.content.dfine = function(win) {
 	});
 	
 	var image = Ti.UI.createView({
-		backgroundImage:"images/building.jpg",
+		backgroundImage:"images/building.png",
 		height:678,
 		width:454,
 		right:80

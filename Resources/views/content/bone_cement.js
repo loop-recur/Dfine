@@ -24,27 +24,27 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	var label = Ti.UI.createLabel({
-		text: "StabiliT  ER  Bone Cement",
+		text: "StabiliT  ER  Bone Cement - Ultra high viscosity and extended working time",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
+		width:700,
 		top:40,
 		left:240,
 		height:'auto'
 	});
 	
-	var label2 = Ti.UI.createLabel({
-		text: "- Unmatched viscosity and working time",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
-		color:"#023f66",
-		width:'auto',
-		top:80,
-		left:250,
-		height:'auto'
-	});
+	// var label2 = Ti.UI.createLabel({
+	// 	text: "- Unmatched viscosity and working time",
+	// 	font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'italic'},
+	// 	color:"#023f66",
+	// 	width:'auto',
+	// 	top:80,
+	// 	left:250,
+	// 	height:'auto'
+	// });
 	
 	view.add(label);
-	view.add(label2);
+	// view.add(label2);
 	view.add(copyright);
 	view.add(two);
 	
@@ -80,7 +80,7 @@ Views.content.bone_cement = function(win) {
 		bottom:70,
 		left:240
 	});
-		
+	
 	video.addEventListener('click', function(){
 		Controllers.content.video('1115.mp4');
 	});

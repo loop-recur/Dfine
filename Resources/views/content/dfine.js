@@ -34,6 +34,8 @@ Views.content.dfine = function(win) {
 	view.add(image);
 	view.add(label);
 	view.add(label2);
-
+	
+	view.add(Views.shared.tech_platform_button()); 
+	
 	return view;
 }

@@ -126,7 +126,7 @@ Views.content.bone_cement2 = function(win) {
 	view.add(video);
 	UI.Er2(video, view, {left: 462, bottom: 93}, {left: 30}, {left: 55});
 	
-	view.add(Views.content.tech_nav(view, "bone_cement"));
+	view.add(Views.shared.tech_nav("bone_cement"));
 	
 	var getContent = function(name) {
 		Views.content[name](view);

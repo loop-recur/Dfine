@@ -26,9 +26,9 @@ Controllers.content = (function() {
 		}
 	};
 	
-	var _getView = function(view_name, window){
+	var _getView = function(view_name){
 		console.log("view_name = "+ view_name);
-		console.log("Views.content[view_name](window) " + Views.content[view_name](window));
+		console.log("Views.content[view_name](window) " + Views.content[view_name]());
 		
 		return Views.content[view_name](window);
 	};
@@ -37,20 +37,23 @@ Controllers.content = (function() {
 	var renderView = function(){
 		var window = _getWindow();
 	  var view
-			, content_view =  _getBlankContentView(window);	 
+			, content_view =  _getBlankContentView(window)
+			, arg_values = renderView.arguments
+			, arg_length = arg_values.length;	 
+			
+		// Opening the window.
+		window.open();
 		
-		for( var i = 0, len = arguments.length; i < len; i++ ){
-			console.log("arguments = "+ arguments);
-			console.log("i = "+ i + " and arguments[i] = " + arguments[i]);
-			view = _getView(arguments[i], window);
-			console.log("window = "+ window);
+		for( var i = 0; i < arg_length; i++){
+			console.log("ALL arg_values = "+ JSON.stringify(arg_values));
+			console.log("arg_values = "+ arg_values + "| arg_length = "+ arg_length);
+			console.log("i = "+ i + " and arg_values[i] = " + JSON.stringify(arg_values[i]));
+			view = _getView(arg_values[i]);
 			console.log("view = "+ view);
 			content_view.add(view); // Applying content to the content_view. 
 		};
 		window.add(content_view);
 
-		// Opening the window.
-		window.open();
 	};
 	
 	return {renderView: renderView};

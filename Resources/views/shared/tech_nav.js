@@ -1,7 +1,9 @@
-Views.content.tech_nav = function(view, current) {	
-	var getContent = function(name) {
-		Views.content[name](view);
-	}
+Views.shared.tech_nav = function(current) {	
+
+	var view = Ti.UI.createView({
+		width:"100%",
+		left: 0	
+	});
 
 	var nav = Ti.UI.createView({
 		height:240,
@@ -24,8 +26,8 @@ Views.content.tech_nav = function(view, current) {
 		top:0,
 		id: 'rf_energy'
 	});
-
-	rf_energy_button.addEventListener('click', App.swapView(view, getContent.p("rf_energy")));
+	
+	rf_energy_button.addEventListener('click', function(e){Controllers.content.renderView("rf_energy")});
 
 	var access_and_navigation_button = Ti.UI.createButton({
 		backgroundImage:"images/technology/small_tech_nav_access_inactive.png",
@@ -37,7 +39,7 @@ Views.content.tech_nav = function(view, current) {
 		id: 'access_and_navigation'
 	});
 
-	access_and_navigation_button.addEventListener('click', App.swapView(view, getContent.p("access_and_navigation")));
+	access_and_navigation_button.addEventListener('click', function(e){Controllers.content.renderView("access_and_navigation")});
 
 	var bone_cement_button = Ti.UI.createButton({
 		backgroundImage:"images/technology/small_tech_nav_bone_inactive.png",
@@ -48,16 +50,23 @@ Views.content.tech_nav = function(view, current) {
 		bottom:10,
 		id: "bone_cement"
 	});
-
-	bone_cement_button.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
+	
+	bone_cement_button.addEventListener('click', function(e){Controllers.content.renderView("bone_cement")});
 
 	var button_group = UI.ButtonGroup(rf_energy_button, access_and_navigation_button, bone_cement_button);
-	var currentButton = {'bone_cement': bone_cement_button, 'access_and_navigation': access_and_navigation_button, 'rf_energy': rf_energy_button }[current];
-	button_group.setActive(currentButton);
+	
+	if(current){
+		var currentButton = {'bone_cement': bone_cement_button, 'access_and_navigation': access_and_navigation_button, 'rf_energy': rf_energy_button }[current];
+		button_group.setActive(currentButton);
+	}
 
 	nav.add(nav_circle);
 	nav.add(rf_energy_button);
 	nav.add(access_and_navigation_button);
 	nav.add(bone_cement_button);
-	return nav;
+	
+	view.add(nav);
+	view.add(Views.shared.tech_platform_button());
+	
+	return view;
 }

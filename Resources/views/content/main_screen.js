@@ -1,4 +1,4 @@
-Views.content.main_screen = function(win) {
+Views.content.main_screen = function() {
 	var view = Ti.UI.createView({
 		width:"100%",
 		left: 0
@@ -57,7 +57,7 @@ Views.content.main_screen = function(win) {
 		id: 'rf_energy'
 	});
 
-	btn_nav_rf.addEventListener('click', Controllers.content.renderView.p("rf_energy"));
+	btn_nav_rf.addEventListener('click', function(e){Controllers.content.renderView("rf_energy")});
 	nav_view.add(btn_nav_rf);
 
 	var btn_nav_access = Ti.UI.createButton({
@@ -70,7 +70,7 @@ Views.content.main_screen = function(win) {
 		id: 'access_and_navigation'
 	});
 	
-	btn_nav_access.addEventListener('click', Controllers.content.renderView.p("access_and_navigation"));
+	btn_nav_access.addEventListener('click', function(e){Controllers.content.renderView("access_and_navigation")});
 	nav_view.add(btn_nav_access);
 		
 	var btn_nav_bone = Ti.UI.createButton({
@@ -83,18 +83,19 @@ Views.content.main_screen = function(win) {
 		id: "bone_cement"
 	});
 	
-	btn_nav_bone.addEventListener('click', Controllers.content.renderView.p("bone_cement"));
+	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("bone_cement")});
 	nav_view.add(btn_nav_bone);
 	
 	var btn_back_to_dfine = Ti.UI.createButton({
-		height:20,
-		width:50,
+		title: "Back to Dfine",
+		height:50,
+		width:150,
 		bottom:0,
 		right:0
 	});
 
-	btn_back_to_dfine.addEventListener('click', Controllers.content.renderView.p("dfine"));
-	nav_view.add(btn_back_to_dfine);
+	btn_back_to_dfine.addEventListener('click', function(e){Controllers.content.renderView("dfine")});
+	view.add(btn_back_to_dfine);
 
 	var rf_sub = Ti.UI.createLabel({
 		text: "RF to modulate bone cement viscosity",
@@ -130,7 +131,6 @@ Views.content.main_screen = function(win) {
 	view.add(rf_sub);
 	view.add(bone_sub);
 	view.add(nav_view);
-	// view.add(btn_back_to_define);
 	
 	return view;
 }

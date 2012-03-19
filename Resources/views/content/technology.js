@@ -1,4 +1,4 @@
-Views.content.technology = function(win) {
+Views.content.technology = function() {
 	var view = Ti.UI.createView({
 		width:"100%",
 		left: 0
@@ -14,9 +14,9 @@ Views.content.technology = function(win) {
 		left:20
 	});
 	
-	back_to_cover.addEventListener("click", function(e) {
-		win.fireEvent('backToCover');
-	});
+	// back_to_cover.addEventListener("click", function(e) {
+	// 	win.fireEvent('backToCover');
+	// });
 	
 	var copyright = Ti.UI.createLabel({
 		text: "®",
@@ -139,6 +139,5 @@ Views.content.technology = function(win) {
 	view.add(nav_view);
 	
 	view.add(back_to_cover);
-	
-	win.add(view);
+	return view;
 }

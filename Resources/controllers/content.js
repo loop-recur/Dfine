@@ -1,43 +1,65 @@
 Controllers.content = (function() {
 	var DEFAULT_WINDOW_NAME = 'content';
+	var window = null
+		, content_view = null;
 
-	// Will return a Ti.window.
+
 	var _getWindow = function(window_name){
 		window_name = window_name || DEFAULT_WINDOW_NAME;
-		return Windows[window_name]();
+		if(window && window.id == window_name){
+			return window;
+		} 
+		window = Windows[window_name]();
+		window.id = window_name; 
+		return window;
 	};
 	
-	var _makeNewBlankContentView = function(){
+	var _makeNewContentView = function(){
 		return Ti.UI.createView({
 			id: "content_view",
 			left:0,
 			height: "100%"
 		});
 	};
-	
+
 	// Where all the content from the views will be added to.
-	var _getBlankContentView = function(window){
-		var existing_content_view = findFirstByProperty('id', 'content_view', window.getChildren());
-		if(existing_content_view){
-			App.removeAllChildren(existing_content_view);
-			return existing_content_view;
-		} else {
-			return _makeNewBlankContentView();
-		}
+	var _getContentView = function(view_type){
+		content_view = findFirstByProperty('id', 'content_view', window.getChildren()) || _makeNewContentView();
+		if(view_type == 'blank'){ App.removeAllChildren(content_view);}
+		return content_view;
 	};
 	
 	var _getView = function(view_name){
 		console.log("view_name = "+ view_name);
-		console.log("Views.content[view_name](window) " + Views.content[view_name]());
-		
 		return Views.content[view_name](window);
 	};
 	
-	// Takes in multiple views, the views will be added to the window in the same order as they are passed in. 
+	// Checks the view for a layout container that the view will go into. And then applies the view.
+	var	_applyView = function(view_name){
+		var new_view = _getView(view_name)
+		 	, parent_view = {};
+		
+		var lc_name = new_view.layout_container;
+		console.log("_applyview: lc_name = "+ lc_name)
+	  if(lc_name){  // Use a Layout Container
+			parent_view = findFirstByProperty('id', lc_name, content_view.getChildren()) || Views.layout_containers[lc_name]();
+			content_view.add(parent_view);
+		} else { // Just use the content_view 
+			parent_view = content_view;
+		}
+		App.removeAllChildren(parent_view);
+		parent_view.add(new_view);
+		return new_view;
+	};
+	
+	
+	/* Will render a completely new view, wiping out everything that was previously on the screen. 
+	*  Takes in multiple views, the views will be added to the window in the same order as they are passed in. 
+	*/
 	var renderView = function(){
-		var window = _getWindow();
+		_getWindow();
+		_getContentView('blank');
 	  var view
-			, content_view =  _getBlankContentView(window)
 			, arg_values = renderView.arguments
 			, arg_length = arg_values.length;	 
 			
@@ -48,14 +70,23 @@ Controllers.content = (function() {
 			console.log("ALL arg_values = "+ JSON.stringify(arg_values));
 			console.log("arg_values = "+ arg_values + "| arg_length = "+ arg_length);
 			console.log("i = "+ i + " and arg_values[i] = " + JSON.stringify(arg_values[i]));
-			view = _getView(arg_values[i]);
+			view = _applyView(arg_values[i]);
 			console.log("view = "+ view);
-			content_view.add(view); // Applying content to the content_view. 
 		};
 		window.add(content_view);
-
 	};
 	
-	return {renderView: renderView};
+
+	/* 
+	* For rendering a simple content view on top of another view. Useful for quick view swaps. 
+	* This assumes that the view has a 'layout_container' element. If it can't find one, then will simply attach to the main content_view 
+	*/
+	var renderSubView = function(view_name){
+		content_view = content_view || _getContentView();
+		var new_view = _applyView(view_name);
+	};
+	
+	return {renderView: renderView, renderSubView: renderSubView};
 	
 })();
+

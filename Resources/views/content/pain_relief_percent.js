@@ -1,4 +1,4 @@
-Views.content.pain_relief_percent = function(win) {	
+Views.content.pain_relief_percent = function() {	
 	var view = Ti.UI.createView({
 	});
 
@@ -65,5 +65,5 @@ Views.content.pain_relief_percent = function(win) {
 	view.add(content);
 	view.add(bullets);
 
-	win.add(view);
+	return view;
 }

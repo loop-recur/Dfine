@@ -102,5 +102,5 @@ UI.Er2 = function(label, win, view_attrs, copy_attrs, two_attrs) {
 }
 
 UI.createButton = function(properties){
-	return Ti.UI.createButton(merge(properties,{zIndex: 10}));
+	return Ti.UI.createButton(merge({zIndex: 10}, properties));
 }	

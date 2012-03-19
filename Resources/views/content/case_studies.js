@@ -1,14 +1,17 @@
-Views.content.case_studies = function(win) {
+Views.content.case_studies = function() {
+	
 	var icon_width = 420
 	, icon_height = 280
 	, columns = 2;
 	
-	var makeView = function() {
-		return Ti.UI.createView({
-		});
-	}
+	// var makeView = function() {
+	// 	return Ti.UI.createView({
+	// 	});
+	// }
 	
-	var view = makeView();
+	var view = Ti.UI.createView({
+		layout_container: "left_main"
+	});
 	
 	var spinner = Ti.UI.createActivityIndicator({
 		style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
@@ -131,5 +134,5 @@ Views.content.case_studies = function(win) {
 	
 	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images")});
 
-	win.add(view);
+	return view;
 }

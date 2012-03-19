@@ -1,5 +1,6 @@
-Views.content.cost = function(win) {	
+Views.content.cost = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "left_main"
 	});
 
 	var label = Ti.UI.createLabel({
@@ -48,5 +49,5 @@ Views.content.cost = function(win) {
 	UI.Er2(label2, view, {left: 69, top: 78}, {left: 30}, {left: 57});
 	UI.Er2(bottom_note, view, {left: 244, bottom: 297}, {left: 30}, {left: 54});
 
-	win.add(view);
+	return view;
 }

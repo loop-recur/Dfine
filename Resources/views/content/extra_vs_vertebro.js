@@ -1,4 +1,4 @@
-Views.content.extra_vs_vertebro = function(win) {	
+Views.content.extra_vs_vertebro = function() {	
 	var view = Ti.UI.createView({
 	});
 	
@@ -55,5 +55,5 @@ Views.content.extra_vs_vertebro = function(win) {
 	view.add(image);
 	view.add(bullets);
 
-	win.add(view);
+	return view;
 }

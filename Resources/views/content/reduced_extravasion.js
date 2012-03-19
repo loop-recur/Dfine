@@ -1,4 +1,4 @@
-Views.content.reduced_extravasion = function(win) {	
+Views.content.reduced_extravasion = function() {	
 	var view = Ti.UI.createView({
 	});
 
@@ -66,5 +66,5 @@ Views.content.reduced_extravasion = function(win) {
 
 	UI.Er2(content, view, {left: 148}, {left: 30}, {left: 57});
 	
-	win.add(view);
+	return view;
 }

@@ -7,7 +7,6 @@ Views.content.a_tabs = function() {
 		layout_container: "right_nav", 
 	});
 	
-	
 	var makeTab = function(attrs) {
 		var tab = UI.createButton({
 			backgroundImage:attrs.background,

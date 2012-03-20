@@ -32,6 +32,7 @@ FileList = [
 	, "views/content/results_nav.js"
 	, "views/content/case_studies.js"
 	, "views/content/cost.js"
+	, "views/content/b_cost.js"
 	, "views/content/reimbursment.js"
 	, "views/content/dfine.js"
 	, "views/content/pain_relief_percent.js"

@@ -29,6 +29,7 @@ Views.content.b_tabs = function() {
 	
 	var tab_attrs = [
 		{name: "Technology", background: "images/tabs/tabs_technology.png", view_name: "main_screen", height:160, top:-2}
+		, {name: "Cost", view_name: "b_cost", background: "images/tabs/tabs_cost.png", height:150, top: -10}
 		, {name: "Dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -9}
 	]
 	

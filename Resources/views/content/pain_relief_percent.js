@@ -1,5 +1,6 @@
 Views.content.pain_relief_percent = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "center_main"
 	});
 
 	var label = Ti.UI.createLabel({

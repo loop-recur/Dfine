@@ -1,5 +1,6 @@
 Views.content.rf_cement_viscosity = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "left_main"
 	});
 		
 	var label = Ti.UI.createLabel({

@@ -1,5 +1,6 @@
 Views.content.visual_analog = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "center_main"
 	});
 
 	var label = Ti.UI.createLabel({

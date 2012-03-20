@@ -12,9 +12,7 @@ Views.content.results_nav = function(){
  		
 
 	var nav = Ti.UI.createView({
-		width: "25%",
-		left:0, 
-		zIndex: 6
+		layout_container: "left_nav"
 	});
 
 	
@@ -75,7 +73,7 @@ Views.content.results_nav = function(){
 	
 	table.addEventListener('click', function(e){
 		animateArrow(e.index);
-		// Controllers.content.renderSubView(, e.source.id);
+		Controllers.content.renderSubView(e.source.id);
 	});
 	
 	return nav;

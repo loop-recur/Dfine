@@ -1,14 +1,13 @@
 Views.content.results = function() {
-	var main_view = Ti.UI.createView();
 	
 	var view = Ti.UI.createView({
-		width: "75%",
-		right:14
+		layout_container: "center_main"
 	});
 
+	
 	view.add(Views.content.pain_reduction());
-	main_view.add(Views.content.results_nav());
-	main_view.add(view);
+	
+	Controllers.content.renderSubView("results_nav");
 
-	return main_view;
+	return view;
 }

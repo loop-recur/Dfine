@@ -1,6 +1,7 @@
 Views.content.rf_energy = function() {	
 	var view = Ti.UI.createView({
 	});
+	
 	view.add(Views.shared.tech_nav('rf_energy'));
 	
 	var btn_multiplex = Ti.UI.createButton({
@@ -20,7 +21,7 @@ Views.content.rf_energy = function() {
 	});
 	
 	btn_multiplex.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "rf_cement_viscosity")});
-	btn_metastar.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "ablate_tumors")});
+	btn_metastar.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "rf_ablate_tumors")});
 	
 	view.add(btn_multiplex);
 	view.add(btn_metastar);

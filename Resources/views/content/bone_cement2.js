@@ -1,6 +1,7 @@
-Views.content.bone_cement2 = function(win) {	
+Views.content.bone_cement2 = function() {	
 	
 	var view = Ti.UI.createView({
+		layout_container: "left_main"
 	});
 	
 	var copyright = Ti.UI.createLabel({
@@ -133,6 +134,6 @@ Views.content.bone_cement2 = function(win) {
 	}
 	
 	read_more.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
-	
-	win.add(view);
+
+	return view;
 }

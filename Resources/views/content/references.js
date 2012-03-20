@@ -1,5 +1,6 @@
-Views.content.references = function(win) {	
+Views.content.references = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "left_main"
 	});
 	
 	var label = Ti.UI.createLabel({
@@ -23,6 +24,6 @@ Views.content.references = function(win) {
 
 	view.add(label);
 	view.add(bullets);
-
-	win.add(view);
+	
+	return view;
 }

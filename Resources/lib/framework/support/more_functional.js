@@ -226,3 +226,9 @@ empty = function(xs) {
 headTail = defn(function(fun, xs) {
 	return fun.apply(fun, [first(xs), rest(xs)]);
 });
+
+findFirstByProperty = defn(function(prop, val, xs) {
+	if(xs){
+  	return compose(first, filter(function(p){return p[prop] == val}))(xs);
+	}
+});

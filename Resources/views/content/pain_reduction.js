@@ -1,5 +1,6 @@
-Views.content.pain_reduction = function(win) {
+Views.content.pain_reduction = function() {
 	var view = Ti.UI.createView({
+		layout_container: "center_main"
 	});
 	
 	var label = Ti.UI.createLabel({
@@ -65,6 +66,6 @@ Views.content.pain_reduction = function(win) {
 	view.add(content);
 	view.add(bullets);
 	UI.Er2(content, view, {left: 92, bottom: 347}, {left: 30}, {left: 56});
-
-	win.add(view);
+	
+	return view;
 }

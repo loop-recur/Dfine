@@ -1,4 +1,4 @@
-Views.content.reimbursment = function(win) {
+Views.content.reimbursment = function() {
 	var table1Data = [
 		["ICD-9 Code", "Fiscal Year", "ICD-9 Code Title", "ICD-9 Code Description"]
 		, ["81.66", "2010", "Percutaneous veterbral augmentation", "Insertion of inflatable balloon, bone tamp, or other device displacing (removing) (compacting) bone to create a space (cavity) (void) prior to the injection of bone void filler (cement) (polymethylmethacrylate) (PMMA) or other substance. Arcuplasty, Kyphoplasty, SKyphoplasty, Spineoplasty.*\n\n"]
@@ -13,6 +13,7 @@ Views.content.reimbursment = function(win) {
 	
 	
 	var view = Ti.UI.createView({
+		layout_container: "left_main"
 	});
 	
 	var left_label = Ti.UI.createLabel({
@@ -130,5 +131,5 @@ Views.content.reimbursment = function(win) {
 	view.add(table1);
 	view.add(table2);
 	
-	win.add(view);
+	return view;
 }

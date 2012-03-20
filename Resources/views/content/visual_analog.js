@@ -1,5 +1,6 @@
-Views.content.visual_analog = function(win) {	
+Views.content.visual_analog = function() {	
 	var view = Ti.UI.createView({
+		layout_container: "center_main"
 	});
 
 	var label = Ti.UI.createLabel({
@@ -64,5 +65,5 @@ Views.content.visual_analog = function(win) {
 	view.add(content);
 	view.add(bullets);
 
-	win.add(view);
+	return view;
 }

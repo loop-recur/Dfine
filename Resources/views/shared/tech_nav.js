@@ -21,16 +21,16 @@ Views.shared.tech_nav = function(current, prefix) {
 	});
 
 	var nav_circle = Ti.UI.createView({
-		backgroundImage:"images/technology/small_tech_nav_ring.png",
-		height:160,
-		width:160
+		backgroundImage:"images/tripoint/tripoint_sm_bg_ring.png",
+		height:153,
+		width:152
 	});
 
 	var rf_energy_button = Ti.UI.createButton({
-		backgroundImage:"images/technology/small_tech_nav_rf_inactive.png",
-		backgroundSelectedImage:"images/technology/small_tech_nav_rf_active.png",
-		width:110,
-		height:110,
+		backgroundImage:"images/tripoint/tripoint_sm_rf.png",
+		backgroundSelectedImage:"images/tripoint/tripoint_sm_rf_a.png",
+		width:105,
+		height:105,
 		top:0,
 		id: 'rf_energy'
 	});
@@ -38,11 +38,11 @@ Views.shared.tech_nav = function(current, prefix) {
 	rf_energy_button.addEventListener('click', function(e){Controllers.content.renderView(prefix+"_rf_energy")});
 
 	var access_and_navigation_button = Ti.UI.createButton({
-		backgroundImage:"images/technology/small_tech_nav_access_inactive.png",
-		backgroundSelectedImage:"images/technology/small_tech_nav_access_active.png",
+		backgroundImage:"images/tripoint/tripoint_sm_an.png",
+		backgroundSelectedImage:"images/tripoint/tripoint_sm_an_a.png",
 		left:0,
-		width:110,
-		height:110,
+		width:105,
+		height:105,
 		bottom:10,
 		id: 'access_and_navigation'
 	});
@@ -50,11 +50,11 @@ Views.shared.tech_nav = function(current, prefix) {
 	access_and_navigation_button.addEventListener('click', function(e){Controllers.content.renderView(prefix+"_access_and_navigation")});
 
 	var bone_cement_button = Ti.UI.createButton({
-		backgroundImage:"images/technology/small_tech_nav_bone_inactive.png",
-		backgroundSelectedImage:"images/technology/small_tech_nav_bone_active.png",
+		backgroundImage:"images/tripoint/tripoint_sm_cement.png",
+		backgroundSelectedImage:"images/tripoint/tripoint_sm_cement_a.png",
 		right:0,
-		width:110,
-		height:110,
+		width:105,
+		height:105,
 		bottom:10,
 		id: "bone_cement"
 	});
@@ -74,7 +74,7 @@ Views.shared.tech_nav = function(current, prefix) {
 	nav.add(bone_cement_button);
 	
 	view.add(nav);
-	view.add(Views.shared.tech_platform_button());
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
 	
 	return view;
 }

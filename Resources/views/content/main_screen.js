@@ -68,7 +68,7 @@ Views.content.main_screen = function() {
 		id: "bone_cement"
 	});
 	
-	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("bone_cement")});
+	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("outer_bone_cement")});
 	nav_view.add(btn_nav_bone);
 	
 	var btn_back_to_dfine = Ti.UI.createView({

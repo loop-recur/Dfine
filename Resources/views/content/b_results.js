@@ -5,9 +5,9 @@ Views.content.b_results = function() {
 	});
 
 	
-	view.add(Views.content.pain_reduction());
+	view.add(Views.content.lit1());
 	
-	Controllers.content.renderSubView("results_nav");
+	Controllers.content.renderSubView("lit_nav");
 
 	return view;
 }

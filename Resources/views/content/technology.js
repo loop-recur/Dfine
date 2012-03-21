@@ -3,7 +3,7 @@ Views.content.technology = function() {
 		layout_container:"left_main"
 	});
 	
-	view.add(Views.shared.tech_platform_button({top: 10, right: 10, title: "back to outer"}));
+	view.add(Views.shared.tech_platform_button());
 	
 	var copyright = Ti.UI.createLabel({
 		text: "®",
@@ -12,7 +12,7 @@ Views.content.technology = function() {
 		width:'auto',
 		height:'auto',
 		top:50,
-		left:333
+		left:303
 	});
 	
 	var label = Ti.UI.createLabel({
@@ -28,51 +28,50 @@ Views.content.technology = function() {
 	view.add(copyright);
 	
 	var nav_view = Ti.UI.createView({
-		height:430,
-		width:430
+		height:440,
+		width:440
 	});
 	
 	var nav_circle = Ti.UI.createView({
-		backgroundImage:"images/technology/large_nav/tech_nav_bg.png",
-		height:400,
-		width:400,
-		bottom:0
+		backgroundImage:"images/outer/outernav/tripoint_lrg_bg_ring.png",
+		height:373,
+		width:374
 	});
 	
 	nav_view.add(nav_circle);
 	
 	var nav_center = Ti.UI.createView({
-		backgroundImage:"images/technology/large_nav/tech_nav_center.png",
-		width:150,
-		height:137
+		backgroundImage:"images/outer/outernav/tripoint_lrg_center.png",
+		width:148,
+		height:148
 	});
 	
 	nav_view.add(nav_center);
 	
 	var nav_rf = Ti.UI.createButton({
-		backgroundImage:"images/technology/large_nav/tech_nav_rf.png",
-		backgroundSelectedImage:"images/technology/large_nav/tech_nav_rf_pressed.png",
-		height:150,
-		width:150,
+		backgroundImage:"images/outer/outernav/tripoint_lrg_rf.png",
+		backgroundSelectedImage:"images/outer/outernav/tripoint_lrg_rf_a.png",
+		height:131,
+		width:131,
 		top:0,
 		id: 'rf_energy'
 	});
-
+	
 	var nav_access = Ti.UI.createButton({
-		backgroundImage:"images/technology/large_nav/tech_nav_access.png",
-		backgroundSelectedImage:"images/technology/large_nav/tech_nav_access_pressed.png",
-		height:150,
-		width:150,
+		backgroundImage:"images/outer/outernav/tripoint_lrg_an.png",
+		backgroundSelectedImage:"images/outer/outernav/tripoint_lrg_an_a.png",
+		height:131,
+		width:131,
 		bottom:20,
 		left:10,
 		id: 'access_and_navigation'
 	});
-		
+	
 	var nav_bone = Ti.UI.createButton({
-		backgroundImage:"images/technology/large_nav/tech_nav_bone.png",
-		backgroundSelectedImage:"images/technology/large_nav/tech_nav_bone_pressed.png",
-		height:150,
-		width:150,
+		backgroundImage:"images/outer/outernav/tripoint_lrg_cement.png",
+		backgroundSelectedImage:"images/outer/outernav/tripoint_lrg_cement_a.png",
+		height:131,
+		width:131,
 		bottom:20,
 		right:10,
 		id: "bone_cement"

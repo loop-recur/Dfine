@@ -31,7 +31,7 @@ Views.content.a_tabs = function() {
 		, {name: "Results", view_name: "a_results", background: "images/tabs/tabs_results.png", height:150, top:0}
 		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", height:190, top:0}
 		, {name: "Cost", view_name: "a_cost", background: "images/tabs/tabs_cost.png", height:150, top: -10}
-		, {name: "Reimbursment", view_name: "a_reimbursement", background: "images/tabs/tabs_reimbursement.png", height:190,top:-20}
+		, {name: "Reimbursement", view_name: "a_reimbursement", background: "images/tabs/tabs_reimbursement.png", height:190,top:-20}
 		, {name: "Dfine", view_name: "inner_dfine", background: "images/tabs/tabs_dfine.png", height:150, top: -9}
 	]
 	

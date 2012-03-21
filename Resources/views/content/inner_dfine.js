@@ -7,7 +7,7 @@ Views.content.inner_dfine = function(win) {
 		text: "DFINE at a glance",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:45,fontWeight:'regular'},
 		color:"#023f66",
-		width:450,
+		width:400,
 		top:40,
 		left:10,
 		height:'auto',
@@ -21,7 +21,7 @@ Views.content.inner_dfine = function(win) {
 		color:"#023f66",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:20,fontWeight:'regular'},
 		height:"auto",
-		width: 450,
+		width: 400,
 		textAlign:"right"
 	});
 	
@@ -29,14 +29,14 @@ Views.content.inner_dfine = function(win) {
 		backgroundImage:"images/building.png",
 		height:678,
 		width:454,
-		right:80
+		right:70
 	});
 	
 	view.add(image);
 	view.add(label);
 	view.add(label2);
 	
-	view.add(Views.shared.tech_platform_button()); 
+	view.add(Views.shared.tech_platform_button({top:30,right:20})); 
 	
 	return view;
 }

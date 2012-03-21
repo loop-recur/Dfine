@@ -1,10 +1,10 @@
-Views.content.bone_cement = function() {	
+Views.content.a_bone_cement = function() {	
 	
 	var view = Ti.UI.createView({
 		layout_container:"left_main"
 	});
 	
-	var nav = Views.shared.tech_nav("bone_cement");
+	var nav = Views.shared.tech_nav("bone_cement", "a");
 	view.add(nav);
 	
 	var copyright = Ti.UI.createLabel({

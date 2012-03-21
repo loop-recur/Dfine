@@ -1,23 +1,9 @@
 Views.content.technology = function() {
 	var view = Ti.UI.createView({
-		width:"100%",
-		left: 0,
 		layout_container:"left_main"
 	});
 	
-	var back_to_cover = Ti.UI.createButton({
-		backgroundImage:"images/page_back_button.png",
-		title: "Back to cover",
-		font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'bold'},
-		color:"black",
-		width: 200,
-		height: 50,
-		left:20
-	});
-	
-	// back_to_cover.addEventListener("click", function(e) {
-	// 	win.fireEvent('backToCover');
-	// });
+	view.add(Views.shared.tech_platform_button({top: 10, right: 10, title: "back to outer"}));
 	
 	var copyright = Ti.UI.createLabel({
 		text: "®",
@@ -100,9 +86,9 @@ Views.content.technology = function() {
 		Views.content[name](view);
 	}
 	
-	nav_rf.addEventListener('click', App.swapView(view, getContent.p("rf_energy")));
-	nav_access.addEventListener('click', App.swapView(view, getContent.p("access_and_navigation")));
-	nav_bone.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
+	nav_rf.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_rf_energy")});
+	nav_access.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_access_and_navigation")});
+	nav_bone.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_bone_cement")});
 	
 	var rf_sub = Ti.UI.createLabel({
 		text: "RF to modulate bone cement viscosity",
@@ -139,6 +125,5 @@ Views.content.technology = function() {
 	view.add(bone_sub);
 	view.add(nav_view);
 	
-	view.add(back_to_cover);
 	return view;
 }

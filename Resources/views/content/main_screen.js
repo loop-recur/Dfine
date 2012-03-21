@@ -127,6 +127,28 @@ Views.content.main_screen = function() {
 		height:'auto'
 	});
 	
+	var btn_stability = Ti.UI.createButton({
+		title: "StabiliT",
+		height:50,
+		width:150,
+		bottom:50,
+		left:150
+	});
+
+	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "technology") });
+	view.add(btn_stability);
+	
+	var btn_star = Ti.UI.createButton({
+		title: "Star",
+		height:50,
+		width:150,
+		bottom:50,
+		right:150
+	});
+	
+	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "technology") });
+	view.add(btn_star);
+	
 	view.add(access_sub);
 	view.add(rf_sub);
 	view.add(bone_sub);

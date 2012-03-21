@@ -2,6 +2,17 @@ Views.content.a_cost = function() {
 	var view = Ti.UI.createView({
 		layout_container: "left_main"
 	});
+	
+	var flipper = UI.createButton({
+		title: "Switch to A Cost",
+		width: 250,
+		height: 50,
+		bottom: 20,
+		right: 20,		
+	});
+	
+	flipper.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_cost")});
+	view.add(flipper);
 
 	var label = Ti.UI.createLabel({
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",

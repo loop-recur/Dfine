@@ -3,7 +3,7 @@ Views.content.b_reimbursement = function() {
 		layout_container: "left_main"
 	});
 	
-	var btn_switch_to_a_cost = UI.createButton({
+	var flipper = UI.createButton({
 		title: "Switch to A reimbursement",
 		width: 250,
 		height: 50,
@@ -11,8 +11,8 @@ Views.content.b_reimbursement = function() {
 		right: 20,		
 	});
 	
-	btn_switch_to_a_cost.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_reimbursement")});
-	view.add(btn_switch_to_a_cost);
+	flipper.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_reimbursement")});
+	view.add(flipper);
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/star/reimbursement/reimbursement_main.png",

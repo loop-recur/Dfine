@@ -1,7 +1,8 @@
 Views.content.technology = function() {
 	var view = Ti.UI.createView({
 		width:"100%",
-		left: 0
+		left: 0,
+		layout_container:"left_main"
 	});
 	
 	var back_to_cover = Ti.UI.createButton({

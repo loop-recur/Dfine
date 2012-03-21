@@ -1,4 +1,4 @@
-Views.content.rf_energy = function() {	
+Views.content.outer_rf_energy = function() {	
 	var view = Ti.UI.createView({
 	});
 	

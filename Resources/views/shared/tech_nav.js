@@ -27,7 +27,7 @@ Views.shared.tech_nav = function(current) {
 		id: 'rf_energy'
 	});
 	
-	rf_energy_button.addEventListener('click', function(e){Controllers.content.renderView("rf_energy")});
+	rf_energy_button.addEventListener('click', function(e){Controllers.content.renderView("outer_rf_energy")});
 
 	var access_and_navigation_button = Ti.UI.createButton({
 		backgroundImage:"images/technology/small_tech_nav_access_inactive.png",
@@ -39,7 +39,7 @@ Views.shared.tech_nav = function(current) {
 		id: 'access_and_navigation'
 	});
 
-	access_and_navigation_button.addEventListener('click', function(e){Controllers.content.renderView("access_and_navigation")});
+	access_and_navigation_button.addEventListener('click', function(e){Controllers.content.renderView("outer_access_and_navigation")});
 
 	var bone_cement_button = Ti.UI.createButton({
 		backgroundImage:"images/technology/small_tech_nav_bone_inactive.png",
@@ -51,7 +51,7 @@ Views.shared.tech_nav = function(current) {
 		id: "bone_cement"
 	});
 	
-	bone_cement_button.addEventListener('click', function(e){Controllers.content.renderView("bone_cement")});
+	bone_cement_button.addEventListener('click', function(e){Controllers.content.renderView("outer_bone_cement")});
 
 	var button_group = UI.ButtonGroup(rf_energy_button, access_and_navigation_button, bone_cement_button);
 	

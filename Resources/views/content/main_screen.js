@@ -57,7 +57,7 @@ Views.content.main_screen = function() {
 		id: 'rf_energy'
 	});
 
-	btn_nav_rf.addEventListener('click', function(e){Controllers.content.renderView("rf_energy")});
+	btn_nav_rf.addEventListener('click', function(e){Controllers.content.renderView("outer_rf_energy")});
 	nav_view.add(btn_nav_rf);
 
 	var btn_nav_access = Ti.UI.createButton({
@@ -70,7 +70,7 @@ Views.content.main_screen = function() {
 		id: 'access_and_navigation'
 	});
 	
-	btn_nav_access.addEventListener('click', function(e){Controllers.content.renderView("access_and_navigation")});
+	btn_nav_access.addEventListener('click', function(e){Controllers.content.renderView("outer_access_and_navigation")});
 	nav_view.add(btn_nav_access);
 		
 	var btn_nav_bone = Ti.UI.createButton({

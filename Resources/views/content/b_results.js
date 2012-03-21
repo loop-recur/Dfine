@@ -1,4 +1,4 @@
-Views.content.results = function() {
+Views.content.b_results = function() {
 	
 	var view = Ti.UI.createView({
 		layout_container: "center_main"

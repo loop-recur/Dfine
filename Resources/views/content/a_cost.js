@@ -1,4 +1,4 @@
-Views.content.cost = function() {	
+Views.content.a_cost = function() {	
 	var view = Ti.UI.createView({
 		layout_container: "left_main"
 	});

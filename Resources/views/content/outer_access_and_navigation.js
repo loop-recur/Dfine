@@ -1,4 +1,4 @@
-Views.content.access_and_navigation = function() {	
+Views.content.outer_access_and_navigation = function() {	
 	var view = Ti.UI.createView();
 
 	var btn_vertecor = UI.createButton({

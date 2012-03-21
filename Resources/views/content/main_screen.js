@@ -71,12 +71,12 @@ Views.content.main_screen = function() {
 	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("bone_cement")});
 	nav_view.add(btn_nav_bone);
 	
-	var btn_back_to_dfine = Ti.UI.createButton({
-		title: "Dfine",
-		height:50,
-		width:150,
-		bottom:0,
-		right:0
+	var btn_back_to_dfine = Ti.UI.createView({
+		backgroundImage:"images/dfine_logo_small.png",
+		height:32,
+		width:137,
+		bottom:20,
+		right:20
 	});
 
 	btn_back_to_dfine.addEventListener('click', function(e){Controllers.content.renderView("dfine")});

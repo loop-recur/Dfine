@@ -1,6 +1,8 @@
-Views.content.outer_bone_cement = function() {	
-	
+Views.content.outer_bone_cement = function() {		
 	var view = Ti.UI.createView({
+		width:1024,
+		height:768,
+		backgroundImage:"images/outer/Combined_bg.png"
 	});
 	
 	var nav = Views.shared.tech_nav("bone_cement");

@@ -11,7 +11,7 @@ Views.content.b_cost = function() {
 		right: 20,		
 	});
 	
-	btn_switch_to_a_cost.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "cost")});
+	btn_switch_to_a_cost.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_cost")});
 	view.add(btn_switch_to_a_cost);
 	
 	return view;

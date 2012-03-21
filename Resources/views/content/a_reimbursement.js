@@ -16,6 +16,17 @@ Views.content.a_reimbursement = function() {
 		layout_container: "left_main"
 	});
 	
+	var btn_switch_to_a_cost = UI.createButton({
+		title: "Switch to B reimbursement",
+		width: 250,
+		height: 50,
+		bottom: 20,
+		right: 20,		
+	});
+	
+	btn_switch_to_a_cost.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_reimbursement")});
+	view.add(btn_switch_to_a_cost);
+	
 	var left_label = Ti.UI.createLabel({
 		text: "Vertebral Augmentation Coding: Effective October 1, 2008 (ICD-9 CM 2010 Volumes 1 & 2)",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:25,fontWeight:'regular'},

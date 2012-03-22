@@ -25,7 +25,20 @@ Views.content.b_a6 = function() {
 	back_button.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_access_and_navigation")});
 	view.add(back_button);
 	
+	var video = Ti.UI.createButton({
+		backgroundImage:"images/star/a6/A6_ablation_vid_btn.png",
+		backgroundSelectedImage:"images/star/a6/A6_ablation_vid_btn_p.png",
+		width: 122,
+		height: 44,
+		bottom:60,
+		left:190,
+		zIndex:40
+	});
+	
+	view.add(video);
+	
 	view.add(Views.shared.tech_nav_star('access_and_navigation', 'b'));
+	view.add(Views.shared.logo("star"));
 	
 	return view;
 }

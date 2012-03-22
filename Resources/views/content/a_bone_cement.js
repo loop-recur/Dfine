@@ -107,6 +107,7 @@ Views.content.a_bone_cement = function() {
 	view.add(foot_note);
 	
 	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_bone_cement2")});
+	view.add(Views.shared.logo());
 	
 	return view;
 }

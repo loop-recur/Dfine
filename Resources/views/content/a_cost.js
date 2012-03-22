@@ -2,26 +2,16 @@ Views.content.a_cost = function() {
 	var view = Ti.UI.createView({
 		layout_container: "left_main"
 	});
-	
-	var flipper = UI.createButton({
-		title: "Switch to A Cost",
-		width: 250,
-		height: 50,
-		bottom: 20,
-		right: 20,		
-	});
-	
-	flipper.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_cost")});
-	view.add(flipper);
 
 	var label = Ti.UI.createLabel({
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:34,fontWeight:'regular'},
 		color:"#023f66",
-		width:'auto',
+		width:600,
 		top:40,
-		left:30,
-		height:'auto'
+		left:190,
+		height:'auto',
+		textAlign:"center"
 	});
 	
 	// var label2 = Ti.UI.createLabel({
@@ -59,6 +49,10 @@ Views.content.a_cost = function() {
 	view.add(bottom_note);
 	// UI.Er2(label2, view, {left: 69, top: 78}, {left: 30}, {left: 57});
 	UI.Er2(bottom_note, view, {left: 244, bottom: 297}, {left: 30}, {left: 54});
+	
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_cost"}));
+	view.add(Views.shared.logo());
 
 	return view;
 }

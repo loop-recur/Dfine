@@ -2,17 +2,6 @@ Views.content.b_cost = function() {
 	var view = Ti.UI.createView({
 		layout_container: "left_main"
 	});
-
-	var flipper = UI.createButton({
-		title: "Switch to A Cost",
-		width: 250,
-		height: 50,
-		bottom: 20,
-		right: 20,		
-	});
-	
-	flipper.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_cost")});
-	view.add(flipper);
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/star/acomp2/AComp2_main.png",
@@ -22,6 +11,10 @@ Views.content.b_cost = function() {
 	});
 	
 	view.add(view_content);
+	
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_cost"}));
+	view.add(Views.shared.logo("star"));
 	
 	return view;
 }

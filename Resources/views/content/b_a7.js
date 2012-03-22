@@ -26,6 +26,7 @@ Views.content.b_a7 = function() {
 	view.add(back_button);
 	
 	view.add(Views.shared.tech_nav_star('rf_energy', 'b'));
+	view.add(Views.shared.logo("star"));
 	
 	return view;
 }

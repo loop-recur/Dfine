@@ -11,4 +11,4 @@ Views.shared.tech_platform_button = function(props) {
 
 	btn_tech_platform.addEventListener('click', function(e){Controllers.content.renderView("main_screen")});
 	return btn_tech_platform;
-}	
+}

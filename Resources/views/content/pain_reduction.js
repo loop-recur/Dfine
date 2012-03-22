@@ -67,5 +67,7 @@ Views.content.pain_reduction = function() {
 	view.add(bullets);
 	UI.Er2(content, view, {left: 92, bottom: 347}, {left: 30}, {left: 56});
 	
+	view.add(Views.shared.logo());
+	
 	return view;
 }

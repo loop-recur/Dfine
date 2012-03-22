@@ -55,6 +55,8 @@ Views.content.extra_vs_vertebro = function() {
 	view.add(label);
 	view.add(image);
 	view.add(bullets);
+	
+	view.add(Views.shared.logo());
 
 	return view;
 }

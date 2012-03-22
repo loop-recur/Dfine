@@ -26,6 +26,7 @@ Views.content.b_a5 = function() {
 	view.add(back_button);
 	
 	view.add(Views.shared.tech_nav_star('access_and_navigation', 'b'));
+	view.add(Views.shared.logo("star"));
 	
 	return view;
 }

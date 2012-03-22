@@ -65,6 +65,8 @@ Views.content.pain_relief_percent = function() {
 	view.add(image);
 	view.add(content);
 	view.add(bullets);
+	
+	view.add(Views.shared.logo());
 
 	return view;
 }

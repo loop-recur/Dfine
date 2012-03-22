@@ -64,6 +64,8 @@ Views.content.visual_analog = function() {
 	view.add(image);
 	view.add(content);
 	view.add(bullets);
+	
+	view.add(Views.shared.logo());
 
 	return view;
 }

@@ -67,5 +67,7 @@ Views.content.reduced_extravasion = function() {
 
 	UI.Er2(content, view, {left: 148}, {left: 30}, {left: 57});
 	
+	view.add(Views.shared.logo());
+	
 	return view;
 }

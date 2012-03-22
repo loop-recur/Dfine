@@ -156,6 +156,7 @@ Views.content.a_bone_cement2 = function() {
 	}
 	
 	read_more.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
+	view.add(Views.shared.logo());
 
 	return view;
 }

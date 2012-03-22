@@ -120,8 +120,9 @@ Views.content.a_access_and_navigation = function() {
 	view.add(tool1);
 	view.add(tool2);
 	
-	var nav = Views.shared.tech_nav("access_and_navigation", "a");
-	view.add(nav);
+	view.add(Views.shared.tech_nav("access_and_navigation", "a"));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_access_and_navigation"}));
+	view.add(Views.shared.logo());
 
 	return view;
 }

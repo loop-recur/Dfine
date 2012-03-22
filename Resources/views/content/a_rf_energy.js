@@ -146,6 +146,8 @@ Views.content.a_rf_energy = function() {
 	view.add(video2);
 	
 	view.add(Views.shared.tech_nav('rf_energy', 'a'));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_rf_energy"}));
+	view.add(Views.shared.logo());
 		
 	return view;
 }

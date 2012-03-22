@@ -6,6 +6,7 @@ Views.content.lit6 = function() {
 		height:768
 	});
 
-
+	view.add(Views.shared.logo("star"));
+	
 	return view;
 }

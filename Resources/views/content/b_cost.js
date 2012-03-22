@@ -19,7 +19,7 @@ Views.content.b_cost = function() {
 		width:964,
 		height:768,
 		left:0
-	})
+	});
 	
 	view.add(view_content);
 	

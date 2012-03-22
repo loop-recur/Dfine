@@ -70,7 +70,8 @@ Views.content.outer_bone_cement = function() {
 		width: 200,
 		height: 50,
 		bottom:70,
-		right:240
+		right:240,
+		zIndex:40
 	});
 	
 	view.add(read_more);
@@ -109,7 +110,7 @@ Views.content.outer_bone_cement = function() {
 	
 	view.add(foot_note);
 	
-	read_more.addEventListener('click', function(e){Controllers.content.renderView("bone_cement2")});
+	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_bone_cement2")});
 	
 	return view;
 }

@@ -30,8 +30,8 @@ Views.content.outer_rf_energy = function() {
 		right: 100
 	});
 	
-	btn_multiplex.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "rf_cement_viscosity")});
-	btn_metastar.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "rf_ablate_tumors")});
+	btn_multiplex.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_rf_energy")});
+	btn_metastar.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_rf_energy")});
 	
 	view.add(btn_multiplex);
 	view.add(btn_metastar);

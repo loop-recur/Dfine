@@ -4,9 +4,6 @@ Views.content.a_bone_cement = function() {
 		layout_container:"left_main"
 	});
 	
-	var nav = Views.shared.tech_nav("bone_cement", "a");
-	view.add(nav);
-	
 	var copyright = Ti.UI.createLabel({
 		text: "®",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
@@ -91,6 +88,7 @@ Views.content.a_bone_cement = function() {
 	
 	view.add(video);
 	view.add(Views.shared.tech_nav('bone_cement', "a"));
+	
 	UI.Er2(video, view, {left: 303, bottom: 93}, {left: 30}, {left: 55});
 	
 	
@@ -108,7 +106,7 @@ Views.content.a_bone_cement = function() {
 	
 	view.add(foot_note);
 	
-	read_more.addEventListener('click', function(e){Controllers.content.renderView("bone_cement2")});
+	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_bone_cement2")});
 	
 	return view;
 }

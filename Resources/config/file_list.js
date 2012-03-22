@@ -44,6 +44,8 @@ FileList = [
 	, "views/content/a_cost.js"
 	, "views/content/b_cost.js"
 	, "views/content/a_reimbursement.js"
+	, "views/content/a_reimbursement2.js"
+	, "views/content/a_reimbursement3.js"
 	, "views/content/b_reimbursement.js"
 	, "views/content/dfine.js"
 	, "views/content/inner_dfine.js"

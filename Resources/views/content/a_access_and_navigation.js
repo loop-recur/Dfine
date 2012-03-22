@@ -11,7 +11,7 @@ Views.content.a_access_and_navigation = function() {
 		left: 50
 	});
 	
-	btn_vertecor.addEventListener("click", function(e){Controllers.content.renderView("a_tabs", "targeted_cavity_creation")}); 
+	btn_vertecor.addEventListener("click", function(e){Controllers.content.renderSubView("targeted_cavity_creation")}); 
 	
 	view.add(btn_vertecor);
 

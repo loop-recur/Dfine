@@ -92,7 +92,7 @@ Views.content.main_screen = function() {
 		left:180
 	});
 
-	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "technology") });
+	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "a_technology") });
 	view.add(btn_stability);
 	
 	var btn_star = Ti.UI.createButton({
@@ -104,7 +104,7 @@ Views.content.main_screen = function() {
 		right:180
 	});
 	
-	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "technology") });
+	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "b_technology") });
 	view.add(btn_star);
 	
 	view.add(nav_view);

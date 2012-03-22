@@ -1,4 +1,4 @@
-Views.content.technology = function() {
+Views.content.a_technology = function() {
 	var view = Ti.UI.createView({
 		layout_container:"left_main"
 	});
@@ -85,9 +85,9 @@ Views.content.technology = function() {
 		Views.content[name](view);
 	}
 	
-	nav_rf.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_rf_energy")});
-	nav_access.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_access_and_navigation")});
-	nav_bone.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_bone_cement")});
+	nav_rf.addEventListener('click', function(e){Controllers.content.renderSubView("a_rf_energy")});
+	nav_access.addEventListener('click', function(e){Controllers.content.renderSubView("a_access_and_navigation")});
+	nav_bone.addEventListener('click', function(e){Controllers.content.renderSubView("a_bone_cement")});
 	
 	var rf_sub = Ti.UI.createLabel({
 		text: "RF to modulate bone cement viscosity",

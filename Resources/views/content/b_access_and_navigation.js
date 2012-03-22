@@ -11,12 +11,11 @@ Views.content.b_access_and_navigation = function() {
 		left: 50
 	});
 	
-	btn_vertecor.addEventListener("click", function(e){Controllers.content.renderView("a_tabs", "targeted_cavity_creation")}); 
-	btn_spinestar.addEventListener("click", function(e){Controllers.content.renderView("b_tabs", "site_specific_ablation")}); 
+	btn_vertecor.addEventListener("click", function(e){Controllers.content.renderSubView("targeted_cavity_creation")}); 
 	
 	view.add(btn_vertecor);
 
-	var nav = Views.shared.tech_nav("access_and_navigation");
+	var nav = Views.shared.tech_nav("access_and_navigation", 'b');
 	view.add(nav);
 
 	return view;

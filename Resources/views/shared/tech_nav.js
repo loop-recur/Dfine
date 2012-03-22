@@ -1,12 +1,7 @@
 Views.shared.tech_nav = function(current, prefix) {	
 	prefix = prefix || "outer";
 	var layout_name = null;
-	
-	if(prefix == "a") {
-		var layout_name = "a_tabs";
-	} else if(prefix == "b") {
-		var layout_name = "b_tabs";
-	}
+	var methodName = (prefix == "outer") ? 'renderView' : 'renderSubView';
 
 	var view = Ti.UI.createView({
 		width:"100%",
@@ -35,7 +30,7 @@ Views.shared.tech_nav = function(current, prefix) {
 		id: 'rf_energy'
 	});
 	
-	rf_energy_button.addEventListener('click', function(e){Controllers.content.renderView(prefix+"_rf_energy")});
+	rf_energy_button.addEventListener('click', function(e){Controllers.content[methodName](prefix+"_rf_energy")});
 
 	var access_and_navigation_button = Ti.UI.createButton({
 		backgroundImage:"images/tripoint/tripoint_sm_an.png",
@@ -47,7 +42,7 @@ Views.shared.tech_nav = function(current, prefix) {
 		id: 'access_and_navigation'
 	});
 
-	access_and_navigation_button.addEventListener('click', function(e){Controllers.content.renderView(prefix+"_access_and_navigation")});
+	access_and_navigation_button.addEventListener('click', function(e){Controllers.content[methodName](prefix+"_access_and_navigation")});
 
 	var bone_cement_button = Ti.UI.createButton({
 		backgroundImage:"images/tripoint/tripoint_sm_cement.png",
@@ -59,7 +54,7 @@ Views.shared.tech_nav = function(current, prefix) {
 		id: "bone_cement"
 	});
 	
-	bone_cement_button.addEventListener('click', function(e){Controllers.content.renderView(prefix+"_bone_cement")});
+	bone_cement_button.addEventListener('click', function(e){ Controllers.content[methodName](prefix+"_bone_cement") });
 
 	var button_group = UI.ButtonGroup(rf_energy_button, access_and_navigation_button, bone_cement_button);
 	

@@ -1,10 +1,10 @@
-Views.content.a_bone_cement = function() {	
+Views.content.b_bone_cement = function() {	
 	
 	var view = Ti.UI.createView({
 		layout_container:"left_main"
 	});
 	
-	var nav = Views.shared.tech_nav("bone_cement", "a");
+	var nav = Views.shared.tech_nav("bone_cement", "b");
 	view.add(nav);
 	
 	var copyright = Ti.UI.createLabel({
@@ -76,7 +76,7 @@ Views.content.a_bone_cement = function() {
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "StabiliT   ER  Bone Cement",
+		title: "StabiliT   ER  Bone Cement BBBBBBBB!",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
 		width: 250,

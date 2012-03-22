@@ -16,11 +16,12 @@ Views.content.b_technology = function() {
 	view.add(view_content);
 	
 	var overview_button = Ti.UI.createButton({
-		title:"NEED BUTTON FOR THIS",
-		width: 122,
-		height: 44,
-		bottom:310,
-		left:40,
+		backgroundImage:"images/star/technologycover/Cover_treating_meta_btn.png",
+		backgroundSelectedImage:"images/star/technologycover/Cover_treating_meta_btn_p.png",
+		width: 167,
+		height: 50,
+		bottom:300,
+		left:35,
 		zIndex:40
 	});
 	
@@ -33,7 +34,8 @@ Views.content.b_technology = function() {
 		width:249,
 		height:49,
 		bottom:50,
-		left:60
+		left:60,
+		zIndex:40
 	});
 	
 	view.add(procedure_button);
@@ -44,10 +46,57 @@ Views.content.b_technology = function() {
 		width:249,
 		height:49,
 		bottom:50,
-		left: 350
+		left: 350,
+		zIndex:40
 	});
 	
 	view.add(saying_button);
+	
+	var popup1_hotspot = Ti.UI.createView({
+		width:290,
+		height:30,
+		left:200, 
+		bottom:130,
+		zIndex:40
+	});
+	
+	view.add(popup1_hotspot);
+	
+	var popup1 = Ti.UI.createView({
+		backgroundImage:"images/star/technologycover/Cover_pop1.png",
+		width:257,
+		height:87,
+		left:200,
+		bottom: 200,
+		visible:false
+	});
+	
+	view.add(popup1);
+	
+	ToggleSwitch(popup1_hotspot, popup1);
+	
+	var popup2_hotspot = Ti.UI.createView({
+		width:180,
+		height:60,
+		right:40, 
+		bottom:380,
+		zIndex:40
+	});
+	
+	view.add(popup2_hotspot);
+	
+	var popup2 = Ti.UI.createView({
+		backgroundImage:"images/star/technologycover/Cover_pop2.png",
+		width:257,
+		height:87,
+		right:60,
+		bottom:200,
+		visible:false
+	});
+	
+	view.add(popup2);
+	
+	ToggleSwitch(popup2_hotspot, popup2);
 
 	view.add(Views.shared.tech_nav_star("", "b"));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_technology"}));

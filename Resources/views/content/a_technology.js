@@ -15,7 +15,7 @@ Views.content.a_technology = function() {
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "RF-TVA",
-		font:{fontSize:15, fontWeight:"regular"},
+		font:{fontSize:15, fontWeight:"regular", fontStyle:"bole"},
 		color:"black",
 		width: 225,
 		height: 50,
@@ -33,7 +33,7 @@ Views.content.a_technology = function() {
 	var video2 = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "What Physicians are Saying",
-		font:{fontSize:15, fontWeight:"regular"},
+		font:{fontSize:15, fontWeight:"regular", fontStyle:"bold"},
 		color:"black",
 		width: 305,
 		height: 50,
@@ -43,7 +43,7 @@ Views.content.a_technology = function() {
 	});
 	
 	video2.addEventListener('click', function(){
-		Controllers.content.video('whatphysiciansaresaying.mp4');
+		Views.videos.show('whatphysiciansaresaying.mp4');
 	});
 	
 	view.add(video2);

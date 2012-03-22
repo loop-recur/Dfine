@@ -5,14 +5,16 @@ Views.shared.tech_nav_star = function(current, prefix) {
 
 	var view = Ti.UI.createView({
 		width:"100%",
-		left: 0	
+		left: 0,
+		zindex:50
 	});
 
 	var nav = Ti.UI.createView({
 		height:240,
 		width:240,
 		top:30,
-		left:30
+		left:30,
+		zindex:50
 	});
 
 	var nav_circle = Ti.UI.createView({

@@ -100,7 +100,7 @@ Views.content.case_studies = function() {
 		var page_view = Ti.UI.createView({});
 		
 		var placeStudyView = function(position, v) {
-			var horizontal_padding = icon_width + 50
+			var horizontal_padding = icon_width + 20
 			, vertical_padding = icon_height + 30
 			, new_left = position.left + horizontal_padding
 			, new_top = position.top;

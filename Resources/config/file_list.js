@@ -52,6 +52,7 @@ FileList = [
 	, "views/content/visual_analog.js"
 	, "views/content/reduced_extravasion.js"
 	, "views/content/extra_vs_vertebro.js"
+	, "views/content/extra_vs_conventional.js"
 	, "views/content/lit_nav.js"
 	, "views/content/lit1.js"
 	, "views/content/lit2.js"

@@ -13,8 +13,8 @@ Views.videos.show = function(filename, attrs) {
 	});
 	
 	var player = Ti.Media.createVideoPlayer({
-		movieControlMode: Ti.Media.VIDEO_CONTROL_DEFAULT,
-		url: "/files/videos/"+filename,
+		mediaControlStyle:Titanium.Media.VIDEO_CONTROL_DEFAULT,
+		url: "/videos/"+filename,
 		height: "80%"
 	});
 	

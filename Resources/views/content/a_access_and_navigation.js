@@ -70,7 +70,7 @@ Views.content.a_access_and_navigation = function() {
 		left:450
 	});
 	
-	var tool1 = ClickToExpand(tool1);
+	// var tool1 = ClickToExpand(tool1);
 	
 	var tool2 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool2b.png",
@@ -80,7 +80,7 @@ Views.content.a_access_and_navigation = function() {
 		left:487
 	});
 	
-	var tool2 = ClickToExpand(tool2);
+	// var tool2 = ClickToExpand(tool2);
 	
 
 	var video = Ti.UI.createButton({
@@ -91,7 +91,8 @@ Views.content.a_access_and_navigation = function() {
 		width: 245,
 		height: 50,
 		left:150,
-		top:300
+		top:300,
+		zIndex:40
 	});
 	
 	video.addEventListener('click', function(){
@@ -108,7 +109,8 @@ Views.content.a_access_and_navigation = function() {
 		width: 245,
 		height: 50,
 		left:150,
-		top:380
+		top:380,
+		zIndex:40
 	});
 	
 	video2.addEventListener('click', function(){

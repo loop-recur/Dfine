@@ -30,7 +30,7 @@ Views.content.b_a5 = function() {
 		height:70,
 		left:170, 
 		top:300,
-		backgroundColor:"red"
+		zIndex:40
 	});
 	
 	view.add(popup1_hotspot);
@@ -40,17 +40,21 @@ Views.content.b_a5 = function() {
 		width:527,
 		height:154,
 		left:300,
-		top: 130
+		top: 130,
+		visible:false
 	});
 	
+	ToggleSwitch(popup1_hotspot, popup1);
+	
 	view.add(popup1);
+	
 	
 	var popup2_hotspot = Ti.UI.createView({
 		width:240,
 		height:70,
 		right:210, 
 		top:300,
-		backgroundColor:"red"
+		zIndex:40
 	});
 	
 	view.add(popup2_hotspot);
@@ -60,10 +64,15 @@ Views.content.b_a5 = function() {
 		width:449,
 		height:207,
 		right:150,
-		bottom:100
+		bottom:100,
+		visible:false
 	});
 	
+	popup2.visible = false;
+	
 	view.add(popup2);
+	
+	ToggleSwitch(popup2_hotspot, popup2);
 	
 	view.add(Views.shared.tech_nav_star('access_and_navigation', 'b'));
 	view.add(Views.shared.logo("star"));

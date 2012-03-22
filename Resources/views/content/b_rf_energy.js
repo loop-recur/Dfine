@@ -42,7 +42,7 @@ Views.content.b_rf_energy = function() {
 		height:40,
 		left:150, 
 		bottom:320,
-		backgroundColor:"red"
+		zIndex:40
 	});
 	
 	view.add(popup1_hotspot);
@@ -52,17 +52,20 @@ Views.content.b_rf_energy = function() {
 		width:348,
 		height:125,
 		left:110,
-		bottom: 150
+		bottom: 150,
+		visible:false
 	});
 	
 	view.add(popup1);
+	
+	ToggleSwitch(popup1_hotspot, popup1);
 	
 	var popup2_hotspot = Ti.UI.createView({
 		width:200,
 		height:40,
 		right:90, 
 		bottom:130,
-		backgroundColor:"red"
+		zIndex:40
 	});
 	
 	view.add(popup2_hotspot);
@@ -72,10 +75,13 @@ Views.content.b_rf_energy = function() {
 		width:307,
 		height:87,
 		right:80,
-		bottom:200
+		bottom:200,
+		visible:false
 	});
 	
 	view.add(popup2);
+	
+	ToggleSwitch(popup2_hotspot, popup2);
 	
 	view.add(Views.shared.tech_nav_star('rf_energy', 'b'));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_rf_energy"}));

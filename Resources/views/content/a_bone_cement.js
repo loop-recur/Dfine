@@ -91,7 +91,7 @@ Views.content.a_bone_cement = function() {
 	view.add(video);
 	view.add(Views.shared.tech_nav('bone_cement', "a"));
 	
-	UI.Er2(video, view, {left: 303, bottom: 93}, {left: 30}, {left: 55});
+	UI.Er2(video, view, {left: 303, bottom: 93,zIndex:41}, {left: 30}, {left: 55});
 	
 	
 	var foot_note = Ti.UI.createLabel({
@@ -104,7 +104,7 @@ Views.content.a_bone_cement = function() {
 		textAlign:"center"
 	});
 	
-	UI.Er2(foot_note, view, {left: 246}, {left: 30}, {left: 55});
+	UI.Er2(foot_note, view, {left: 220}, {left: 30}, {left: 55});
 	
 	view.add(foot_note);
 	

@@ -150,7 +150,7 @@ Views.content.a_bone_cement2 = function() {
 	});
 	
 	view.add(video);
-	UI.Er2(video, view, {left: 462, bottom: 93}, {left: 30}, {left: 55});
+	UI.Er2(video, view, {left: 462, bottom: 93, xIndex:41}, {left: 30}, {left: 55});
 	
 	view.add(Views.shared.tech_nav("bone_cement"));
 	

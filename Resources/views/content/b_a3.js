@@ -16,8 +16,7 @@ Views.content.b_a3 = function() {
 		backgroundImage:"images/star/a3/A3_popup_overlay.png",
 		width:964,
 		height:768,
-		left:0,
-		zIndex:10
+		left:0
 	});
 	
 	view.add(popup_view);

@@ -53,11 +53,11 @@ Views.content.b_technology = function() {
 	view.add(saying_button);
 	
 	var popup1_hotspot = Ti.UI.createView({
-		width:200,
+		width:290,
 		height:30,
 		left:200, 
-		bottom:190,
-		backgroundColor:"red"
+		bottom:130,
+		zIndex:40
 	});
 	
 	view.add(popup1_hotspot);
@@ -67,17 +67,20 @@ Views.content.b_technology = function() {
 		width:257,
 		height:87,
 		left:200,
-		bottom: 200
+		bottom: 200,
+		visible:false
 	});
 	
 	view.add(popup1);
 	
+	ToggleSwitch(popup1_hotspot, popup1);
+	
 	var popup2_hotspot = Ti.UI.createView({
-		width:200,
-		height:30,
+		width:180,
+		height:60,
 		right:40, 
-		bottom:350,
-		backgroundColor:"red"
+		bottom:380,
+		zIndex:40
 	});
 	
 	view.add(popup2_hotspot);
@@ -87,10 +90,13 @@ Views.content.b_technology = function() {
 		width:257,
 		height:87,
 		right:60,
-		bottom:200
+		bottom:200,
+		visible:false
 	});
 	
 	view.add(popup2);
+	
+	ToggleSwitch(popup2_hotspot, popup2);
 
 	view.add(Views.shared.tech_nav_star("", "b"));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_technology"}));

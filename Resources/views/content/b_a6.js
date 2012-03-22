@@ -28,8 +28,8 @@ Views.content.b_a6 = function() {
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/star/a6/A6_ablation_vid_btn.png",
 		backgroundSelectedImage:"images/star/a6/A6_ablation_vid_btn_p.png",
-		width: 122,
-		height: 44,
+		width: 265,
+		height: 49,
 		bottom:60,
 		left:190,
 		zIndex:40

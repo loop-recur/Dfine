@@ -89,7 +89,7 @@ Views.content.main_screen = function() {
 		height:49,
 		width:249,
 		bottom:50,
-		left:180
+		left:200
 	});
 
 	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "a_technology") });
@@ -101,7 +101,7 @@ Views.content.main_screen = function() {
 		height:49,
 		width:249,
 		bottom:50,
-		right:180
+		right:200
 	});
 	
 	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "b_technology") });

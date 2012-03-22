@@ -39,8 +39,8 @@ Views.content.reduced_extravasion = function() {
 	});
 	
 	var toggle_label = UI.toggleableLabel({
-		bottom: 20,
-		right:70,
+		bottom: 80,
+		left:20,
 		text: "Reference",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 	});
@@ -48,8 +48,8 @@ Views.content.reduced_extravasion = function() {
 	var toggle_reference = UI.toggleableLabel({
 		text:"Georgy, B. Comparison between RF Kyphoplasty, balloon kyphoplasty and high viscosity vertebroplasty in treatment of spinal compression fracture.” The 2nd Joint Meeting of European Society of Neuroradiology (ESNR) & American Society of Spine Radiology (ASSR). 2011.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
-		bottom: 40,
-		right:70,
+		bottom: 60,
+		left:90,
 		width:430,
 		height:"auto"
 	});

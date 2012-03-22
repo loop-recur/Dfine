@@ -158,7 +158,7 @@ Views.content.a_bone_cement2 = function() {
 		Views.content[name](view);
 	}
 	
-	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_bone_cement")});
+	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_bone_cement")});
 	view.add(Views.shared.logo());
 
 	return view;

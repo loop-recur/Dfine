@@ -40,8 +40,8 @@ Views.content.pain_relief_percent = function() {
 	});
 	
 	var toggle_label = UI.toggleableLabel({
-		bottom: 20,
-		right:70,
+		bottom: 80,
+		left:20,
 		text: "Reference",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 	});
@@ -49,8 +49,8 @@ Views.content.pain_relief_percent = function() {
 	var toggle_reference = UI.toggleableLabel({
 		text:"Sewall L, Smith S, and Vlahos A. Clinical Evaluation of Percutaneous Vertebral Augmentation Procedures using Radiofrequency Kyphoplasty in Treatment of 69 Vertebral Compression Fractures. ASBMR 2010.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
-		bottom: 40,
-		right:70,
+		bottom: 60,
+		left:90,
 		width:300,
 		height:"auto"
 	});

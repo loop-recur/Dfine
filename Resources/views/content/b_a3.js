@@ -12,6 +12,16 @@ Views.content.b_a3 = function() {
 	
 	view.add(view_content);
 	
+	var popup_view = Ti.UI.createView({
+		backgroundImage:"images/star/a3/A3_popup_overlay.png",
+		width:964,
+		height:768,
+		left:0,
+		zIndex:10
+	});
+	
+	view.add(popup_view);
+	
 	var back_button = Ti.UI.createButton({
 		backgroundImage:"images/back_btn.png",
 		backgroundSelectedImage:"images/back_btn_p.png",

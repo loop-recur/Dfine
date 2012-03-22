@@ -16,11 +16,12 @@ Views.content.b_technology = function() {
 	view.add(view_content);
 	
 	var overview_button = Ti.UI.createButton({
-		title:"NEED BUTTON FOR THIS",
-		width: 122,
-		height: 44,
-		bottom:310,
-		left:40,
+		backgroundImage:"images/star/technologycover/Cover_treating_meta_btn.png",
+		backgroundSelectedImage:"images/star/technologycover/Cover_treating_meta_btn_p.png",
+		width: 167,
+		height: 50,
+		bottom:300,
+		left:35,
 		zIndex:40
 	});
 	
@@ -50,6 +51,46 @@ Views.content.b_technology = function() {
 	});
 	
 	view.add(saying_button);
+	
+	var popup1_hotspot = Ti.UI.createView({
+		width:200,
+		height:30,
+		left:200, 
+		bottom:190,
+		backgroundColor:"red"
+	});
+	
+	view.add(popup1_hotspot);
+	
+	var popup1 = Ti.UI.createView({
+		backgroundImage:"images/star/technologycover/Cover_pop1.png",
+		width:257,
+		height:87,
+		left:200,
+		bottom: 200
+	});
+	
+	view.add(popup1);
+	
+	var popup2_hotspot = Ti.UI.createView({
+		width:200,
+		height:30,
+		right:40, 
+		bottom:350,
+		backgroundColor:"red"
+	});
+	
+	view.add(popup2_hotspot);
+	
+	var popup2 = Ti.UI.createView({
+		backgroundImage:"images/star/technologycover/Cover_pop2.png",
+		width:257,
+		height:87,
+		right:60,
+		bottom:200
+	});
+	
+	view.add(popup2);
 
 	view.add(Views.shared.tech_nav_star("", "b"));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_technology"}));

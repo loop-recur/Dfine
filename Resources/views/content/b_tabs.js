@@ -4,7 +4,7 @@ Views.content.b_tabs = function() {
 	var nav = Ti.UI.createView({
 		layout: "horizontal",
 		width: "100%",
-		layout_container: "right_nav", 
+		layout_container: "right_nav"
 	});
 	
 	

@@ -24,7 +24,7 @@ Views.content.b_access_and_navigation = function() {
 	
 	view.add(view_content);
 
-	view.add(Views.shared.tech_nav("access_and_navigation", 'b'));
+	view.add(Views.shared.tech_nav_star("access_and_navigation", 'b'));
 	
 	var left_button = Ti.UI.createButton({
 		backgroundImage:"images/star/a4/A4_controlled_access_vid_btn.png",

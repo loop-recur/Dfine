@@ -28,7 +28,7 @@ Views.content.a_bone_cement = function() {
 		text: "StabiliT  ER  Bone Cement - Ultra high viscosity and extended working time",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:36,fontWeight:'regular'},
 		color:"#023f66",
-		width:700,
+		width:550,
 		top:40,
 		left:240,
 		height:'auto'

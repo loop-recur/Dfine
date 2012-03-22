@@ -27,7 +27,7 @@ Views.content.a_tabs = function() {
 	}
 	
 	var tab_attrs = [
-		{name: "Technology", background: "images/tabs/tabs_technology.png", height:160, top:-2}
+		{name: "Technology", view_name: "a_technology", background: "images/tabs/tabs_technology.png", height:160, top:-2}
 		, {name: "Results", view_name: "a_results", background: "images/tabs/tabs_results.png", height:150, top:0}
 		, {name: "Case Studies", background: "images/tabs/tabs_case_studies.png", height:190, top:0}
 		, {name: "Cost", view_name: "a_cost", background: "images/tabs/tabs_cost.png", height:150, top: -10}

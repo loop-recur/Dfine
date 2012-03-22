@@ -49,7 +49,7 @@ Views.content.b_technology = function() {
 	
 	view.add(saying_button);
 
-	view.add(Views.shared.tech_nav("", "b"));	
+	view.add(Views.shared.tech_nav_star("", "b"));	
 	
 	return view;
 }

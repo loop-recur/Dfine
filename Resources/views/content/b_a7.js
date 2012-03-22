@@ -25,7 +25,7 @@ Views.content.b_a7 = function() {
 	back_button.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_technology")});
 	view.add(back_button);
 	
-	view.add(Views.shared.tech_nav('rf_energy', 'b'));
+	view.add(Views.shared.tech_nav_star('rf_energy', 'b'));
 	
 	return view;
 }

@@ -25,7 +25,7 @@ Views.content.b_a6 = function() {
 	back_button.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_access_and_navigation")});
 	view.add(back_button);
 	
-	view.add(Views.shared.tech_nav('access_and_navigation', 'b'));
+	view.add(Views.shared.tech_nav_star('access_and_navigation', 'b'));
 	
 	return view;
 }

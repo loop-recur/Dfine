@@ -41,7 +41,8 @@ Views.content.a_rf_energy = function() {
 			width: 25,
 			height: 25,
 			top: element.top,
-			left: element.left+n
+			left: element.left+n,
+			zIndex:40
 		});
 
 		plus_button.addEventListener('click', function() {
@@ -118,8 +119,9 @@ Views.content.a_rf_energy = function() {
 		color:"black",
 		width: 225,
 		height: 50,
-		bottom:40,
-		right:370
+		bottom:60,
+		right:390,
+		zIndex:40
 	});
 	
 	video.addEventListener('click', function(){
@@ -135,8 +137,9 @@ Views.content.a_rf_energy = function() {
 		color:"black",
 		width: 225,
 		height: 50,
-		bottom:40,
-		right:100
+		bottom:60,
+		right:120,
+		zIndex:40
 	});
 	
 	video2.addEventListener('click', function(){

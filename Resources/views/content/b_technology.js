@@ -33,7 +33,8 @@ Views.content.b_technology = function() {
 		width:249,
 		height:49,
 		bottom:50,
-		left:60
+		left:60,
+		zIndex:40
 	});
 	
 	view.add(procedure_button);
@@ -44,7 +45,8 @@ Views.content.b_technology = function() {
 		width:249,
 		height:49,
 		bottom:50,
-		left: 350
+		left: 350,
+		zIndex:40
 	});
 	
 	view.add(saying_button);

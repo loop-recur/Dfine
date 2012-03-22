@@ -112,7 +112,8 @@ Views.content.a_bone_cement2 = function() {
 		width:350,
 		top:500,
 		right:150,
-		height:'auto'
+		height:'auto',
+		zIndex:40
 	});
 	
 	view.add(left_note);
@@ -126,7 +127,8 @@ Views.content.a_bone_cement2 = function() {
 		width: 200,
 		height: 50,
 		bottom:70,
-		left:240
+		left:240,
+		zIndex:40
 	});
 	
 	view.add(read_more);
@@ -139,7 +141,8 @@ Views.content.a_bone_cement2 = function() {
 		width: 250,
 		height: 50,
 		bottom:70,
-		right:240
+		right:240,
+		zIndex:40
 	});
 
 	video.addEventListener('click', function(){
@@ -155,7 +158,7 @@ Views.content.a_bone_cement2 = function() {
 		Views.content[name](view);
 	}
 	
-	read_more.addEventListener('click', App.swapView(view, getContent.p("bone_cement")));
+	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_bone_cement")});
 	view.add(Views.shared.logo());
 
 	return view;

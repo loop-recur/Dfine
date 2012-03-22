@@ -66,7 +66,8 @@ Views.content.a_bone_cement = function() {
 		width: 200,
 		height: 50,
 		bottom:70,
-		right:240
+		right:240,
+		zIndex:40
 	});
 	
 	view.add(read_more);
@@ -79,7 +80,8 @@ Views.content.a_bone_cement = function() {
 		width: 250,
 		height: 50,
 		bottom:70,
-		left:240
+		left:240,
+		zIndex:40
 	});
 	
 	video.addEventListener('click', function(){

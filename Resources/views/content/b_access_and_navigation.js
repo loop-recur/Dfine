@@ -61,6 +61,10 @@ Views.content.b_access_and_navigation = function() {
 	
 	view.add(movie);
 	
+	movie.addEventListener('click', function(){
+		Views.videos.show('PML3361-544.m4v');
+	});
+	
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_access_and_navigation"}));
 	view.add(Views.shared.logo("star"));
 

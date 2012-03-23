@@ -96,7 +96,7 @@ Views.content.a_access_and_navigation = function() {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('1757.mp4');
+		Views.videos.show('1757.mp4');
 	});
 	
 	view.add(video);
@@ -114,7 +114,7 @@ Views.content.a_access_and_navigation = function() {
 	});
 	
 	video2.addEventListener('click', function(){
-		Controllers.content.video('PML2775-a-access-midline-45-120.mov');
+		Views.videos.show('PML2775-a-access-midline-45-120.mov');
 	});
 	
 	view.add(video2);

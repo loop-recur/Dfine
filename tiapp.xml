@@ -8,7 +8,7 @@
         <target device="android">false</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <id>com.looprecur.dfineapp</id>
+    <id>com.looprecur.DFINE</id>
     <name>DFINE</name>
     <version>0.8</version>
     <publisher>loop/recur</publisher>
@@ -27,7 +27,7 @@
     <iphone>
         <orientations device="ipad">
             <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
-						<orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>

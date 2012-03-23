@@ -25,6 +25,22 @@ Views.content.b_a5 = function() {
 	back_button.addEventListener('click', function(e){Controllers.content.renderView("b_tabs", "b_access_and_navigation")});
 	view.add(back_button);
 	
+	var video = Ti.UI.createButton({
+		backgroundImage:"images/star/a6/A6_ablation_vid_btn.png",
+		backgroundSelectedImage:"images/star/a6/A6_ablation_vid_btn_p.png",
+		width: 265,
+		height: 49,
+		bottom:60,
+		left:190,
+		zIndex:40
+	});
+	
+	view.add(video);
+	
+	video.addEventListener('click', function(){
+		Views.videos.show('RF-phantom-ablation.m4v');
+	});
+	
 	var popup1_hotspot = Ti.UI.createView({
 		width:200,
 		height:70,

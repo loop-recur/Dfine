@@ -125,7 +125,7 @@ Views.content.rf_cement_viscosity = function() {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('1482.mov');
+		Views.videos.show('1482.mov');
 	});
 	
 	view.add(video);
@@ -142,7 +142,7 @@ Views.content.rf_cement_viscosity = function() {
 	});
 	
 	video2.addEventListener('click', function(){
-		Controllers.content.video('2772-a-rf-handswitch-159-212.mov');
+		Views.videos.show('2772-a-rf-handswitch-159-212.mov');
 	});
 	
 	view.add(video2);

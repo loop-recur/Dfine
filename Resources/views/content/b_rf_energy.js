@@ -24,6 +24,10 @@ Views.content.b_rf_energy = function() {
 	
 	view.add(movie);
 	
+	movie.addEventListener('click', function(){
+		Views.videos.show('SpineSTAR-Thermal-Image-Short.m4v');
+	});
+	
 	var right_button = Ti.UI.createButton({
 		backgroundImage:"images/star/a2/A2_metastar_btn.png",
 		backgroundSelectedImage:"images/star/a2/A2_metastar_btn_p.png",

@@ -40,6 +40,10 @@ Views.content.b_technology = function() {
 	
 	view.add(procedure_button);
 	
+	procedure_button.addEventListener('click', function(){
+		Views.videos.show('PML3361-544.m4v');
+	});
+	
 	var saying_button = Ti.UI.createButton({
 		backgroundImage:"images/star/technologycover/Cover_what_phys_vid_btn.png",
 		backgroundSelectedImage:"images/star/technologycover/Cover_what_phys_vid_btn_p.png",
@@ -51,6 +55,10 @@ Views.content.b_technology = function() {
 	});
 	
 	view.add(saying_button);
+	
+	saying_button.addEventListener('click', function(){
+		Views.videos.show('whatphysiciansaresaying.mp4');
+	});
 	
 	var popup1_hotspot = Ti.UI.createView({
 		width:290,

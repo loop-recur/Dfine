@@ -135,7 +135,7 @@ Views.content.a_bone_cement2 = function() {
 
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
-		title: "StabiliT   ER  Bone Cement",
+		title: "StabiliT ER Bone Cement",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"black",
 		width: 250,
@@ -146,11 +146,12 @@ Views.content.a_bone_cement2 = function() {
 	});
 
 	video.addEventListener('click', function(){
-		Controllers.content.video('PML2775-a-bone2-157-208.mov');
+		Views.videos.show('PML2775-a-bone2-157-208.mov');
 	});
 	
 	view.add(video);
-	UI.Er2(video, view, {left: 462, bottom: 93, xIndex:41}, {left: 30}, {left: 55});
+	// Got rid of this because it wasn't going over the button
+	// UI.Er2(video, view, {left: 402, bottom: 83, xIndex:51}, {left: 30}, {left: 55});
 	
 	view.add(Views.shared.tech_nav("bone_cement"));
 	

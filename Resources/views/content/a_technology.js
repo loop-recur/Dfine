@@ -25,18 +25,16 @@ Views.content.a_technology = function() {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('PML2775.mp4');
+		Views.videos.show('PML2775.mp4');
 	});
 	
 	view.add(video);
 	
 	var video2 = Ti.UI.createButton({
-		backgroundImage:"images/video_button.png",
-		title: "What Physicians are Saying",
-		font:{fontSize:15, fontWeight:"regular", fontStyle:"bold"},
-		color:"black",
-		width: 305,
-		height: 50,
+		backgroundImage:"images/star/technologycover/Cover_what_phys_vid_btn.png",
+		backgroundSelectedImage:"images/star/technologycover/Cover_what_phys_vid_btn_p.png",
+		width:249,
+		height:49,
 		bottom:190,
 		left:70,
 		zIndex:40

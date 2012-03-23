@@ -57,7 +57,7 @@ Views.content.b_technology = function() {
 	view.add(saying_button);
 	
 	saying_button.addEventListener('click', function(){
-		Views.videos.show('whatphysiciansaresaying.mp4');
+		Views.videos.show('STAR-Physician-Commentary.mp4');
 	});
 	
 	var popup1_hotspot = Ti.UI.createView({

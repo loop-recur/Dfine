@@ -67,6 +67,8 @@ Views.content.reduced_extravasion = function() {
 
 	UI.Er2(content, view, {left: 148}, {left: 30}, {left: 57});
 	
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));
 	view.add(Views.shared.logo());
 	
 	return view;

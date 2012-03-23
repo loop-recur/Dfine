@@ -67,6 +67,8 @@ Views.content.pain_reduction = function() {
 	view.add(bullets);
 	UI.Er2(content, view, {left: 92, bottom: 347}, {left: 30}, {left: 56});
 	
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));
 	view.add(Views.shared.logo());
 	
 	return view;

@@ -7,7 +7,7 @@ Views.content.extra_vs_vertebro = function() {
 		text: "RF-TVA Extravasation Versus Vertebroplasty Extravasation",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
-		width:700,
+		width:500,
 		top:40,
 		left:30,
 		height:'auto'
@@ -56,6 +56,8 @@ Views.content.extra_vs_vertebro = function() {
 	view.add(image);
 	view.add(bullets);
 	
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));
 	view.add(Views.shared.logo());
 
 	return view;

@@ -6,6 +6,8 @@ Views.content.lit5 = function() {
 		height:768
 	});
 
+	view.add(Views.shared.tech_platform_button({top:30,right:30}));
+	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_results"}));
 	view.add(Views.shared.logo("star"));
 	return view;
 }

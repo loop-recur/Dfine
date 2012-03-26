@@ -22,7 +22,7 @@ Views.content.a_reimbursement = function() {
 		zIndex:40
 	});
 	
-	left_button.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_reimbursement2")});
+	left_button.addEventListener('click', function(e){Controllers.content.renderSubView("a_reimbursement2")});
 	view.add(left_button);
 	
 	var right_button = Ti.UI.createButton({
@@ -35,7 +35,7 @@ Views.content.a_reimbursement = function() {
 		zIndex:40
 	});
 	
-	right_button.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_reimbursement3")});
+	right_button.addEventListener('click', function(e){Controllers.content.renderSubView("a_reimbursement3")});
 	view.add(right_button);
 	
 	view.add(Views.shared.tech_platform_button({top:30,right:30}));

@@ -22,7 +22,7 @@ Views.content.a_reimbursement3 = function() {
 		zIndex:40
 	});
 	
-	back_button.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_reimbursement")});
+	back_button.addEventListener('click', function(e){Controllers.content.renderSubView("a_reimbursement")});
 	view.add(back_button);
 	
 	view.add(Views.shared.tech_platform_button({top:30,right:30}));

@@ -7,11 +7,10 @@ Views.content.a_cost = function() {
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:34,fontWeight:'regular'},
 		color:"#023f66",
-		width:600,
+		width:750,
 		top:40,
-		left:190,
-		height:'auto',
-		textAlign:"center"
+		left:40,
+		height:'auto'
 	});
 	
 	// var label2 = Ti.UI.createLabel({

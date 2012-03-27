@@ -46,6 +46,43 @@ Views.content.a_technology = function() {
 	
 	view.add(video2);
 	
+	var makePlus = function(element, n) {
+		var plus_button = Ti.UI.createImageView({
+			image: "images/reveal_plus_sign.png",
+			width: 25,
+			height: 25,
+			top: element.top,
+			left: element.left+n,
+			zIndex:40
+		});
+
+		plus_button.addEventListener('click', function() {
+			element.fireEvent('click');
+		});
+		
+		return plus_button;
+	}
+	
+	var hard_switch_bullets = Ti.UI.createLabel({
+		text: "• Unipedicular, bone sparing cavity creation \n\n • Creation of preferential paths for targeted delivery of RF-treated, ultra-high viscosity bone cement  \n\n • Optimal surface area for interdigitation \n\n • Controlled injection of bone cement",
+		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:14,fontWeight:'regular'},
+		color:"black",
+		width:230,
+		top:10,
+		height:'auto',
+		zIndex:40
+	});
+	
+	var hard_switch_cable_info = UI.toggleableView({top:250, left:300, width:250, zIndex:40});
+	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "", top:220, left:420});
+	var hard_plus_button = makePlus(hard_switch_cable, 150);
+	hard_switch_cable_info.add(hard_switch_bullets);
+	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
+	view.add(hard_switch_cable);
+	view.add(hard_plus_button);
+	view.add(hard_switch_cable_info);
+	
+	
 	view.add(Views.shared.tech_nav("", "a"));	
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_technology"}));
 	view.add(Views.shared.logo());

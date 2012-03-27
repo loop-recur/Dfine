@@ -1,7 +1,10 @@
 Views.content.a_technology = function() {
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	// var view = Ti.UI.createView({
+	// 	layout_container:"left_main",
+	// 	backgroundImage:"images/stabilit/stabilit_bg.png"
+	// });
+	
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/closed_tab_all_content_flat.png",

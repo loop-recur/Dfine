@@ -9,9 +9,7 @@ Views.content.case_studies = function() {
 	// 	});
 	// }
 	
-	var view = Ti.UI.createView({
-		layout_container: "left_main"
-	});
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var spinner = Ti.UI.createActivityIndicator({
 		style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,

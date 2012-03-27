@@ -1,7 +1,5 @@
 Views.content.b_access_and_navigation = function() {	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	var view = Views.shared.bg_left_main_view("star");
 
 	// var btn_vertecor = UI.createButton({
 	// 	title: "VertecoR Navigational MidLine Osteotome",

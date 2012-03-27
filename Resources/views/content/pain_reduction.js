@@ -1,6 +1,8 @@
 Views.content.pain_reduction = function() {
 	var view = Ti.UI.createView({
-		layout_container: "center_main"
+		layout_container: "center_main",
+		backgroundImage:"images/stabilit/stabilit_bg_small.png",
+		top:0
 	});
 	
 	var label = Ti.UI.createLabel({

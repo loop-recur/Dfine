@@ -66,6 +66,7 @@ FileList = [
 	, "views/content/b_a5.js"
 	, "views/content/b_a6.js"
 	, "views/content/b_a7.js"
+	, "views/shared/bg_left_main_view.js"
 	, "views/shared/tech_nav.js"
 	, "views/shared/logo.js"
 	, "views/shared/flipper.js"

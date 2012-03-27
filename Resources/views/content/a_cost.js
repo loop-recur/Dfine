@@ -1,7 +1,5 @@
 Views.content.a_cost = function() {	
-	var view = Ti.UI.createView({
-		layout_container: "left_main"
-	});
+	var view = Views.shared.bg_left_main_view("stabilit");
 
 	var label = Ti.UI.createLabel({
 		text: "Superior cost effectiveness at one level, additional savings in multi-level cases",

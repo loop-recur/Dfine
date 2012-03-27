@@ -1,8 +1,6 @@
 Views.content.a_bone_cement = function() {	
 	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var copyright = Ti.UI.createLabel({
 		text: "®",

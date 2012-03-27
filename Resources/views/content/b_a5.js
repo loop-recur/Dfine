@@ -1,7 +1,5 @@
 Views.content.b_a5 = function() {	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	var view = Views.shared.bg_left_main_view("star");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/star/a5/A5_main.png",

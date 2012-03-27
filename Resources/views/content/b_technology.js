@@ -1,8 +1,10 @@
 Views.content.b_technology = function() {
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	// var view = Ti.UI.createView({
+	// 	layout_container:"left_main",
+	// 	backgroundImage:"images/star/star_bg.png"
+	// });
 	
+	var view = Views.shared.bg_left_main_view("star");
 	
 	// view.add(Views.shared.tech_platform_button());
 	

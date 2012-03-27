@@ -1,7 +1,5 @@
 Views.content.b_cost = function() {	
-	var view = Ti.UI.createView({
-		layout_container: "left_main"
-	});
+	var view = Views.shared.bg_left_main_view("star");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/star/acomp2/AComp2_main.png",

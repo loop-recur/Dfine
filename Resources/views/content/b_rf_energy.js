@@ -1,7 +1,6 @@
 Views.content.b_rf_energy = function() {	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+
+	var view = Views.shared.bg_left_main_view("star");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/star/a2/A2_main.png",

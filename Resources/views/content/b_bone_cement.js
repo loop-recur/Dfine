@@ -1,8 +1,6 @@
 Views.content.b_bone_cement = function() {	
 	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	var view = Views.shared.bg_left_main_view("star");
 	
 	var nav = Views.shared.tech_nav("bone_cement", "b");
 	view.add(nav);

@@ -1,7 +1,5 @@
 Views.content.a_reimbursement2 = function() {
-	var view = Ti.UI.createView({
-		layout_container: "left_main"
-	});
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/a_reimbursement/stabiliT_reimb_2.png",

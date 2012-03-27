@@ -1,7 +1,5 @@
 Views.content.a_reimbursement = function() {
-	var view = Ti.UI.createView({
-		layout_container: "left_main"
-	});
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var view_content = Ti.UI.createView({
 		backgroundImage:"images/a_reimbursement/stabiliT_reimb_1.png",
@@ -13,9 +11,9 @@ Views.content.a_reimbursement = function() {
 	view.add(view_content);
 	
 	var left_button = Ti.UI.createButton({
-		backgroundImage:"images/a_reimbursement/reimbursement_cal_btn.png",
-		backgroundSelectedImage:"images/a_reimbursement/reimbursement_cal_btn_p.png",
-		width: 265,
+		backgroundImage:"images/a_reimbursement/stabiliT_calendar_btn.png",
+		backgroundSelectedImage:"images/a_reimbursement/stabiliT_calendar_btn_p.png",
+		width: 277,
 		height: 49,
 		bottom:40,
 		left:200,
@@ -26,9 +24,9 @@ Views.content.a_reimbursement = function() {
 	view.add(left_button);
 	
 	var right_button = Ti.UI.createButton({
-		backgroundImage:"images/a_reimbursement/reimbursement_ICD_btn.png",
-		backgroundSelectedImage:"images/a_reimbursement/reimbursement_ICD_btn_p.png",
-		width: 265,
+		backgroundImage:"images/a_reimbursement/stabiliT_ICD_btn.png",
+		backgroundSelectedImage:"images/a_reimbursement/stabiliT_ICD_btn_p.png",
+		width: 277,
 		height: 49,
 		bottom:40,
 		right:200,

@@ -1,7 +1,6 @@
 Views.content.a_rf_energy = function() {	
-	var view = Ti.UI.createView({
-		layout_container:"left_main"
-	});
+	
+	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var label = Ti.UI.createLabel({
 		text: "MultiPlex Controller and Activation Element",

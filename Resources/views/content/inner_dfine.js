@@ -36,7 +36,7 @@ Views.content.inner_dfine = function(win) {
 	view.add(label);
 	view.add(label2);
 	
-	view.add(Views.shared.tech_platform_button({top:30,right:20})); 
+	view.add(Views.shared.tech_platform_button({bottom:30,right:20})); 
 	
 	return view;
 }

@@ -71,16 +71,16 @@ Views.content.main_screen = function() {
 	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("outer_bone_cement")});
 	nav_view.add(btn_nav_bone);
 	
-	var btn_back_to_dfine = Ti.UI.createView({
-		backgroundImage:"images/dfine_logo_small.png",
-		height:32,
-		width:137,
-		bottom:20,
-		right:20
-	});
-
-	btn_back_to_dfine.addEventListener('click', function(e){Controllers.content.renderView("dfine")});
-	view.add(btn_back_to_dfine);
+	// var btn_back_to_dfine = Ti.UI.createView({
+	// 	backgroundImage:"images/dfine_logo_small.png",
+	// 	height:32,
+	// 	width:137,
+	// 	bottom:20,
+	// 	right:20
+	// });
+	// 
+	// btn_back_to_dfine.addEventListener('click', function(e){Controllers.content.renderView("dfine")});
+	// view.add(btn_back_to_dfine);
 
 
 	var btn_stability = Ti.UI.createButton({

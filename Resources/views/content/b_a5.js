@@ -44,7 +44,7 @@ Views.content.b_a5 = function() {
 	var popup1_hotspot = Ti.UI.createView({
 		width:200,
 		height:70,
-		left:170, 
+		left:280, 
 		top:300,
 		zIndex:40
 	});
@@ -55,7 +55,7 @@ Views.content.b_a5 = function() {
 		backgroundImage:"images/star/a5/A5_pop1.png",
 		width:527,
 		height:154,
-		left:300,
+		left:350,
 		top: 130,
 		visible:false
 	});
@@ -68,7 +68,7 @@ Views.content.b_a5 = function() {
 	var popup2_hotspot = Ti.UI.createView({
 		width:240,
 		height:70,
-		right:210, 
+		right:130, 
 		top:300,
 		zIndex:40
 	});

@@ -120,7 +120,7 @@ Views.content.a_rf_energy = function() {
 		width: 225,
 		height: 50,
 		bottom:60,
-		right:390,
+		right:490,
 		zIndex:40
 	});
 	
@@ -138,7 +138,7 @@ Views.content.a_rf_energy = function() {
 		width: 225,
 		height: 50,
 		bottom:60,
-		right:120,
+		right:220,
 		zIndex:40
 	});
 	

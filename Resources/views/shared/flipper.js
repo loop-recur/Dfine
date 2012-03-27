@@ -4,8 +4,10 @@ Views.shared.flipper = function(props) {
 	var view = Ti.UI.createView(merge({
 		height:40,
 		width:50,
-		top:30, 
-		right:80
+		// top:30,
+		bottom:30, 
+		right:80,
+		zIndex:50
 	}, props));
 	
 	var divider = Ti.UI.createView({

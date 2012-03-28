@@ -19,9 +19,12 @@ Views.content.results3 = function() {
 		backgroundImage:"images/results/results3.png",
 		top:80,
 		left:0,
-		width:751,
-		height:310,
+		width:706,
+		height:291,
+		zIndex:20
 	});
+	
+	ClickToExpand(image);
 	
 	var content = Ti.UI.createLabel({
 		text: "93% of patients had complete or moderate pain relief.",

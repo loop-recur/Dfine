@@ -11,6 +11,19 @@ Views.content.b_rf_energy = function() {
 	
 	view.add(view_content);
 	
+	var main_image = Ti.UI.createView({
+		backgroundImage:"images/star-large/DSCF0042_trans.png",
+		height:384,
+		width:574,
+		right:100,
+		top:190,
+		zIndex:20
+	});
+	
+	view.add(main_image);
+	
+	ClickToExpand(main_image);
+	
 	var movie = Ti.UI.createButton({
 		backgroundImage:"images/star/a2/A2_controlled_rf_vid_btn.png",
 		backgroundSelectedImage:"images/star/a2/A2_controlled_rf_vid_btn_p.png",
@@ -56,7 +69,8 @@ Views.content.b_rf_energy = function() {
 		height:125,
 		left:110,
 		bottom: 150,
-		visible:false
+		visible:false,
+		zIndex:21
 	});
 	
 	view.add(popup1);
@@ -79,7 +93,8 @@ Views.content.b_rf_energy = function() {
 		height:87,
 		right:80,
 		bottom:200,
-		visible:false
+		visible:false,
+		zIndex:21
 	});
 	
 	view.add(popup2);

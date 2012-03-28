@@ -18,9 +18,12 @@ Views.content.results4 = function() {
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results4.png",
 		top:90,
-		width:730,
-		height:390
+		width:700,
+		height:374,
+		zIndex:20
 	});
+	
+	ClickToExpand(image);
 	
 	var content = Ti.UI.createLabel({
 		text: "Use of StabiliT   ER  Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.",

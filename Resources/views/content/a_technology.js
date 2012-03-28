@@ -1,9 +1,4 @@
 Views.content.a_technology = function() {
-	// var view = Ti.UI.createView({
-	// 	layout_container:"left_main",
-	// 	backgroundImage:"images/stabilit/stabilit_bg.png"
-	// });
-	
 	var view = Views.shared.bg_left_main_view("stabilit");
 	
 	var view_content = Ti.UI.createView({
@@ -14,6 +9,19 @@ Views.content.a_technology = function() {
 	});
 	
 	view.add(view_content);
+	
+	var main_image = Ti.UI.createView({
+		backgroundImage:"images/technology/rf/363.png",
+		height:385,
+		width:617,
+		right:5,
+		top:230,
+		zIndex:20
+	});
+	
+	view.add(main_image);
+	
+	ClickToExpand(main_image);
 	
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
@@ -84,6 +92,18 @@ Views.content.a_technology = function() {
 	view.add(hard_switch_cable);
 	view.add(hard_plus_button);
 	view.add(hard_switch_cable_info);
+	
+	// var hotspot1 = Ti.UI.createView({
+	// 	width:300,
+	// 	height:300,
+	// 	right:200, 
+	// 	top:280,
+	// 	backgroundColor:"red",
+	// 	opacity:0.5,
+	// 	zIndex:40
+	// });
+	// 
+	// view.add(hotspot1);
 	
 	
 	view.add(Views.shared.tech_nav("", "a"));	

@@ -65,7 +65,8 @@ Views.content.a_access_and_navigation = function() {
 		height:157,
 		width:304,
 		top:150,
-		left:450
+		left:450,
+		zIndex:20
 	});
 	
 	// var tool1 = ClickToExpand(tool1);
@@ -75,7 +76,8 @@ Views.content.a_access_and_navigation = function() {
 		height:148,
 		width:265,
 		top:330,
-		left:487
+		left:487,
+		zIndex:30
 	});
 	
 	// var tool2 = ClickToExpand(tool2);
@@ -117,8 +119,23 @@ Views.content.a_access_and_navigation = function() {
 	
 	view.add(video2);
 	
+	ClickToExpand(tool1);
+	ClickToExpand(tool2);
+	
 	view.add(tool1);
 	view.add(tool2);
+	
+	// var hotspot1 = Ti.UI.createView({
+	// 	width:300,
+	// 	height:300,
+	// 	right:200, 
+	// 	top:100,
+	// 	backgroundColor:"red",
+	// 	opacity:0.5,
+	// 	zIndex:40
+	// });
+	// 
+	// view.add(hotspot1);
 	
 	view.add(Views.shared.tech_nav("access_and_navigation", "a"));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_access_and_navigation"}));

@@ -18,9 +18,12 @@ Views.content.results2 = function() {
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results2.png",
 		top:100,
-		width:722,
-		height:384
+		width:700,
+		height:372,
+		zIndex:20
 	});
+	
+	ClickToExpand(image);
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.",

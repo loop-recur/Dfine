@@ -16,6 +16,16 @@ Controllers.case_studies = (function() {
 		cb = params.fix_urls ? compose(cb, map(_fixUrls)) : cb;
 		Api.all(cb, {}, options);
 	}
+
+	var getStabilit = function(cb, params, options) {
+		Api = RestApi("case_studies/stabilit");
+		getAll(cb, params, options);
+	}
 	
-	return {getAll : getAll}
+	var getStar = function(cb, params, options) {
+		Api = RestApi("case_studies/star");
+		getAll(cb, params, options);
+	}
+	
+	return {getAll : getAll, getStabilit: getStabilit, getStar: getStar}
 })();

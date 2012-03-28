@@ -126,8 +126,7 @@ Views.content.b_case_studies = function() {
 		view.add(dashboard);
 	}
 
-
-	Controllers.case_studies.getStar(finish, {fix_urls: Ti.App.Properties.getBool("cached_images")});
+	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images"), kind: "star"});
 
 	return view;
 }

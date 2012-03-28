@@ -151,7 +151,7 @@ Views.content.a_bone_cement2 = function() {
 	// Got rid of this because it wasn't going over the button
 	// UI.Er2(video, view, {left: 402, bottom: 83, xIndex:51}, {left: 30}, {left: 55});
 	
-	view.add(Views.shared.tech_nav("bone_cement"));
+	view.add(Views.shared.tech_nav('bone_cement', "a"));
 	
 	var getContent = function(name) {
 		Views.content[name](view);

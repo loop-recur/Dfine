@@ -1,4 +1,4 @@
-Views.content.visual_analog = function() {	
+Views.content.results2 = function() {	
 	var view = Ti.UI.createView({
 		layout_container: "center_main",
 		backgroundImage:"images/stabilit/stabilit_bg_small.png",
@@ -15,18 +15,18 @@ Views.content.visual_analog = function() {
 		height:'auto'
 	});
 	
-	var image = ClickToExpand(Ti.UI.createView({
-		backgroundImage:"images/results/results_page2_visual_analog.png",
+	var image = Ti.UI.createView({
+		backgroundImage:"images/results/results2.png",
 		top:100,
 		width:722,
-		height:285
-	}), true);
+		height:384
+	});
 	
 	var content = Ti.UI.createLabel({
 		text: "Pre- and post-RF-TVA pain and disability scores at 3 and 6 months.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
-		bottom:330,
+		bottom:230,
 		height:'auto',
 		textAlign:"center"
 	});
@@ -35,7 +35,7 @@ Views.content.visual_analog = function() {
 		text: "•63 patients underwent RF-TVA to treat 116 osteolytic vertebral compression fractures \n•Median pain (VAS) and Oswestry (disability) scores improved significantly post treatment and continued to maintain improved levels at 3 and 6 months",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		width:650,
-		bottom:230,
+		bottom:150,
 		height:'auto',
 		textAlign:"center"
 	});

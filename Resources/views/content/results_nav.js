@@ -2,12 +2,12 @@ Views.content.results_nav = function(){
 	var arrow_top = 100;
 	
 	var data = [
-		{id: "pain_reduction", image: "images/results/results_nav_icon1.png", text: "Significant pain reduction"}
-		, {id: "visual_analog", image: "images/results/results_nav_icon2.png", text: "Visual analog scale pain scores vs. Oswestry disability scores"}
-		, {id: "pain_relief_percent", image: "images/results/results_nav_icon3.png", text: "Percent of patients with pain relief"}
-		, {id: "reduced_extravasion", image: "images/results/results_nav_icon4.png", text: "Significantly reduced extravasation"}
-		, {id: "extra_vs_vertebro", image: "images/results/results_nav_icon5.png", text: "RF-TVA extravasation versus vertebroplasty extravasation"}
-		, {id: "extra_vs_conventional", image: "images/results/results_nav_icon6.png", text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications"}
+		{id: "results1", image: "images/results/results_nav_icon1.png", text: "Significant pain reduction"}
+		, {id: "results2", image: "images/results/results_nav_icon2.png", text: "Visual analog scale pain scores vs. Oswestry disability scores"}
+		, {id: "results3", image: "images/results/results_nav_icon3.png", text: "Percent of patients with pain relief"}
+		, {id: "results4", image: "images/results/results_nav_icon4.png", text: "Significantly reduced extravasation"}
+		, {id: "results5", image: "images/results/results_nav_icon5.png", text: "RF-TVA extravasation versus vertebroplasty extravasation"}
+		, {id: "results6", image: "images/results/results_nav_icon6.png", text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications"}
 	]
  		
 

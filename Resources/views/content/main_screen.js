@@ -109,5 +109,20 @@ Views.content.main_screen = function() {
 	
 	view.add(nav_view);
 	
+	// var swipe_cover = Ti.UI.createView({
+	// 	backgroundImage:"Default-Landscape.png",
+	// 	width:1024,
+	// 	height:768,
+	// 	top:0,
+	// 	left:0,
+	// 	zIndex:99,
+	// });
+	// 
+	// swipe_cover.addEventListener('swipe', function(){
+	// 	swipe_cover.hide();
+	// });
+	// 
+	// view.add(swipe_cover);
+	
 	return view;
 }

@@ -5,7 +5,7 @@ Views.content.a_results = function() {
 		backgroundImage:"images/stabilit/stabilit_bg.png"
 	});
 	
-	view.add(Views.content.pain_reduction());
+	view.add(Views.content.results1());
 	
 	Controllers.content.renderSubView("results_nav");
 

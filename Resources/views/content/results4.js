@@ -1,12 +1,12 @@
-Views.content.pain_reduction = function() {
+Views.content.results4 = function() {	
 	var view = Ti.UI.createView({
 		layout_container: "center_main",
 		backgroundImage:"images/stabilit/stabilit_bg_small.png",
 		top:0
 	});
-	
+
 	var label = Ti.UI.createLabel({
-		text: "Significant Pain Reduction",
+		text: "Significantly Reduced Extravasation",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:28,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
@@ -15,29 +15,27 @@ Views.content.pain_reduction = function() {
 		height:'auto'
 	});
 	
-	var image = ClickToExpand(Ti.UI.createView({
-		backgroundImage:"images/results/results_page1_significant_pain.png",
-		top:100,
-		width:722,
-		height:285,
-	}), true);
+	var image = Ti.UI.createView({
+		backgroundImage:"images/results/results4.png",
+		top:90,
+		width:730,
+		height:390
+	});
 	
-	view.add(image);
-
 	var content = Ti.UI.createLabel({
-		text: "StabiliT   ER  Bone Cement fills the pathways created by the VertecoR MidLine Osteotome to ensure targeted delivery and interdigitation throughout the vertebra, potentially resulting in a safer and more effective vertebral augmentation.",
+		text: "Use of StabiliT   ER  Bone Cement with RF-TVA significantly decreases the incidence of cement extravasation.",
 		font:{fontFamily:'Helvetica LT CondensedBlack',fontSize:15,fontWeight:'bold'},
 		width:650,
-		bottom:300,
+		bottom:230,
 		height:'auto',
 		textAlign:"center"
 	});
 	
 	var bullets = Ti.UI.createLabel({
-		text: "• 66 RF-TVA procedures were performed between December 2008 and May 2009 \n• A standard 10-point visual analog scale (VAS) was utilized to assess back pain pre- and post-operatively \n• Pain medication use and activities were defined and monitored for changes \n• Significant improvement in pain, activity, and narcotic use was observed at 6 months",
+		text: "• 39 levels were treated with RF-TVA \n• 66 levels were treated with high-viscosity vertebroplasty \n• 49 levels were treated with conventional balloon kyphoplasty \n• No leakage was reported in 69% of the RF-TVA group, compared to 53% in the vertebroplasty procedure group and 41% in the conventional balloon kyphoplasty procedure group \n• This represents a significant decrease in incidence of cement leakage when using RF-TVA: \n-34% lower leakage rate than vertebroplasty3 \n- 47% lower leakage rate than conventional balloon kyphoplasty",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:15,fontWeight:'regular'},
 		width:650,
-		bottom:170,
+		bottom:60,
 		height:'auto',
 		textAlign:"center"
 	});
@@ -50,11 +48,11 @@ Views.content.pain_reduction = function() {
 	});
 	
 	var toggle_reference = UI.toggleableLabel({
-		text:"Erdem, E. Radiofrequency Kyphoplasty (RFK) for the Treatment of Vertebral Compression Fractures As A Result of Multiple Myeloma. ASSR 2011.",
+		text:"Georgy, B. Comparison between RF Kyphoplasty, balloon kyphoplasty and high viscosity vertebroplasty in treatment of spinal compression fracture.” The 2nd Joint Meeting of European Society of Neuroradiology (ESNR) & American Society of Spine Radiology (ASSR). 2011.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
-		bottom: 60,
+		bottom: 10,
 		left:90,
-		width:300,
+		width:430,
 		height:"auto"
 	});
 	
@@ -65,9 +63,11 @@ Views.content.pain_reduction = function() {
 	view.add(toggle_reference);
 
 	view.add(label);
+	view.add(image);
 	view.add(content);
 	view.add(bullets);
-	UI.Er2(content, view, {left: 92, bottom: 347}, {left: 30}, {left: 56});
+
+	UI.Er2(content, view, {left: 128}, {left: 30}, {left: 57});
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));

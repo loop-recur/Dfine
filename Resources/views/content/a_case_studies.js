@@ -1,13 +1,9 @@
-Views.content.case_studies = function() {
+Views.content.a_case_studies = function() {
 	
 	var icon_width = 420
 	, icon_height = 280
 	, columns = 2;
 	
-	// var makeView = function() {
-	// 	return Ti.UI.createView({
-	// 	});
-	// }
 	
 	var view = Views.shared.bg_left_main_view("stabilit");
 	
@@ -129,8 +125,9 @@ Views.content.case_studies = function() {
 
 		view.add(dashboard);
 	}
-	
-	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images")});
+
+
+	Controllers.case_studies.getStabilit(finish, {fix_urls: Ti.App.Properties.getBool("cached_images")});
 
 	return view;
 }

@@ -4,13 +4,17 @@ Views.content.main_screen = function() {
 		height:768,
 		backgroundImage:"images/outer/Combined_bg.png"
 	});
+	
+	var content_view = Ti.UI.createView({
+		backgroundColor: "#FFFFFF"
+	});	
 
 	var comp_view = Ti.UI.createView({
 		width:1024,
 		height:768,
 		backgroundImage:"images/outer/Cover_main.png"
 	});
-	view.add(comp_view);
+	content_view.add(comp_view);
 	
 	var nav_view = Ti.UI.createView({
 		height:440,
@@ -93,7 +97,7 @@ Views.content.main_screen = function() {
 	});
 
 	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "a_technology") });
-	view.add(btn_stability);
+	content_view.add(btn_stability);
 	
 	var btn_star = Ti.UI.createButton({
 		backgroundImage:"images/outer/goto_star_btn.png",
@@ -105,9 +109,31 @@ Views.content.main_screen = function() {
 	});
 	
 	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "b_technology") });
-	view.add(btn_star);
+	content_view.add(btn_star);
 	
-	view.add(nav_view);
+	content_view.add(nav_view);
+	
+	var oneTimeSplash = function(){
+		var swipe_cover = Ti.UI.createView({
+			backgroundImage:"Default-Landscape.png",
+			width:1024,
+			height:768,
+			top:0,
+			left:0,
+			zIndex:99,
+		});
+
+		var _swipeListener = function(){
+			var t = Ti.UI.iPhone.AnimationStyle.CURL_DOWN;
+			swipe_cover.animate({view: content_view, transition: t}, function(e){swipe_cover.removeEventListener('swipe', _swipeListener);});
+		};
+
+		swipe_cover.addEventListener('swipe', _swipeListener);
+		view.add(swipe_cover);
+		Ti.App.app_is_opened = true;  //Flag so that this is only run one time.
+	};
+
+	!Ti.App.app_is_opened ? oneTimeSplash() : view.add(content_view);
 	
 	return view;
 }

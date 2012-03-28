@@ -49,9 +49,9 @@ Views.content.a_bone_cement = function() {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
-		height:268,
-		width:640,
-		top:275
+		height:351,
+		width:721,
+		top:225
 	});
 	
 	view.add(image);
@@ -97,7 +97,7 @@ Views.content.a_bone_cement = function() {
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
 		color:"#023f66",
 		width:580,
-		bottom:150,
+		bottom:135,
 		height:'auto',
 		textAlign:"center"
 	});

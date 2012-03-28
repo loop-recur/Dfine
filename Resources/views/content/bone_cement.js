@@ -54,9 +54,9 @@ Views.content.bone_cement = function() {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
-		height:268,
-		width:640,
-		top:275
+		height:351,
+		width:721,
+		top:245
 	});
 	
 	view.add(image);

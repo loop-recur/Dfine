@@ -49,24 +49,26 @@ Views.content.a_bone_cement2 = function() {
 	view.add(two);
 	
 	var left_image = Ti.UI.createView({
-		backgroundImage:"images/technology/bone_cement/bolus2_transparent.png",
+		backgroundImage:"images/technology/bone_cement/bone2-left-large.png",
 		height:275,
 		width:375,
 		left: 90,
-		top:200
+		top:200,
+		zIndex:20
 	});
 	
-	// var left_image = ClickToExpand(left_image);
+	var left_image = ClickToExpand(left_image);
 	
 	var right_image = Ti.UI.createView({
-		backgroundImage:"images/technology/bone_cement/midlifeCement2_transparent.png",
+		backgroundImage:"images/technology/bone_cement/bone2-right-large.png",
 		height:275,
 		width:375,
-		right:140,
-		top:200
+		right:110,
+		top:200,
+		zIndex:20
 	});
 	
-	// var right_image = ClickToExpand(right_image);
+	var right_image = ClickToExpand(right_image);
 	
 	view.add(left_image);
 	view.add(right_image);
@@ -104,12 +106,12 @@ Views.content.a_bone_cement2 = function() {
 	// });
 	
 	var right_note = Ti.UI.createLabel({
-		text: "The orange area indicates where the StabiliT  ER   ultra high viscosity cement penetrated the vertebral body. Note the high degree of remaining intact cancellous bone and the relative size of the targeted cavity versus the high degree of cement interdigitation.",
+		text: "The orange area indicates where the StabiliT ER ultra high viscosity cement penetrated the vertebral body. Note the high degree of remaining intact cancellous bone and the relative size of the targeted cavity versus the high degree of cement interdigitation.",
 		font:{fontFamily:'Helvetica',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
 		width:350,
 		top:500,
-		right:150,
+		right:120,
 		height:'auto',
 		zIndex:40
 	});

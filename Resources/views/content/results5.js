@@ -19,9 +19,12 @@ Views.content.results5 = function() {
 		backgroundImage:"images/results/results5.png",
 		top:130,
 		left:-10,
-		width:730,
-		height:150,
+		width:700,
+		height:144,
+		zIndex:20
 	});
+	
+	ClickToExpand(image);
 	
 	var bullets = Ti.UI.createLabel({
 		text: "	• 60 patients underwent RF-TVA to treat 92 osteoporotic vertebral compression fractures \n• 39 patients were treated for 52 spine fractures (control group) \n• Patients that underwent RF-TVA experienced 54% fewer incidence of cement leakage and saw a restorative increase in height",

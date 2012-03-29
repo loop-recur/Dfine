@@ -18,11 +18,14 @@ Views.content.results1 = function() {
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results1.png",
 		top:100,
-		width:722,
-		height:384,
+		width:700,
+		height:372,
+		zIndex:20
 	});
 	
 	view.add(image);
+	
+	ClickToExpand(image);
 
 	var content = Ti.UI.createLabel({
 		text: "StabiliT   ER  Bone Cement fills the pathways created by the VertecoR MidLine Osteotome to ensure targeted delivery and interdigitation throughout the vertebra, potentially resulting in a safer and more effective vertebral augmentation.",

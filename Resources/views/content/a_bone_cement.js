@@ -51,10 +51,13 @@ Views.content.a_bone_cement = function() {
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
 		height:351,
 		width:721,
-		top:225
+		top:225,
+		zIndex:20
 	});
 	
 	view.add(image);
+	
+	ClickToExpand(image);
 	
 	var read_more = Ti.UI.createButton({
 		backgroundImage:"images/page_fwd_button.png",

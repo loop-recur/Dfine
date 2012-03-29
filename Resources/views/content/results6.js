@@ -18,9 +18,12 @@ Views.content.results6 = function() {
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results6.png",
 		top:130,
-		width:721,
-		height:369
+		width:700,
+		height:358,
+		zIndex:20
 	});
+	
+	ClickToExpand(image);
 	
 	var content = Ti.UI.createLabel({
 		text: "A comparison of leakage rates between spine fractures treatments <6 weeks old and those >6 weeks old.",

@@ -31,7 +31,7 @@ Views.content.a_rf_energy = function() {
 		width:882,
 		top:90
 	});
-
+	
 	view.add(main_image);
 	
 	var makePlus = function(element, n) {
@@ -146,6 +146,22 @@ Views.content.a_rf_energy = function() {
 	});
 	
 	view.add(video2);
+	
+	var hotspot1 = Ti.UI.createView({
+		backgroundImage:"images/technology/rf/363.png",
+		width:380,
+		height:300,
+		right:250, 
+		top:200,
+		// backgroundColor:"red",
+		// visible:false,
+		opacity:0.0,
+		zIndex:40
+	});
+	
+	view.add(hotspot1);
+	
+	ClickToExpand(hotspot1);
 	
 	view.add(Views.shared.tech_nav('rf_energy', 'a'));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_rf_energy"}));

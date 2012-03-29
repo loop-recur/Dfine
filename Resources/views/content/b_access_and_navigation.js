@@ -21,6 +21,32 @@ Views.content.b_access_and_navigation = function() {
 	});
 	
 	view.add(view_content);
+	
+	var main_image1 = Ti.UI.createView({
+		backgroundImage:"images/star-large/DSCF0196_trans.png",
+		height:215,
+		width:426,
+		right:100,
+		top:200,
+		zIndex:20
+	});
+	
+	view.add(main_image1);
+	
+	ClickToExpand(main_image1);
+	
+	var main_image2 = Ti.UI.createView({
+		backgroundImage:"images/star-large/DSCF0222_trans.png",
+		height:285,
+		width:425,
+		right:100,
+		top:350,
+		zIndex:20
+	});
+	
+	view.add(main_image2);
+	
+	ClickToExpand(main_image2);
 
 	view.add(Views.shared.tech_nav_star("access_and_navigation", 'b'));
 	

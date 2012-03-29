@@ -17,6 +17,19 @@ Views.content.b_technology = function() {
 	
 	view.add(view_content);
 	
+	var main_image = Ti.UI.createView({
+		backgroundImage:"images/star-large/DSCF0042_trans.png",
+		height:384,
+		width:574,
+		right:230,
+		top:210,
+		zIndex:20
+	});
+	
+	view.add(main_image);
+	
+	ClickToExpand(main_image);
+	
 	var overview_button = Ti.UI.createButton({
 		backgroundImage:"images/star/technologycover/Cover_treating_meta_btn.png",
 		backgroundSelectedImage:"images/star/technologycover/Cover_treating_meta_btn_p.png",
@@ -78,7 +91,8 @@ Views.content.b_technology = function() {
 		height:87,
 		left:200,
 		bottom: 200,
-		visible:false
+		visible:false,
+		zIndex:21
 	});
 	
 	view.add(popup1);
@@ -101,7 +115,8 @@ Views.content.b_technology = function() {
 		height:87,
 		right:60,
 		bottom:200,
-		visible:false
+		visible:false,
+		zIndex:21
 	});
 	
 	view.add(popup2);

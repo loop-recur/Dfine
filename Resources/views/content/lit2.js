@@ -16,8 +16,21 @@ Views.content.lit2 = function() {
 	
 	view.add(view_content);
 	
+	var image = Ti.UI.createView({
+		backgroundImage:"images/star/lit/lit2_graph.png",
+		top:200,
+		left:30,
+		width:647,
+		height:309,
+		zIndex:20
+	});
+	
+	view.add(image);
+	
+	ClickToExpand(image);
+	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_results"}));
-	view.add(Views.shared.logo("star"));
+	
 	return view;
 }

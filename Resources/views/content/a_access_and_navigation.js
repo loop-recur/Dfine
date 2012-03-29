@@ -58,7 +58,7 @@ Views.content.a_access_and_navigation = function() {
 	});
 	
 	view.add(midline_bullets);
-	UI.Er2(midline_bullets, view, {left: 550, bottom: 138}, {left: 30}, {left: 56});	
+	UI.Er2(midline_bullets, view, {left: 525, bottom: 138}, {left: 30}, {left: 56});	
 	
 	var tool1 = Ti.UI.createView({
 		backgroundImage:"images/technology/access/tool1b.png",
@@ -139,7 +139,7 @@ Views.content.a_access_and_navigation = function() {
 	
 	view.add(Views.shared.tech_nav("access_and_navigation", "a"));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_access_and_navigation"}));
-	view.add(Views.shared.logo());
+	
 
 	return view;
 }

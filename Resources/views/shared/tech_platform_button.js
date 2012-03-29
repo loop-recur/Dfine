@@ -5,9 +5,7 @@ Views.shared.tech_platform_button = function(props) {
 		backgroundImage:"images/gotomain_icon.png",
 		height:40,
 		width:40,
-		bottom:5,
-		right:5,
-		zIndex:70
+		zIndex:99
 	}, props));
 
 	btn_tech_platform.addEventListener('click', function(e){Controllers.content.renderView("main_screen")});

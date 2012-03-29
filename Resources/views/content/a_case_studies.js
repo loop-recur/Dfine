@@ -58,6 +58,7 @@ Views.content.a_case_studies = function() {
 			borderWidth: 1
 		});
 		
+		
 		var featured_pic = compose(first, filter('.featured'))(attrs.images);
 		var path = featured_pic ? featured_pic.url : first(attrs.images).url;
 
@@ -95,9 +96,9 @@ Views.content.a_case_studies = function() {
 		
 		var placeStudyView = function(position, v) {
 			var horizontal_padding = icon_width + 20
-			, vertical_padding = icon_height + 30
-			, new_left = position.left + horizontal_padding
-			, new_top = position.top;
+				, vertical_padding = icon_height + 30
+				, new_left = position.left + horizontal_padding
+				, new_top = position.top;
 
 			v.top = position.top;
 			v.left = position.left;

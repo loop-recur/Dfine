@@ -12,13 +12,11 @@ UI.ButtonGroup = function() {
 	var setInactive = function(button) {
 		button.backgroundImage = registry[button.id].backgroundImage;
 		button.zIndex = 7;
-		console.log("Button : "+ button.id + " set INACTIVE has a zIndex of "+ button.zIndex);
 	}
 	
 	var setActive = function(button) {
 		button.backgroundImage = registry[button.id].backgroundSelectedImage;
 		button.zIndex = 60;
-		console.log("Button : "+ button.id + " set ACTIVE and has a zIndex of "+ button.zIndex + " and button.title = "+ button.title);
 	}
 
 	var toggleButtonState = function(e) {

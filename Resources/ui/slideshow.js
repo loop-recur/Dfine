@@ -1,4 +1,7 @@
 UI.slideshow = function(images) {
+	
+	console.log("UI.slideshow images = " + JSON.stringify(images));
+	
 	var bottom_views = [];
 	var currentImageIndex = 0;
 	var win = Ti.UI.createWindow({backgroundColor: "#000000"});
@@ -88,15 +91,14 @@ UI.slideshow = function(images) {
 	
 	var _updateImagePositions = function() {
 		var image = images[currentImageIndex];
-
 		var previous_image = images[currentImageIndex-1];
 		var next_image = images[currentImageIndex+1];
 		
 		previous_label.visible = !!previous_image;
 		next_label.visible = !!next_image;
 		
-		previous_image_view.image = (previous_image ? previous_image.url : null);
-		next_image_view.image = (next_image ? next_image.url : null);
+		if(previous_image){previous_image_view.image = previous_image.url};
+		if(next_image){next_image_view.image = next_image.url};
 		
 		main_image_view.image = image.url;
 		
@@ -160,13 +162,13 @@ UI.slideshow = function(images) {
 			width: '70%',
 			height: '70%'
 		});
-
+		
 		console.log("openMainImage : image.url = " + image.url);
 
 		image_win.add(image_view);
 		image_win.add(back);
 		image_win.open();
-	}
+	};
 	
 	var addClickHandlers = function() {
 		main_image_view.addEventListener('click', openMainImage);
@@ -184,6 +186,7 @@ UI.slideshow = function(images) {
 		});
 	}
 
+	
 	map(_addToBottom, images);
 	
 	last(bottom_views).addEventListener("load", addClickHandlers);

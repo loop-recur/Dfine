@@ -40,10 +40,10 @@ Views.content.b_a5 = function() {
 	});
 	
 	var popup1_hotspot = Ti.UI.createView({
-		width:200,
+		width:40,
 		height:70,
 		left:280, 
-		top:300,
+		top:290,
 		zIndex:40
 	});
 	
@@ -51,8 +51,8 @@ Views.content.b_a5 = function() {
 	
 	var popup1 = Ti.UI.createView({
 		backgroundImage:"images/star/a5/A5_pop1.png",
-		width:527,
-		height:154,
+		width:595,
+		height:118,
 		left:350,
 		top: 130,
 		visible:false
@@ -64,10 +64,10 @@ Views.content.b_a5 = function() {
 	
 	
 	var popup2_hotspot = Ti.UI.createView({
-		width:240,
+		width:40,
 		height:70,
-		right:130, 
-		top:300,
+		left:400, 
+		top:290,
 		zIndex:40
 	});
 	
@@ -75,8 +75,8 @@ Views.content.b_a5 = function() {
 	
 	var popup2 = Ti.UI.createView({
 		backgroundImage:"images/star/a5/A5_pop2.png",
-		width:449,
-		height:207,
+		width:595,
+		height:78,
 		right:150,
 		bottom:100,
 		visible:false
@@ -89,7 +89,7 @@ Views.content.b_a5 = function() {
 	ToggleSwitch(popup2_hotspot, popup2);
 	
 	view.add(Views.shared.tech_nav_star('access_and_navigation', 'b'));
-	view.add(Views.shared.logo("star"));
+	
 	
 	return view;
 }

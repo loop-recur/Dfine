@@ -103,7 +103,7 @@ Views.content.b_rf_energy = function() {
 	
 	view.add(Views.shared.tech_nav_star('rf_energy', 'b'));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_rf_energy"}));
-	view.add(Views.shared.logo("star"));
+	
 	
 	
 	return view;

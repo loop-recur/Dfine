@@ -74,12 +74,10 @@ Views.content.a_bone_cement = function() {
 	view.add(read_more);
 	
 	var video = Ti.UI.createButton({
-		backgroundImage:"images/video_button.png",
-		title: "StabiliT   ER  Bone Cement",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:16,fontWeight:'regular'},
-		color:"black",
-		width: 250,
-		height: 50,
+		backgroundImage:"images/technology/bone_cement/StabiliT_ER_btn.png",
+		backgroundSelectedImage:"images/technology/bone_cement/StabiliT_ER_btn_p.png",
+		width: 265,
+		height: 49,
 		bottom:70,
 		left:240,
 		zIndex:40
@@ -91,8 +89,6 @@ Views.content.a_bone_cement = function() {
 	
 	view.add(video);
 	view.add(Views.shared.tech_nav('bone_cement', "a"));
-	
-	UI.Er2(video, view, {left: 303, bottom: 93,zIndex:41}, {left: 30}, {left: 55});
 	
 	
 	var foot_note = Ti.UI.createLabel({
@@ -110,7 +106,7 @@ Views.content.a_bone_cement = function() {
 	view.add(foot_note);
 	
 	read_more.addEventListener('click', function(e){Controllers.content.renderView("a_tabs", "a_bone_cement2")});
-	view.add(Views.shared.logo());
+	
 	
 	return view;
 }

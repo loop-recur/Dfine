@@ -45,11 +45,11 @@ Views.content.a_cost = function() {
 	view.add(cost);
 	view.add(bottom_note);
 	// UI.Er2(label2, view, {left: 69, top: 78}, {left: 30}, {left: 57});
-	UI.Er2(bottom_note, view, {left: 244, bottom: 297}, {left: 30}, {left: 54});
+	UI.Er2(bottom_note, view, {left: 264, bottom: 297}, {left: 30}, {left: 54});
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_cost"}));
-	view.add(Views.shared.logo());
+	
 
 	return view;
 }

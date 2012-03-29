@@ -12,7 +12,7 @@ Views.content.b_cost = function() {
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_cost"}));
-	view.add(Views.shared.logo("star"));
+	
 	
 	return view;
 }

@@ -69,7 +69,7 @@ Views.shared.tech_nav = function(current, prefix) {
 	nav.add(bone_cement_button);
 	
 	view.add(nav);
-	view.add(Views.shared.tech_platform_button({bottom:30,right:30, zIndex:90}));
+	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	
 	return view;
 }

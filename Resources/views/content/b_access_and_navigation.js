@@ -90,7 +90,7 @@ Views.content.b_access_and_navigation = function() {
 	});
 	
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_access_and_navigation"}));
-	view.add(Views.shared.logo("star"));
+	
 
 	return view;
 }

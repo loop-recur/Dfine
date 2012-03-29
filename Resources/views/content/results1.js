@@ -74,7 +74,7 @@ Views.content.results1 = function() {
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));
-	view.add(Views.shared.logo());
+	
 	
 	return view;
 }

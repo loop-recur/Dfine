@@ -15,10 +15,23 @@ Views.content.lit6 = function() {
 	});
 	
 	view.add(view_content);
+	
+	var image = Ti.UI.createView({
+		backgroundImage:"images/star/lit/lit6_graph.png",
+		top:160,
+		left:20,
+		width:680,
+		height:278,
+		zIndex:20
+	});
+	
+	view.add(image);
+	
+	ClickToExpand(image);
 
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_results"}));
-	view.add(Views.shared.logo("star"));
+	
 	
 	return view;
 }

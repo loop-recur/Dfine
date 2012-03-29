@@ -125,7 +125,7 @@ Views.content.b_technology = function() {
 
 	view.add(Views.shared.tech_nav_star("", "b"));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_technology"}));
-	view.add(Views.shared.logo("star"));
+	
 	
 	return view;
 }

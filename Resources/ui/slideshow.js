@@ -161,6 +161,8 @@ UI.slideshow = function(images) {
 			height: '70%'
 		});
 
+		console.log("openMainImage : image.url = " + image.url);
+
 		image_win.add(image_view);
 		image_win.add(back);
 		image_win.open();

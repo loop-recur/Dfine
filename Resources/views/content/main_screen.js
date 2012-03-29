@@ -124,7 +124,7 @@ Views.content.main_screen = function() {
 		});
 
 		var _swipeListener = function(){
-			var t = Ti.UI.iPhone.AnimationStyle.CURL_DOWN;
+			var t = Ti.UI.iPhone.AnimationStyle.CURL_UP;
 			swipe_cover.animate({view: content_view, transition: t}, function(e){swipe_cover.removeEventListener('swipe', _swipeListener);});
 		};
 

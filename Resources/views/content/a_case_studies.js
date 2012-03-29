@@ -43,7 +43,7 @@ Views.content.a_case_studies = function() {
 		
 		var newTop = (point.length > 30) ? 40 : 20;
 		return {top:state.top+newTop}
-	}
+	};
 	
 	var makeStudy = function(attrs) {
 		var study_view = Ti.UI.createScrollView({
@@ -107,15 +107,14 @@ Views.content.a_case_studies = function() {
 			if(new_left >= (horizontal_padding * columns)) {
 				new_top = position.top + vertical_padding;
 				new_left = 0;
-			}
-
+			};
 			return {left: new_left, top: new_top}
-		}
+		};
 
 		var study_views =	map(makeStudy, studies);
 		reduce(placeStudyView, {left : 0, top : 0}, study_views);
 		return page_view;
-	}
+	};
 	
 	var finish = function(studies) {
 		map(function(c){ view.remove(c); }, view.children);
@@ -124,7 +123,7 @@ Views.content.a_case_studies = function() {
 		var dashboard = Ti.UI.createScrollableView({height: "90%", width: "90%", views: views, showPagingControl:true, pagingControlColor:"transparent"});
 
 		view.add(dashboard);
-	}
+	};
 
 	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images"), kind: "stabilit"});
 

@@ -58,6 +58,7 @@ UI.slideshow = function(images) {
 		borderWidth: 1,
 		width: 420,
 		height: 'auto',
+		minHeight: 60,
 		bottom: 175
 	});
 	
@@ -89,16 +90,18 @@ UI.slideshow = function(images) {
 		_scrollTo(image_view);
 	}
 	
+	var _updateSurroundingImage = function(label, view, image) {
+		if(image) view.image = image.url;		
+		label.visible = view.visible = !!image;
+	}
+	
 	var _updateImagePositions = function() {
 		var image = images[currentImageIndex];
 		var previous_image = images[currentImageIndex-1];
 		var next_image = images[currentImageIndex+1];
 		
-		previous_label.visible = !!previous_image;
-		next_label.visible = !!next_image;
-		
-		if(previous_image){previous_image_view.image = previous_image.url};
-		if(next_image){next_image_view.image = next_image.url};
+		_updateSurroundingImage(next_label, next_image_view, next_image);
+		_updateSurroundingImage(previous_label, previous_image_view,  previous_image);
 		
 		main_image_view.image = image.url;
 		

@@ -93,8 +93,6 @@ Views.content.a_bone_cement2 = function() {
 		height:'auto'
 	});
 	
-	// UI.Er2(left_note, view, {left: 312}, {left: 30}, {left: 60});
-	
 	// var right_note = Ti.UI.createLabel({
 	// 	text: "Cement is removed from the same vertebra – brown area is evidence of cement interdigitation",
 	// 	font:{fontFamily:'Helvetica',fontSize:16,fontWeight:'regular'},
@@ -106,7 +104,7 @@ Views.content.a_bone_cement2 = function() {
 	// });
 	
 	var right_note = Ti.UI.createLabel({
-		text: "The orange area indicates where the StabiliT ER ultra high viscosity cement penetrated the vertebral body. Note the high degree of remaining intact cancellous bone and the relative size of the targeted cavity versus the high degree of cement interdigitation.",
+		text: "The orange area indicates where the StabiliT  ER  ultra high viscosity cement penetrated the vertebral body. Note the high degree of remaining intact cancellous bone and the relative size of the targeted cavity versus the high degree of cement interdigitation.",
 		font:{fontFamily:'Helvetica',fontSize:15,fontWeight:'regular'},
 		color:"#023f66",
 		width:350,
@@ -115,6 +113,8 @@ Views.content.a_bone_cement2 = function() {
 		height:'auto',
 		zIndex:40
 	});
+	
+	UI.Er2(right_note, view, {right: 136}, {left: 30}, {left: 60});
 	
 	view.add(left_note);
 	view.add(right_note);

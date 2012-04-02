@@ -40,7 +40,7 @@ Views.content.b_a5 = function() {
 	});
 	
 	var popup1_hotspot = Ti.UI.createView({
-		width:40,
+		width:200,
 		height:70,
 		left:280, 
 		top:290,
@@ -64,9 +64,9 @@ Views.content.b_a5 = function() {
 	
 	
 	var popup2_hotspot = Ti.UI.createView({
-		width:40,
+		width:200,
 		height:70,
-		left:400, 
+		left:600, 
 		top:290,
 		zIndex:40
 	});

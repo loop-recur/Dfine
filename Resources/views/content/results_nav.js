@@ -8,8 +8,9 @@ Views.content.results_nav = function(){
 		, {id: "results4", image: "images/results/results_nav_icon4.png", text: "Significantly reduced extravasation"}
 		, {id: "results5", image: "images/results/results_nav_icon5.png", text: "RF-TVA extravasation versus vertebroplasty extravasation"}
 		, {id: "results6", image: "images/results/results_nav_icon6.png", text: "RF-TVA extravasation versus Conventional balloon kyphoplasty complications"}
+		, {id: "results7", image: "images/results/results_nav_icon6.png", text: "Reduced Extravasation with RF-TVA"}
 	]
- 		
+
 
 	var nav = Ti.UI.createView({
 		layout_container: "left_nav"

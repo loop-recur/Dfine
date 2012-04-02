@@ -70,7 +70,7 @@ Views.content.results4 = function() {
 	view.add(content);
 	view.add(bullets);
 
-	UI.Er2(content, view, {left: 128}, {left: 30}, {left: 57});
+	UI.Er2(content, view, {left: 120}, {left: 30}, {left: 57});
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));

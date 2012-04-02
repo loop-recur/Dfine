@@ -56,6 +56,7 @@ FileList = [
 	, "views/content/results4.js"
 	, "views/content/results5.js"
 	, "views/content/results6.js"
+	, "views/content/results7.js"
 	, "views/content/lit_nav.js"
 	, "views/content/lit1.js"
 	, "views/content/lit2.js"

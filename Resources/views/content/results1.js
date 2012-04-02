@@ -35,6 +35,7 @@ Views.content.results1 = function() {
 		height:'auto',
 		textAlign:"center"
 	});
+	UI.Er2(content, view, {left: 65, bottom:267}, {left: 30}, {left: 56});
 	
 	var bullets = Ti.UI.createLabel({
 		text: "• 66 RF-TVA procedures were performed between December 2008 and May 2009 \n• A standard 10-point visual analog scale (VAS) was utilized to assess back pain pre- and post-operatively \n• Pain medication use and activities were defined and monitored for changes \n• Significant improvement in pain, activity, and narcotic use was observed at 6 months",
@@ -70,7 +71,6 @@ Views.content.results1 = function() {
 	view.add(label);
 	view.add(content);
 	view.add(bullets);
-	UI.Er2(content, view, {left: 92, bottom: 347}, {left: 30}, {left: 56});
 	
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_results"}));

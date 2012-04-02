@@ -33,8 +33,7 @@ Views.content.results7 = function() {
 	});
 	
 	var toggle_reference = UI.toggleableLabel({
-		text:"Comparison of Clinical and Radiological Data in the Treatment of Patients with Osteoporotic Vertebral Compression Fractures Using
-		Radiofrequency Kyphoplasty or Balloon Kyphoplasty. Pflugmacher R, Bornemann R, Koch EM, Randau TM, Müller-Broich J, Lehmann U, Weber O, Wirtz DC, Kabir K. Z Orthop Unfall. 2011 Oct 12.",
+		text:"Comparison of Clinical and Radiological Data in the Treatment of Patients with Osteoporotic Vertebral Compression Fractures Using Radiofrequency Kyphoplasty or Balloon Kyphoplasty. Pflugmacher R, Bornemann R, Koch EM, Randau TM, Müller-Broich J, Lehmann U, Weber O, Wirtz DC, Kabir K. Z Orthop Unfall. 2011 Oct 12.",
 		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:12,fontWeight:'regular'},
 		bottom: 30,
 		left:90,

@@ -18,8 +18,8 @@ Views.content.results6 = function() {
 	var image = Ti.UI.createView({
 		backgroundImage:"images/results/results6.png",
 		top:130,
-		width:700,
-		height:358,
+		width:722,
+		height:350,
 		zIndex:20
 	});
 	

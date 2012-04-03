@@ -10,7 +10,7 @@
     </deployment-targets>
     <id>com.looprecur.DFINE</id>
     <name>DFINE</name>
-    <version>0.8</version>
+    <version>0.9</version>
     <publisher>loop/recur</publisher>
     <url>http://looprecur.com</url>
     <description>DFINE Sales App</description>

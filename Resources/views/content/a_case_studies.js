@@ -1,21 +1,22 @@
-Views.content.a_case_studies = function() {
+Views.content.a_case_studies = function() {	
+	var inner_view;
 	
 	var icon_width = 420
 	, icon_height = 280
 	, columns = 2;
 	
-	
 	var view = Views.shared.bg_left_main_view("stabilit");
 	
-	var spinner = Ti.UI.createActivityIndicator({
-		style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
-		height:30,
-		width:30
+	var refreshButton = Ti.UI.createButton({
+		backgroundImage: "/images/case_studies_refresh.png",
+		backgroundSelectedImage: "/images/case_studies_refresh_p.png",
+		width: 50,
+		height: 50,
+		right: 50,
+		bottom: 50,
+		zIndex:99
 	});
-
-	view.add(spinner);
-	spinner.show();
-	
+		
 	var makeBullet = function(view, state, point) {
 		var dot = Ti.UI.createView({
 			left: 210,
@@ -118,15 +119,39 @@ Views.content.a_case_studies = function() {
 	};
 	
 	var finish = function(studies) {
-		map(function(c){ view.remove(c); }, view.children);
+		log("CALLING FINISH");
+		if(view.children) map(function(c){ view.remove(c); }, view.children);
+
 		var groups = groups_of(4, studies);
 		var views = map(makePage, groups);
 		var dashboard = Ti.UI.createScrollableView({height: "90%", width: "90%", views: views, showPagingControl:true, pagingControlColor:"transparent"});
-
-		view.add(dashboard);
+		
+		inner_view.add(dashboard);
+		inner_view.add(refreshButton);
+		view.add(inner_view);
 	};
+	
+	refreshButton.addEventListener('click', function(){
+		view.remove(inner_view);
+		view.add(spinner);
+		App.http_client.expireCache();
+		ImageCache(init);
+	});
+	
+	function init() {
+		inner_view = Ti.UI.createView({});
 
-	Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images"), kind: "stabilit"});
+		spinner = Ti.UI.createActivityIndicator({
+			style:Ti.UI.iPhone.ActivityIndicatorStyle.DARK,
+			height:30,
+			width:30
+		});
 
+		view.add(spinner);
+		spinner.show();
+		Controllers.case_studies.getAll(finish, {fix_urls: Ti.App.Properties.getBool("cached_images"), kind: "stabilit"}, {preload: true});
+	}
+	
+	init();
 	return view;
 }

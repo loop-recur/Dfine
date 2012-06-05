@@ -8,11 +8,11 @@
         <target device="android">false</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <id>com.looprecur.DFINE</id>
+    <id>com.dfine.DFINE</id>
     <name>DFINE</name>
     <version>0.9</version>
     <publisher>loop/recur</publisher>
-    <url>http://looprecur.com</url>
+    <url>http://dfine.com</url>
     <description>DFINE Sales App</description>
     <copyright>2011 by loop/recur</copyright>
     <icon>appicon.png</icon>

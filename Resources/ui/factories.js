@@ -4,14 +4,14 @@ UI.toggleableLabel = function(attrs) {
 		font:{fontFamily:'Helvetica-Light',fontSize:17,fontWeight:'regular'},
 		color:"#023f66",
 		width:'auto',
-		height:'auto'
+		height:Ti.UI.SIZE
 	}, attrs));
 	
 	return label;
 }
 
 UI.toggleableView = function(attrs) {
-	var view = Ti.UI.createView(merge({visible:false, width: 200, height: 'auto'}, attrs));
+	var view = Ti.UI.createView(merge({visible:false, width: 200, height: Ti.UI.SIZE}, attrs));
 	
 	var box = Ti.UI.createView({
 		backgroundColor:"#ffffff",
@@ -25,25 +25,11 @@ UI.toggleableView = function(attrs) {
 		borderRadius: 8,
 		borderWidth: 1,
 		borderColor: "#cccccc",
-		height:'100%',
-		width:'100%'
+		width:'100%',
+		height: Ti.UI.FILL
 	});
 		
-	// var close_button = Ti.UI.createImageView({
-	// 	image: "images/reveal_close_x.png",
-	// 	width: 30,
-	// 	height: 30,
-	// 	top: -15,
-	// 	right: -15,
-	// 	zIndex: 10
-	// });
-	// 
-	// close_button.addEventListener('click', function() {
-	// 	view.visible = false;
-	// });
-	
 	view.add(box);
-	// view.add(close_button);
 
 	return view;
 }

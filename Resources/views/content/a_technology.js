@@ -80,31 +80,19 @@ Views.content.a_technology = function() {
 		color:"black",
 		width:230,
 		top:10,
-		height:'auto',
+		height:Ti.UI.SIZE,
 		zIndex:40
 	});
 	
-	var hard_switch_cable_info = UI.toggleableView({top:250, left:300, width:250, zIndex:40});
+	var hard_switch_cable_info = UI.toggleableView({top:250, left:300, width:250, height: 220, zIndex:40});
 	var hard_switch_cable = UI.toggleableLabel({image:"images/reveal_plus_sign.png", text: "", top:220, left:420});
 	var hard_plus_button = makePlus(hard_switch_cable, 150);
+	
 	hard_switch_cable_info.add(hard_switch_bullets);
 	ToggleSwitch(hard_switch_cable, hard_switch_cable_info);
 	view.add(hard_switch_cable);
 	view.add(hard_plus_button);
 	view.add(hard_switch_cable_info);
-	
-	// var hotspot1 = Ti.UI.createView({
-	// 	width:300,
-	// 	height:300,
-	// 	right:200, 
-	// 	top:280,
-	// 	backgroundColor:"red",
-	// 	opacity:0.5,
-	// 	zIndex:40
-	// });
-	// 
-	// view.add(hotspot1);
-	
 	
 	view.add(Views.shared.tech_nav("", "a"));	
 	view.add(Views.shared.flipper({tabs:"b_tabs", flip_to:"b_technology"}));

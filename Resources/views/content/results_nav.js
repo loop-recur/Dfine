@@ -36,7 +36,6 @@ Views.content.results_nav = function(){
 			text: attrs.text,
 			font: {fontFamily:'Helvetica',fontSize:"13dp",fontWeight:'regular'},
 			color: "#6c7881",
-			top: 5,
 			left: 80,
 			id: attrs.id
 		});

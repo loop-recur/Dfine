@@ -57,7 +57,7 @@ UI.slideshow = function(images) {
 		borderColor: "black",
 		borderWidth: 1,
 		width: 420,
-		height: 'auto',
+		height: Ti.UI.SIZE,
 		minHeight: 60,
 		bottom: 175
 	});
@@ -69,7 +69,7 @@ UI.slideshow = function(images) {
 		top: 10,
 		bottom: 10,
 		color: "#023f66",
-		height: 'auto'
+		height: Ti.UI.SIZE
 	});
 	
 	caption_view.add(caption_text);

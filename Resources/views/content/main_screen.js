@@ -74,18 +74,6 @@ Views.content.main_screen = function() {
 	
 	btn_nav_bone.addEventListener('click', function(e){Controllers.content.renderView("outer_bone_cement")});
 	nav_view.add(btn_nav_bone);
-	
-	// var btn_back_to_dfine = Ti.UI.createView({
-	// 	backgroundImage:"images/dfine_logo_small.png",
-	// 	height:32,
-	// 	width:137,
-	// 	bottom:20,
-	// 	right:20
-	// });
-	// 
-	// btn_back_to_dfine.addEventListener('click', function(e){Controllers.content.renderView("dfine")});
-	// view.add(btn_back_to_dfine);
-
 
 	var btn_stability = Ti.UI.createButton({
 		backgroundImage:"images/outer/goto_stab_btn.png",
@@ -122,18 +110,22 @@ Views.content.main_screen = function() {
 			left:0,
 			zIndex:99,
 		});
-
+		
 		var _swipeListener = function(){
 			var t = Ti.UI.iPhone.AnimationStyle.CURL_UP;
-			swipe_cover.animate({view: content_view, transition: t}, function(e){swipe_cover.removeEventListener('swipe', _swipeListener);});
+			swipe_cover.animate({view: content_view, transition: t}, function(e){
+        swipe_cover.removeEventListener('swipe', _swipeListener);
+			});
 		};
 
 		swipe_cover.addEventListener('swipe', _swipeListener);
 		view.add(swipe_cover);
 		Ti.App.app_is_opened = true;  //Flag so that this is only run one time.
 	};
-
-view.add(content_view);
-	
+  
+  
+  
+  if(!Ti.App.app_is_opened) oneTimeSplash();
+	view.add(content_view)
 	return view;
 }

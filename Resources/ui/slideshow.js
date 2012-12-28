@@ -1,4 +1,7 @@
 UI.slideshow = function(images) {
+	
+	console.log("UI.slideshow images = " + JSON.stringify(images));
+	
 	var bottom_views = [];
 	var currentImageIndex = 0;
 	var win = Ti.UI.createWindow({backgroundColor: "#000000"});
@@ -54,7 +57,8 @@ UI.slideshow = function(images) {
 		borderColor: "black",
 		borderWidth: 1,
 		width: 420,
-		height: 'auto',
+		height: Ti.UI.SIZE,
+		minHeight: 60,
 		bottom: 175
 	});
 	
@@ -65,7 +69,7 @@ UI.slideshow = function(images) {
 		top: 10,
 		bottom: 10,
 		color: "#023f66",
-		height: 'auto'
+		height: Ti.UI.SIZE
 	});
 	
 	caption_view.add(caption_text);
@@ -86,17 +90,18 @@ UI.slideshow = function(images) {
 		_scrollTo(image_view);
 	}
 	
+	var _updateSurroundingImage = function(label, view, image) {
+		if(image) view.image = image.url;		
+		label.visible = view.visible = !!image;
+	}
+	
 	var _updateImagePositions = function() {
 		var image = images[currentImageIndex];
-
 		var previous_image = images[currentImageIndex-1];
 		var next_image = images[currentImageIndex+1];
 		
-		previous_label.visible = !!previous_image;
-		next_label.visible = !!next_image;
-		
-		previous_image_view.image = (previous_image ? previous_image.url : null);
-		next_image_view.image = (next_image ? next_image.url : null);
+		_updateSurroundingImage(next_label, next_image_view, next_image);
+		_updateSurroundingImage(previous_label, previous_image_view,  previous_image);
 		
 		main_image_view.image = image.url;
 		
@@ -160,11 +165,13 @@ UI.slideshow = function(images) {
 			width: '70%',
 			height: '70%'
 		});
+		
+		console.log("openMainImage : image.url = " + image.url);
 
 		image_win.add(image_view);
 		image_win.add(back);
 		image_win.open();
-	}
+	};
 	
 	var addClickHandlers = function() {
 		main_image_view.addEventListener('click', openMainImage);
@@ -182,6 +189,7 @@ UI.slideshow = function(images) {
 		});
 	}
 
+	
 	map(_addToBottom, images);
 	
 	last(bottom_views).addEventListener("load", addClickHandlers);

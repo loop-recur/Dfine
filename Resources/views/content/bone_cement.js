@@ -1,7 +1,11 @@
-Views.content.bone_cement = function(win) {	
+Views.content.bone_cement = function() {	
 	
 	var view = Ti.UI.createView({
+		layout_container:"left_main"
 	});
+	
+	var nav = Views.shared.tech_nav("bone_cement");
+	view.add(nav);
 	
 	var copyright = Ti.UI.createLabel({
 		text: "®",
@@ -50,9 +54,9 @@ Views.content.bone_cement = function(win) {
 	
 	var image = Ti.UI.createView({
 		backgroundImage:"images/technology/bone_cement/bonecement1.png",
-		height:268,
-		width:640,
-		top:275
+		height:351,
+		width:721,
+		top:245
 	});
 	
 	view.add(image);
@@ -82,11 +86,11 @@ Views.content.bone_cement = function(win) {
 	});
 	
 	video.addEventListener('click', function(){
-		Controllers.content.video('1115.mp4');
+		Views.videos.show('1115.mp4');
 	});
 	
 	view.add(video);
-	view.add(Views.content.tech_nav(view, 'bone_cement'));
+	view.add(Views.shared.tech_nav('bone_cement'));
 	UI.Er2(video, view, {left: 303, bottom: 93}, {left: 30}, {left: 55});
 	
 	
@@ -104,11 +108,7 @@ Views.content.bone_cement = function(win) {
 	
 	view.add(foot_note);
 	
-	var getContent = function(name) {
-		Views.content[name](view);
-	}
+	read_more.addEventListener('click', function(e){Controllers.content.renderView("bone_cement2")});
 	
-	read_more.addEventListener('click', App.swapView(view, getContent.p("bone_cement2")));
-	
-	win.add(view);
+	return view;
 }

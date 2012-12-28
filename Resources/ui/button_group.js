@@ -11,12 +11,12 @@ UI.ButtonGroup = function() {
 	
 	var setInactive = function(button) {
 		button.backgroundImage = registry[button.id].backgroundImage;
-		button.animate({zIndex:0});
+		button.zIndex = 7;
 	}
 	
 	var setActive = function(button) {
 		button.backgroundImage = registry[button.id].backgroundSelectedImage;
-		button.animate({zIndex:10});
+		button.zIndex = 60;
 	}
 
 	var toggleButtonState = function(e) {

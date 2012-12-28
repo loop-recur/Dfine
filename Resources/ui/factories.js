@@ -100,3 +100,7 @@ UI.Er2 = function(label, win, view_attrs, copy_attrs, two_attrs) {
 	view.add(two);
 	win.add(view);
 }
+
+UI.createButton = function(properties){
+	return Ti.UI.createButton(merge({zIndex: 10}, properties));
+}	

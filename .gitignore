@@ -7,3 +7,5 @@ build.log
 .project
 .settings/*
 .fastdev.lock
+Resources/files
+Resources/videos

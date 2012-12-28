@@ -1,5 +1,6 @@
-ImageCache = function() {
-
+ImageCache = function(opt_cb) {
+	opt_cb = (opt_cb || id);
+	
 	var path = Ti.Filesystem.getFile(Ti.Filesystem.applicationDataDirectory, "images");
 	if(!path.exists()) path.createDirectory();
 	
@@ -26,7 +27,7 @@ ImageCache = function() {
 	
 	function startDownloading() {
 		var _storeImage = compose(_download, '.url');
-		var cb = compose(_markFinished, map(map(_storeImage)), map('.images'));
+		var cb = compose(opt_cb, _markFinished, map(map(_storeImage)), map('.images'));
 		Controllers.case_studies.getAll(cb, {}, {preload: true});
 	}
 	

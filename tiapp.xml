@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
-    <sdk-version>1.7.3</sdk-version>
+    <sdk-version>1.8.1</sdk-version>
     <deployment-targets>
         <target device="mobileweb">false</target>
         <target device="iphone">false</target>
@@ -8,11 +8,11 @@
         <target device="android">false</target>
         <target device="blackberry">false</target>
     </deployment-targets>
-    <id>com.looprecur.DFINE</id>
+    <id>com.dfine.DFINE</id>
     <name>DFINE</name>
-    <version>0.8</version>
+    <version>0.9</version>
     <publisher>loop/recur</publisher>
-    <url>http://looprecur.com</url>
+    <url>http://dfine.com</url>
     <description>DFINE Sales App</description>
     <copyright>2011 by loop/recur</copyright>
     <icon>appicon.png</icon>
@@ -27,10 +27,8 @@
     <iphone>
         <orientations device="ipad">
             <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
         </orientations>
     </iphone>
     <android xmlns:android="http://schemas.android.com/apk/res/android"/>
-    <modules>
-        <module platform="iphone" version="1.0">ti.charts</module>
-    </modules>
 </ti:app>

@@ -1,5 +1,8 @@
 Views.content.dfine = function(win) {	
 	var view = Ti.UI.createView({
+		width:1024,
+		height:768,
+		backgroundImage:"images/outer/Combined_bg.png"
 	});
 	
 	var label = Ti.UI.createLabel({
@@ -34,6 +37,8 @@ Views.content.dfine = function(win) {
 	view.add(image);
 	view.add(label);
 	view.add(label2);
-
-	win.add(view);
+	
+	view.add(Views.shared.tech_platform_button({bottom:40, right:20})); 
+	
+	return view;
 }

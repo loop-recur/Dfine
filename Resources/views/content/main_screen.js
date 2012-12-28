@@ -133,7 +133,7 @@ Views.content.main_screen = function() {
 		Ti.App.app_is_opened = true;  //Flag so that this is only run one time.
 	};
 
-	!Ti.App.app_is_opened ? oneTimeSplash() : view.add(content_view);
+view.add(content_view);
 	
 	return view;
 }

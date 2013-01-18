@@ -81,7 +81,7 @@ Views.content.main_screen = function() {
 		height:49,
 		width:249,
 		bottom:50,
-		left:200
+		left:40
 	});
 
 	btn_stability.addEventListener('click', function(e){ Controllers.content.renderView("a_tabs", "a_technology") });
@@ -93,11 +93,23 @@ Views.content.main_screen = function() {
 		height:49,
 		width:249,
 		bottom:50,
-		right:200
+		left:330
 	});
 	
 	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "b_technology") });
 	content_view.add(btn_star);
+	
+	var btn_demographics = Ti.UI.createButton({
+		backgroundImage:"images/outer/goto_patient_dem_btn.png",
+		backgroundSelectedImage:"images/outer/goto_patient_dem_btn_p.png",
+		height:49,
+		width:249,
+		bottom:50,
+		right:40
+	});
+	
+	btn_demographics.addEventListener('click', function(e){Controllers.content.renderView("venn")});
+	content_view.add(btn_demographics);
 	
 	content_view.add(nav_view);
 	

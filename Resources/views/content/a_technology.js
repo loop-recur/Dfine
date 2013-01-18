@@ -26,7 +26,7 @@ Views.content.a_technology = function() {
 	var video = Ti.UI.createButton({
 		backgroundImage:"images/video_button.png",
 		title: "RF-TVA",
-		font:{fontSize:15, fontWeight:"regular", fontStyle:"bole"},
+		font:{fontSize:15, fontWeight:"regular", fontStyle:"bold"},
 		color:"black",
 		width: 225,
 		height: 50,

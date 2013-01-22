@@ -92,8 +92,7 @@ Views.content.main_screen = function() {
 		backgroundSelectedImage:"images/outer/goto_star_btn_p.png",
 		height:49,
 		width:249,
-		bottom:50,
-		left:330
+		bottom:50
 	});
 	
 	btn_star.addEventListener('click', function(e){ Controllers.content.renderView("b_tabs", "b_technology") });

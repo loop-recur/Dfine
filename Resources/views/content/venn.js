@@ -16,9 +16,9 @@ Views.content.venn = function() {
 	});
 	
 	var venn_diagram = Ti.UI.createView({
-		width:354,
-		height:575,
-		backgroundImage:"images/outer/Venn-Diagram.png"
+		width:540,
+		height:330,
+		backgroundImage:"images/outer/venn_diagram_sm.png"
 	});
 	
 	view.add(label);

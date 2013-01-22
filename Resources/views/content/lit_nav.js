@@ -8,7 +8,7 @@ Views.content.lit_nav = function(){
 		, {id: "lit4", image: "images/star/lit/lit_bar_4_Nature.png"}
 		, {id: "lit5", image: "images/star/lit/lit_bar_5_Radio1.png"}
 		, {id: "lit6", image: "images/star/lit/lit_bar_6_Radio2.png"}
-		, {id: "lit7", image: "images/star/lit/lit7_icon.png"}
+		, {id: "lit7", image: "images/star/lit/lit7_thumb.png"}
 	]
  		
 

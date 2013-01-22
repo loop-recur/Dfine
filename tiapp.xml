@@ -10,7 +10,7 @@
     </deployment-targets>
     <id>com.dfine.DFINE</id>
     <name>DFINE</name>
-    <version>0.9</version>
+    <version>0.95</version>
     <publisher>loop/recur</publisher>
     <url>http://dfine.com</url>
     <description>DFINE Sales App</description>

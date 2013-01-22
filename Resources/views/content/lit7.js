@@ -8,26 +8,26 @@ Views.content.lit7 = function() {
 	});
 	
 	var view_content = Ti.UI.createView({
-		backgroundImage:"images/star/lit/Lit7.png",
-		width:714,
+		backgroundImage:"images/star/lit/lit7_fullscreen.png",
+		width:773,
 		height:768,
 		left:0
 	});
 	
-	view.add(view_content);
-	
 	var image = Ti.UI.createView({
-		backgroundImage:"images/star/lit/lit6_graph.png",
+		backgroundImage:"images/star/lit/lit7.png",
 		top:160,
 		left:20,
-		width:680,
-		height:278,
+		width:722,
+		height:350,
 		zIndex:20
 	});
 	
 	view.add(image);
 	
 	ClickToExpand(image);
+	
+	view.add(view_content);
 
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 	view.add(Views.shared.flipper({tabs:"a_tabs", flip_to:"a_results"}));

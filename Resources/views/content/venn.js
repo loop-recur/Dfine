@@ -2,27 +2,10 @@ Views.content.venn = function() {
 	var view = Ti.UI.createView({
 		width:1024,
 		height:768,
-		backgroundImage:"images/outer/Combined_bg.png"
+		backgroundImage:"images/outer/venn_page.png",
+		backgroundColor:"white"
 	});
 
-	var label = Ti.UI.createLabel({
-		text: "Patient Demographics",
-		font:{fontFamily:'Helvetica LT CondensedLight',fontSize:65,fontWeight:'regular'},
-		color:"#023f66",
-		width:'auto',
-		top:20,
-		right:40,
-		height:'auto'
-	});
-	
-	var venn_diagram = Ti.UI.createView({
-		width:540,
-		height:330,
-		backgroundImage:"images/outer/venn_diagram_sm.png"
-	});
-	
-	view.add(label);
-	view.add(venn_diagram);
 	view.add(Views.shared.tech_platform_button({bottom:30,right:30}));
 
 	return view;
